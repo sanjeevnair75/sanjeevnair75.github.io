@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Juris Nair – Indirect Tax & Regulatory Law, Mumbai</title>
+  <meta name="description" content="Juris Nair – Expert legal practice in Indirect Tax and Regulatory Laws, based in Mumbai. Trusted counsel for businesses across India.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #B8974A;
+      --gold-light: #D4B878;
+      --dark: #0E0E0E;
+      --dark2: #161616;
+      --dark3: #1E1E1E;
+      --text: #E8E0D0;
+      --text-muted: #9A9080;
+      --border: rgba(184,151,74,0.2);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--dark);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.4rem 4rem;
+      background: rgba(14,14,14,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+      text-decoration: none;
+    }
+
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    .nav-cta {
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold) !important;
+      padding: 0.5rem 1.4rem;
+      border-radius: 2px;
+      transition: background 0.3s, color 0.3s !important;
+    }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--dark) !important; }
+
+    /* HERO */
+    #home {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      padding: 8rem 4rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(184,151,74,0.07) 0%, transparent 60%),
+                  radial-gradient(ellipse at 20% 80%, rgba(184,151,74,0.04) 0%, transparent 50%);
+    }
+
+    .hero-line {
+      position: absolute; top: 0; left: 50%;
+      width: 1px; height: 100%;
+      background: linear-gradient(to bottom, transparent, var(--border), transparent);
+      opacity: 0.4;
+    }
+
+    .hero-content { position: relative; max-width: 700px; }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--border);
+      padding: 0.4rem 1rem;
+      margin-bottom: 2rem;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-weight: 600;
+      line-height: 1.05;
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.8s 0.15s ease both;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 480px;
+      margin-bottom: 2.5rem;
+      animation: fadeUp 0.8s 0.3s ease both;
+    }
+
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 0.8s 0.45s ease both; }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--dark);
+      padding: 0.85rem 2rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 2px;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.85rem 2rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 400;
+      border-radius: 2px;
+      transition: border-color 0.3s, color 0.3s;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+    .hero-right {
+      position: absolute; right: 4rem; top: 50%; transform: translateY(-50%);
+      display: flex; flex-direction: column; align-items: flex-end; gap: 2rem;
+      animation: fadeLeft 1s 0.5s ease both;
+    }
+
+    .hero-stat {
+      text-align: right;
+      border-right: 2px solid var(--gold);
+      padding-right: 1.5rem;
+    }
+
+    .hero-stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .hero-stat-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+    }
+
+    /* SECTION BASE */
+    section { padding: 7rem 4rem; }
+    .section-tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 600;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+    .section-title em { font-style: italic; color: var(--gold); }
+    .divider {
+      width: 60px; height: 1px;
+      background: var(--gold);
+      margin-bottom: 3rem;
+    }
+
+    /* ABOUT */
+    #about { background: var(--dark2); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      max-width: 1100px;
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+      font-size: 0.97rem;
+    }
+
+    .about-text p strong { color: var(--text); font-weight: 500; }
+
+    .about-card {
+      background: var(--dark3);
+      border: 1px solid var(--border);
+      padding: 2.5rem;
+      border-radius: 4px;
+      position: relative;
+    }
+
+    .about-card::before {
+      content: '"';
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 8rem;
+      color: var(--gold);
+      opacity: 0.12;
+      position: absolute;
+      top: -1rem; left: 1.5rem;
+      line-height: 1;
+    }
+
+    .about-card p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .about-card-name {
+      margin-top: 1.5rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* SERVICES */
+    #services { background: var(--dark); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+    }
+
+    .service-card {
+      background: var(--dark3);
+      border: 1px solid var(--border);
+      padding: 2.5rem;
+      border-radius: 4px;
+      transition: border-color 0.3s, transform 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+
+    .service-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+    .service-card:hover::after { transform: scaleX(1); }
+
+    .service-icon {
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+
+    .service-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      color: var(--text);
+    }
+
+    .service-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    /* BLOG */
+    #blog { background: var(--dark2); }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+    }
+
+    .blog-card {
+      background: var(--dark3);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .blog-card:hover { transform: translateY(-4px); border-color: var(--gold); }
+
+    .blog-card-body { padding: 2rem; }
+
+    .blog-tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+
+    .blog-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 0.8rem;
+      color: var(--text);
+    }
+
+    .blog-excerpt {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
+
+    .blog-read {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      transition: gap 0.3s;
+    }
+    .blog-read:hover { gap: 0.8rem; }
+
+    /* CONTACT */
+    #contact { background: var(--dark); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 5rem;
+      max-width: 1100px;
+      align-items: start;
+    }
+
+    .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+
+    .contact-item {
+      display: flex; gap: 1.2rem; align-items: flex-start;
+    }
+
+    .contact-icon {
+      width: 40px; height: 40px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+      color: var(--gold);
+    }
+
+    .contact-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-value {
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .contact-value a { color: var(--text); text-decoration: none; transition: color 0.3s; }
+    .contact-value a:hover { color: var(--gold); }
+
+    .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+
+    label {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    input, textarea, select {
+      background: var(--dark3);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.8rem 1rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.92rem;
+      border-radius: 2px;
+      outline: none;
+      transition: border-color 0.3s;
+      width: 100%;
+    }
+
+    input:focus, textarea:focus, select:focus { border-color: var(--gold); }
+
+    textarea { min-height: 120px; resize: vertical; }
+
+    .form-submit {
+      background: var(--gold);
+      color: var(--dark);
+      border: none;
+      padding: 0.95rem 2rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      align-self: flex-start;
+    }
+
+    .form-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+    .form-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: -0.5rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark2);
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--gold);
+    }
+
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeLeft {
+      from { opacity: 0; transform: translate(24px, -50%); }
+      to { opacity: 1; transform: translate(0, -50%); }
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .nav-links { display: none; }
+      #home { padding: 6rem 1.5rem 3rem; }
+      .hero-right { display: none; }
+      section { padding: 4rem 1.5rem; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-logo">Juris Nair</a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#blog">Insights</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-line"></div>
+  <div class="hero-content">
+    <span class="hero-tag">Mumbai · India</span>
+    <h1 class="hero-title"><em>Juris Nair</em></h1>
+    <p style="font-size:0.95rem; color:var(--text-muted); letter-spacing:0.04em; margin-bottom:2rem;">Indirect Tax, Trade &amp; Regulatory Law &nbsp;|&nbsp; Advisory &middot; Consulting &middot; Litigation</p>
+    <p class="hero-sub">Helping businesses navigate complex compliance landscapes with clarity, strategy, and confidence.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Enquire Now</a>
+      <a href="#services" class="btn-outline">Our Services</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stat">
+      <div class="hero-stat-num">GST</div>
+      <div class="hero-stat-label">Specialist</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">Pan</div>
+      <div class="hero-stat-label">India Practice</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">MH</div>
+      <div class="hero-stat-label">Bar Registered</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-text">
+      <p class="section-tag">About</p>
+      <h2 class="section-title">Trusted Expertise in<br><em>Tax & Regulation</em></h2>
+      <div class="divider"></div>
+      <p><strong>Juris Nair</strong> is a Mumbai-based legal practice with deep expertise in Indirect Tax and Regulatory Laws.</p>
+      <p>With a practice rooted in precision and client focus, we provide strategic counsel to businesses of all sizes — from startups navigating GST compliance for the first time to large enterprises managing complex regulatory matters.</p>
+      <p>The practice covers all aspects of <strong>GST, Customs, Foreign Trade Policy, and allied regulatory frameworks</strong> — offering end-to-end legal support from advisory and structuring to litigation and representation before authorities.</p>
+      <br>
+      <a href="#contact" class="btn-outline">Schedule a Consultation</a>
+    </div>
+    <div class="about-card">
+      <p>Every tax challenge is also a business problem. I believe in delivering solutions that are not just legally sound, but practically effective for the client's goals.</p>
+      <p class="about-card-name">— Juris Nair</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <p class="section-tag">What We Do</p>
+  <h2 class="section-title">Practice <em>Areas</em></h2>
+  <div class="divider"></div>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-icon">⚖️</span>
+      <h3 class="service-title">GST Advisory & Compliance</h3>
+      <p class="service-desc">Comprehensive guidance on Goods and Services Tax — registration, returns, input tax credit optimization, classification, and compliance management for businesses across sectors.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🏛️</span>
+      <h3 class="service-title">GST Litigation</h3>
+      <p class="service-desc">Representation before GST authorities, appellate forums, and tribunals. Drafting show cause notice replies, appeals, and managing departmental audits and assessments.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🚢</span>
+      <h3 class="service-title">Customs & Foreign Trade</h3>
+      <p class="service-desc">Expert counsel on Customs Act, Import-Export Policy, Foreign Trade Policy (FTP), advance authorizations, EPCG, and customs valuation disputes.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">📋</span>
+      <h3 class="service-title">Regulatory Consulting</h3>
+      <p class="service-desc">Strategic advisory on allied regulatory frameworks — FEMA, SEZ, anti-dumping, and sector-specific compliance — helping businesses stay ahead of regulatory change.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🔍</span>
+      <h3 class="service-title">Tax Due Diligence</h3>
+      <p class="service-desc">Indirect tax due diligence for mergers, acquisitions, and business restructuring — identifying risks, liabilities, and opportunities before transactions close.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🎓</span>
+      <h3 class="service-title">Training & Workshops</h3>
+      <p class="service-desc">Corporate training sessions and workshops on GST, Customs, and regulatory matters — empowering your finance and compliance teams with practical knowledge.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG / INSIGHTS -->
+<section id="blog">
+  <p class="section-tag">Insights</p>
+  <h2 class="section-title">Latest <em>Articles</em></h2>
+  <div class="divider"></div>
+  <div class="blog-grid">
+    <div class="blog-card">
+      <div class="blog-card-body">
+        <p class="blog-tag">Customs · Petrochemicals</p>
+        <h3 class="blog-title">India's 90-Day Petrochemical Ceasefire: Zero Duty, Full Compliance</h3>
+        <p class="blog-excerpt">Notification No. 12/2026-Customs grants NIL Basic Customs Duty on 40 petrochemical products from 2 April to 30 June 2026. But zero duty is not zero compliance. A classification and compliance playbook for importers.</p>
+        <a href="article-petrochemical-ceasefire.html" class="blog-read">Read More →</a>
+      </div>
+    </div>
+    <div class="blog-card">
+      <div class="blog-card-body">
+        <p class="blog-tag">GST · IGST · Jurisdiction</p>
+        <h3 class="blog-title">Transit State &#8800; Taxing State &#8800; Adjudicating State: AP High Court on Checkpoint Capitalism</h3>
+        <p class="blog-excerpt">The AP High Court in Golden Traders v. State of AP draws a clear constitutional line: a transit state with no fiscal stake in an IGST transaction has no jurisdiction to detain, seize, or confiscate goods under Sections 129 or 130.</p>
+        <a href="article-golden-traders-transit-state.html" class="blog-read">Read More →</a>
+      </div>
+    </div>
+    <div class="blog-card">
+      <div class="blog-card-body">
+        <p class="blog-tag">GST · Litigation</p>
+        <h3 class="blog-title">Responding to a GST Show Cause Notice: A Practical Guide</h3>
+        <p class="blog-excerpt">Receiving a show cause notice from the GST department can be daunting. Understanding the timelines, legal rights, and effective response strategy can make all the difference.</p>
+        <a href="#contact" class="blog-read">Read More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-grid">
+    <div>
+      <p class="section-tag">Get in Touch</p>
+      <h2 class="section-title">Let's <em>Connect</em></h2>
+      <div class="divider"></div>
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">✉</div>
+          <div>
+            <p class="contact-label">Email</p>
+            <p class="contact-value"><a href="/cdn-cgi/l/email-protection#b9cad8d7d3dcdccff9d3cccbd0cad7d8d0cb97dad6d4"><span class="__cf_email__" data-cfemail="85f6e4ebefe0e0f3c5eff0f7ecf6ebe4ecf7abe6eae8">[email&#160;protected]</span></a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <p class="contact-label">Location</p>
+            <p class="contact-value">Mumbai, Maharashtra, India</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <p class="contact-label">Working Hours</p>
+            <p class="contact-value">Monday – Friday, 9:00 AM – 6:00 PM IST</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="your@email.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject">
+            <option value="">Select a topic</option>
+            <option>GST Advisory & Compliance</option>
+            <option>GST Litigation</option>
+            <option>Customs & Foreign Trade</option>
+            <option>Regulatory Consulting</option>
+            <option>Tax Due Diligence</option>
+            <option>Training & Workshops</option>
+            <option>General Enquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" placeholder="Briefly describe your matter..." required></textarea>
+        </div>
+        <p class="form-note">Your enquiry will be sent directly to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e390828d89868695a38996918a908d828a91cd808c8e">[email&#160;protected]</a></p>
+        <button type="submit" class="form-submit">Send Enquiry →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Juris Nair</div>
+  <p class="footer-copy">© 2025 Juris Nair. All rights reserved. | <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b1c2d0dfdbd4d4c7f1dbc4c3d8c2dfd0d8c39fd2dedc">[email&#160;protected]</a></p>
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Smooth scroll active nav highlighting
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.getAttribute('id');
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--gold)' : '';
+    });
+  });
+
+  // Contact form handler
+  function handleSubmit(e) {
+    e.preventDefault();
+    const name = doc
