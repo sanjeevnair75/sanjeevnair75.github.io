@@ -443,9 +443,10 @@
       </div>
 
       <script>
-        (function() {
+        window.addEventListener('DOMContentLoaded', function() {
           var EXPECTED = 483000;
           var filedEl = document.getElementById('filed-count');
+          if (!filedEl) return;
           var filed = parseInt(filedEl.textContent.replace(/,/g, ''));
           var filedFormatted = filed.toLocaleString('en-IN');
           var pct = (filed / EXPECTED * 100).toFixed(2);
@@ -462,7 +463,7 @@
           document.getElementById('disclaimer-date').textContent = dateStr;
           document.getElementById('title-filed-count').textContent = filedFormatted;
           document.getElementById('conclusion-filed').textContent = filedFormatted;
-        })();
+        });
       </script>
     </div>
 
