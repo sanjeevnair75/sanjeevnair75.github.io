@@ -163,6 +163,87 @@
       text-transform: uppercase;
     }
 
+    .live-stats-box {
+      background: var(--dark3);
+      border: 1px solid var(--gold);
+      border-radius: 4px;
+      padding: 2rem;
+      margin: 2.5rem 0;
+    }
+
+    .live-stats-header {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+      margin-bottom: 1.5rem; padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .live-stats-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem; font-weight: 600; color: var(--text);
+    }
+
+    .live-badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gold); border: 1px solid var(--border);
+      padding: 0.3rem 0.8rem; border-radius: 2px;
+    }
+
+    .live-dot {
+      width: 6px; height: 6px;
+      background: var(--gold); border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .live-stats-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1rem; margin-bottom: 1.5rem;
+    }
+
+    .live-stat-item { text-align: center; }
+
+    .live-stat-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem; font-weight: 600;
+      color: var(--gold); line-height: 1; margin-bottom: 0.4rem;
+    }
+
+    .live-stat-label {
+      font-size: 0.72rem; color: var(--text-muted);
+      letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.4;
+    }
+
+    .live-stats-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 0.8rem;
+      padding-top: 1rem; border-top: 1px solid var(--border);
+    }
+
+    .live-updated { font-size: 0.75rem; color: var(--text-muted); font-style: italic; }
+
+    .live-source-link {
+      font-size: 0.75rem; color: var(--gold); text-decoration: none;
+      letter-spacing: 0.08em; transition: color 0.3s;
+    }
+    .live-source-link:hover { color: var(--gold-light); text-decoration: underline; }
+
+    .progress-bar-wrap {
+      background: var(--dark); border-radius: 2px;
+      height: 6px; margin: 1rem 0; overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(to right, var(--gold), var(--gold-light));
+      border-radius: 2px; width: 0.43%;
+    }
+
     .article-body { font-size: 0.97rem; color: var(--text-muted); line-height: 1.9; }
     .article-body p { margin-bottom: 1.5rem; }
 
@@ -334,14 +415,31 @@
 
     <p>As of early March 2026, the GSTAT e-filing portal's own statistics dashboard tells a sobering tale:</p>
 
-    <div class="stat-grid">
-      <div class="stat-card">
-        <div class="stat-number">4,83,000</div>
-        <div class="stat-label">Appeals Expected</div>
+    <div class="live-stats-box">
+      <div class="live-stats-header">
+        <span class="live-stats-title">GSTAT Filing Tracker</span>
+        <span class="live-badge"><span class="live-dot"></span> Updated by Juris Nair</span>
       </div>
-      <div class="stat-card">
-        <div class="stat-number">2,083</div>
-        <div class="stat-label">Filed as of March 2026 (0.43%)</div>
+      <div class="live-stats-grid">
+        <div class="live-stat-item">
+          <div class="live-stat-number">4,83,000</div>
+          <div class="live-stat-label">Appeals Expected</div>
+        </div>
+        <div class="live-stat-item">
+          <div class="live-stat-number">2,083</div>
+          <div class="live-stat-label">Appeals Filed</div>
+        </div>
+        <div class="live-stat-item">
+          <div class="live-stat-number">0.43%</div>
+          <div class="live-stat-label">Filed vs Expected</div>
+        </div>
+      </div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill"></div>
+      </div>
+      <div class="live-stats-footer">
+        <span class="live-updated">Last updated: 12 April 2026 &nbsp;|&nbsp; Deadline: 30 June 2026</span>
+        <a href="https://efiling.gstat.gov.in" target="_blank" class="live-source-link">View live data on GSTAT portal &#8594;</a>
       </div>
     </div>
 
@@ -437,15 +535,8 @@
 
 <footer>
   <div class="footer-logo">Juris Nair</div>
-  <p class="footer-copy">© 2026 Juris Nair. All rights reserved. | sanjeev@jurisnair.com</p>
+  <p class="footer-copy">© 2026 Juris Nair. All rights reserved. | <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3340525d59565645735946415a405d525a411d505c5e">[email&#160;protected]</a></p>
   <div class="footer-links">
     <a href="index.html#home">Home</a>
     <a href="index.html#about">About</a>
     <a href="index.html#services">Services</a>
-    <a href="index.html#blog">Insights</a>
-    <a href="index.html#contact">Contact</a>
-  </div>
-</footer>
-
-</body>
-</html>
