@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AEO & EMI Scheme — A Complete Guide | Juris Nair</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0B1930;
+    --navy-mid: #112244;
+    --navy-light: #1a3260;
+    --gold: #C9973A;
+    --gold-light: #E2B45A;
+    --gold-pale: #F5E6C8;
+    --cream: #F9F4EC;
+    --white: #FFFFFF;
+    --text-muted: rgba(255,255,255,0.55);
+    --text-dim: rgba(255,255,255,0.75);
+    --border-gold: rgba(201,151,58,0.3);
+    --border-gold-bright: rgba(201,151,58,0.7);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    height: 100vh;
+    overflow: hidden;
+    cursor: default;
+  }
+
+  /* ── DECK WRAPPER ── */
+  .deck {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ── SLIDE BASE ── */
+  .slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 80px;
+    opacity: 0;
+    transform: translateX(60px);
+    pointer-events: none;
+    overflow: hidden;
+    /* No transition on initial state — JS adds it */
+  }
+
+  .slide.ready {
+    transition: opacity 0.55s cubic-bezier(.4,0,.2,1), transform 0.55s cubic-bezier(.4,0,.2,1);
+  }
+
+  .slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+  }
+
+  .slide.exit {
+    opacity: 0;
+    transform: translateX(-60px);
+    pointer-events: none;
+  }
+
+  /* ── BACKGROUND PATTERNS ── */
+  .slide::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 80% 20%, rgba(201,151,58,0.07) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 40% at 10% 80%, rgba(26,50,96,0.6) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .slide-title-bg::after {
+    content: 'AEO';
+    position: absolute;
+    right: -40px;
+    bottom: -60px;
+    font-family: 'Playfair Display', serif;
+    font-size: 340px;
+    font-weight: 700;
+    color: rgba(201,151,58,0.04);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  /* ── GOLD LINE ACCENT ── */
+  .gold-rule {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin-bottom: 28px;
+    flex-shrink: 0;
+  }
+
+  .gold-rule.centered { margin-left: auto; margin-right: auto; }
+
+  /* ── SLIDE LABELS ── */
+  .slide-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+
+  /* ── TYPOGRAPHY ── */
+  .display-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 5vw, 64px);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 24px;
+  }
+
+  .display-title em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .display-title .line2 {
+    color: var(--gold-light);
+  }
+
+  .subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(16px, 2vw, 22px);
+    font-weight: 300;
+    color: var(--text-dim);
+    line-height: 1.6;
+    max-width: 680px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 3.5vw, 46px);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+
+  .section-title em { font-style: italic; color: var(--gold-light); }
+
+  .body-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(15px, 1.6vw, 19px);
+    font-weight: 400;
+    line-height: 1.75;
+    color: var(--text-dim);
+    max-width: 760px;
+  }
+
+  /* ── SLIDE 1: TITLE ── */
+  .slide-1 { background: var(--navy); text-align: center; }
+
+  .firm-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--border-gold);
+    padding: 8px 20px;
+    margin-bottom: 48px;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  .firm-badge::before, .firm-badge::after {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+
+  .title-meta {
+    margin-top: 48px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title-meta-item {
+    text-align: center;
+  }
+
+  .title-meta-item .label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .title-meta-item .value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    color: var(--text-dim);
+  }
+
+  .title-divider {
+    width: 1px;
+    height: 32px;
+    background: var(--border-gold);
+  }
+
+  /* ── SLIDE 2: WHAT IS AEO ── */
+  .slide-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    text-align: left;
+  }
+
+  .slide-2-left { display: flex; flex-direction: column; }
+  .slide-2-right { display: flex; flex-direction: column; gap: 20px; }
+
+  .definition-box {
+    border-left: 3px solid var(--gold);
+    padding: 20px 24px;
+    background: rgba(201,151,58,0.06);
+    margin-top: 24px;
+  }
+
+  .definition-box p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--gold-pale);
+  }
+
+  .stat-pill {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    border: 1px solid var(--border-gold);
+    background: rgba(255,255,255,0.02);
+  }
+
+  .stat-pill .number {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--gold);
+    flex-shrink: 0;
+    min-width: 64px;
+  }
+
+  .stat-pill .desc {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-dim);
+  }
+
+  /* ── SLIDE 3: FOUR TIERS ── */
+  .slide-3 { text-align: center; }
+
+  .tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    width: 100%;
+    margin-top: 36px;
+  }
+
+  .tier-card {
+    border: 1px solid var(--border-gold);
+    padding: 24px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.02);
+    position: relative;
+    transition: background 0.3s, border-color 0.3s;
+    cursor: pointer;
+  }
+
+  .tier-card:hover {
+    background: rgba(201,151,58,0.08);
+    border-color: var(--gold);
+  }
+
+  .tier-card.featured {
+    border-color: var(--gold);
+    background: rgba(201,151,58,0.08);
+  }
+
+  .tier-card.featured::before {
+    content: 'RECOMMENDED';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 3px 10px;
+    white-space: nowrap;
+  }
+
+  .tier-badge {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--gold);
+  }
+
+  .tier-validity {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .tier-divider {
+    width: 30px;
+    height: 1px;
+    background: var(--border-gold);
+  }
+
+  .tier-benefit {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--white);
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .tier-detail {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  /* ── SLIDE 4: FIVE BENEFITS ── */
+  .slide-4 { text-align: center; }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    width: 100%;
+    margin-top: 36px;
+  }
+
+  .benefit-card {
+    padding: 22px 14px;
+    border-top: 2px solid var(--border-gold);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.02);
+    transition: border-color 0.3s, background 0.3s;
+  }
+
+  .benefit-card:hover {
+    border-top-color: var(--gold);
+    background: rgba(201,151,58,0.06);
+  }
+
+  .benefit-icon {
+    font-size: 26px;
+    line-height: 1;
+  }
+
+  .benefit-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gold-light);
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .benefit-desc {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  /* ── SLIDE 5: BUDGET 2026 ── */
+  .slide-5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+    text-align: left;
+  }
+
+  .update-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 28px;
+  }
+
+  .update-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .update-icon {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--border-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .update-text .update-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--gold-light);
+    margin-bottom: 4px;
+  }
+
+  .update-text .update-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .highlight-box {
+    border: 1px solid var(--border-gold-bright);
+    padding: 32px;
+    background: rgba(201,151,58,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .highlight-box .big-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .highlight-box .big-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: var(--text-dim);
+  }
+
+  .highlight-box .big-sub {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+  }
+
+  /* ── SLIDE 6: CASH FLOW ── */
+  .slide-6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .calc-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+  }
+
+  .calc-table tr {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .calc-table tr:last-child { border-bottom: none; }
+
+  .calc-table td {
+    padding: 10px 4px;
+    font-size: 13px;
+  }
+
+  .calc-table td:first-child { color: var(--text-muted); }
+  .calc-table td:last-child { color: var(--white); font-weight: 500; text-align: right; }
+
+  .calc-table tr.highlight td {
+    color: var(--gold-light);
+    font-weight: 600;
+  }
+
+  .savings-display {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .savings-card {
+    border: 1px solid var(--border-gold);
+    padding: 28px 32px;
+    background: rgba(201,151,58,0.05);
+  }
+
+  .savings-card .savings-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .savings-card .savings-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .savings-card .savings-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-style: italic;
+    color: var(--text-muted);
+    margin-top: 6px;
+  }
+
+  /* ── SLIDE 7: EMI INTRO ── */
+  .slide-7 { text-align: center; }
+
+  .emi-intro-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 36px;
+  }
+
+  .emi-card {
+    padding: 28px;
+    border: 1px solid var(--border-gold);
+    background: rgba(255,255,255,0.02);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+  }
+
+  .emi-card .emi-card-icon { font-size: 24px; }
+
+  .emi-card .emi-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--gold-light);
+  }
+
+  .emi-card .emi-card-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    color: var(--text-dim);
+    line-height: 1.65;
+  }
+
+  .emi-tag {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    margin-bottom: 20px;
+  }
+
+  /* ── SLIDE 8: EMI ELIGIBILITY ── */
+  .slide-8 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+  }
+
+  .eligibility-col { display: flex; flex-direction: column; }
+
+  .eligibility-col .col-title {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-gold);
+  }
+
+  .check-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .check-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .check-item .check {
+    color: var(--gold);
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .check-item .check-text {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--text-dim);
+  }
+
+  .check-item .check-text strong {
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  .msme-callout {
+    margin-top: 24px;
+    padding: 16px 20px;
+    background: rgba(201,151,58,0.1);
+    border-left: 3px solid var(--gold);
+  }
+
+  .msme-callout p {
+    font-size: 12px;
+    color: var(--gold-pale);
+    line-height: 1.6;
+  }
+
+  .msme-callout strong { color: var(--gold); }
+
+  /* ── SLIDE 9: ROADMAP ── */
+  .slide-9 { text-align: center; }
+
+  .roadmap {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+  }
+
+  .roadmap-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .roadmap-step:not(:last-child)::after {
+    content: '→';
+    position: absolute;
+    right: -12px;
+    top: 28px;
+    font-size: 18px;
+    color: var(--gold);
+    z-index: 2;
+  }
+
+  .step-node {
+    width: 56px;
+    height: 56px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gold);
+    background: var(--navy);
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+  }
+
+  .roadmap-step.target .step-node {
+    background: var(--gold);
+    color: var(--navy);
+  }
+
+  .step-content {
+    margin-top: 16px;
+    padding: 0 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .step-date {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .step-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    text-align: center;
+  }
+
+  .step-desc {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.6;
+    max-width: 140px;
+  }
+
+  /* ── SLIDE 10: PITFALLS ── */
+  .slide-10 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 50px;
+    align-items: start;
+  }
+
+  .pitfall-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .pitfall-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .pitfall-text .pitfall-wrong {
+    font-size: 11px;
+    color: #e07070;
+    margin-bottom: 2px;
+    font-weight: 500;
+  }
+
+  .pitfall-text .pitfall-right {
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+
+  /* ── SLIDE 11: WHO QUALIFIES ── */
+  .slide-11 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .qualify-yes, .qualify-no {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .qualify-header {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-bottom: 12px;
+    border-bottom: 2px solid;
+    margin-bottom: 4px;
+  }
+
+  .qualify-header.yes { color: #7ec8a0; border-color: #7ec8a0; }
+  .qualify-header.no { color: #e07070; border-color: #e07070; }
+
+  .qualify-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+
+  .qualify-item .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+
+  .qualify-item .dot.green { background: #7ec8a0; }
+  .qualify-item .dot.red { background: #e07070; }
+
+  /* ── SLIDE 12: CTA ── */
+  .slide-12 {
+    background: var(--navy);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .cta-eyebrow {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+
+  .cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .cta-title em { font-style: italic; color: var(--gold-light); }
+
+  .cta-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--text-dim);
+    max-width: 560px;
+    line-height: 1.65;
+    margin-bottom: 44px;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 52px;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    padding: 14px 32px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .btn-primary:hover { background: var(--gold-light); }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 14px 32px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s;
+  }
+
+  .btn-secondary:hover { background: rgba(201,151,58,0.1); }
+
+  .contact-row {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid var(--border-gold);
+    padding-top: 28px;
+    flex-wrap: wrap;
+  }
+
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .contact-item .c-label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .contact-item .c-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    color: var(--text-dim);
+  }
+
+  .contact-item a { color: var(--text-dim); text-decoration: none; }
+  .contact-item a:hover { color: var(--gold-light); }
+
+  /* ── NAVIGATION ── */
+  .nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 48px;
+    background: rgba(11,25,48,0.95);
+    border-top: 1px solid var(--border-gold);
+    z-index: 100;
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 0.5px;
+  }
+
+  .nav-brand span {
+    font-weight: 400;
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 11px;
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 0;
+  }
+
+  .nav-center {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .nav-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .dot-indicator {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--border-gold);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .dot-indicator.active {
+    background: var(--gold);
+    transform: scale(1.3);
+  }
+
+  .nav-counter {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .nav-controls {
+    display: flex;
+    gap: 10px;
+  }
+
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border-gold);
+    background: transparent;
+    color: var(--gold);
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .nav-btn:hover {
+    background: rgba(201,151,58,0.1);
+    border-color: var(--gold);
+  }
+
+  .nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  /* ── PROGRESS BAR ── */
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.4s cubic-bezier(.4,0,.2,1);
+    z-index: 200;
+  }
+
+  /* ── KEYBOARD HINT ── */
+  .kbd-hint {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    z-index: 100;
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+<div class="kbd-hint">← → arrow keys to navigate</div>
+
+<div class="deck" id="deck">
+
+  <!-- SLIDE 1: TITLE -->
+  <div class="slide slide-1 slide-title-bg" data-slide="1">
+    <div class="firm-badge">Juris Nair · Indirect Tax & Trade Law</div>
+    <div class="gold-rule centered"></div>
+    <div class="display-title" style="text-align:center;">
+      Authorized Economic<br><em>Operator (AEO)</em><br>
+      <span class="line2">& the EMI Scheme</span>
+    </div>
+    <div class="subtitle" style="text-align:center; margin: 0 auto;">
+      A complete guide for Indian businesses — what it is, what it offers,<br>and why 2026 is the year to act.
+    </div>
+    <div class="title-meta">
+      <div class="title-meta-item">
+        <div class="label">Updated</div>
+        <div class="value">April 2026</div>
+      </div>
+      <div class="title-divider"></div>
+      <div class="title-meta-item">
+        <div class="label">Authority</div>
+        <div class="value">Circular No. 08/2026-Customs</div>
+      </div>
+      <div class="title-divider"></div>
+      <div class="title-meta-item">
+        <div class="label">Published by</div>
+        <div class="value">Sanjeev Nair · jurisnair.com</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: WHAT IS AEO -->
+  <div class="slide slide-2" data-slide="2">
+    <div class="slide-2-left">
+      <div class="slide-label">What Is AEO</div>
+      <div class="gold-rule"></div>
+      <div class="section-title">A Trust-Based<br><em>Partnership</em> with Customs</div>
+      <div class="body-text" style="margin-top:16px;">
+        The Authorized Economic Operator programme is a voluntary CBIC certification aligned with the World Customs Organization's SAFE Framework. Businesses that demonstrate strong compliance, financial solvency, and supply chain security are recognised as trusted traders — and rewarded with significant operational and financial benefits.
+      </div>
+      <div class="definition-box">
+        <p>"AEO is not a compliance burden. It is a competitive advantage that pays for itself — in working capital freed, in clearance time saved, and in market access unlocked."</p>
+      </div>
+    </div>
+    <div class="slide-2-right">
+      <div class="stat-pill">
+        <div class="number">2011</div>
+        <div class="desc">Year AEO was introduced in India. The programme has expanded significantly since, with Budget 2026 bringing the most substantial enhancements to date.</div>
+      </div>
+      <div class="stat-pill">
+        <div class="number">4</div>
+        <div class="desc">Certification tiers — T1, T2, T3, and LO — each offering progressively greater benefits for progressively stronger compliance.</div>
+      </div>
+      <div class="stat-pill">
+        <div class="number">30</div>
+        <div class="desc">Days of deferred customs duty payment for T2/T3 holders — freeing working capital on every single import shipment.</div>
+      </div>
+      <div class="stat-pill">
+        <div class="number">MRA</div>
+        <div class="desc">Mutual Recognition Agreements with partner countries mean AEO status reduces inspection rates at foreign ports too.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: FOUR TIERS -->
+  <div class="slide slide-3" data-slide="3">
+    <div class="slide-label">Programme Structure</div>
+    <div class="gold-rule centered"></div>
+    <div class="section-title">The Four <em>AEO Tiers</em></div>
+    <div class="tiers-grid">
+      <div class="tier-card">
+        <div class="tier-badge">T1</div>
+        <div class="tier-validity">Valid · 3 Years</div>
+        <div class="tier-divider"></div>
+        <div class="tier-benefit">Priority Clearance &amp; DPD/DPE Access</div>
+        <div class="tier-detail">Entry point. 50% bank guarantee waiver. Fast-track processing. Certificate within 30 days. Ideal starting point for MSMEs.</div>
+      </div>
+      <div class="tier-card featured">
+        <div class="tier-badge">T2</div>
+        <div class="tier-validity">Valid · 3 Years</div>
+        <div class="tier-divider"></div>
+        <div class="tier-benefit">30-Day Duty Deferral + Paperless Filing</div>
+        <div class="tier-detail">Reduced bank guarantee. Dedicated CRM at Customs House. ICEGATE consolidated data access. 120–180 days to certify.</div>
+      </div>
+      <div class="tier-card featured">
+        <div class="tier-badge">T3</div>
+        <div class="tier-validity">Valid · 5 Years</div>
+        <div class="tier-divider"></div>
+        <div class="tier-benefit">No Bank Guarantee + Immediate Release</div>
+        <div class="tier-detail">Minimal scanning. Goods released on bill of entry filing. 30-day duty deferral. Factory-to-ship exports. Gold standard.</div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-badge">LO</div>
+        <div class="tier-validity">Valid · 5 Years</div>
+        <div class="tier-divider"></div>
+        <div class="tier-benefit">Logistics Operator Facilitation</div>
+        <div class="tier-detail">For freight forwarders, custodians, warehouse operators. Cross-agency recognition. Bank guarantee waivers for custodians.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 4: FIVE BENEFITS -->
+  <div class="slide slide-4" data-slide="4">
+    <div class="slide-label">Why It Matters</div>
+    <div class="gold-rule centered"></div>
+    <div class="section-title">Five Benefits That <em>Transform</em> Your Operations</div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">⚡</div>
+        <div class="benefit-title">Faster Clearance</div>
+        <div class="benefit-desc">Direct Port Delivery moves goods from port to your premises — bypassing CFS entirely. Clearance time drops from 2–3 days to under 4 hours for T3 holders.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">💰</div>
+        <div class="benefit-title">Lower Working Capital</div>
+        <div class="benefit-desc">30-day duty deferral plus reduced or waived bank guarantees free critical cash for operations and growth on every shipment.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🛡️</div>
+        <div class="benefit-title">Fewer Inspections</div>
+        <div class="benefit-desc">Risk-based checks mean fewer physical examinations. Less disruption, less unpredictability, faster turnaround at every port.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">📋</div>
+        <div class="benefit-title">Paperless Processes</div>
+        <div class="benefit-desc">ICEGATE consolidated data access and advance ruling validity now extended to 5 years create predictable, documentation-light workflows.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🌐</div>
+        <div class="benefit-title">Global Market Access</div>
+        <div class="benefit-desc">MRAs with partner countries reduce checks at foreign ports. AEO status is increasingly a competitive differentiator in global supply chains.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: BUDGET 2026 -->
+  <div class="slide slide-5" data-slide="5">
+    <div>
+      <div class="slide-label">Budget 2026 Updates</div>
+      <div class="gold-rule"></div>
+      <div class="section-title">What Changed for<br><em>AEO Holders</em></div>
+      <div class="update-list">
+        <div class="update-item">
+          <div class="update-icon">⏳</div>
+          <div class="update-text">
+            <div class="update-title">Extended Duty Deferral</div>
+            <div class="update-desc">30-day deferral for AEO T2/T3, up from 15 days. Significant working capital relief for regular importers.</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <div class="update-icon">🏭</div>
+          <div class="update-text">
+            <div class="update-title">Manufacturer Inclusion</div>
+            <div class="update-desc">Manufacturer-importers now eligible for the same 30-day deferral — previously only available to traders.</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <div class="update-icon">📜</div>
+          <div class="update-text">
+            <div class="update-title">Advance Ruling: 5 Years</div>
+            <div class="update-desc">Extended from 3 to 5 years — greater predictability for MSMEs planning import schedules.</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <div class="update-icon">🤝</div>
+          <div class="update-text">
+            <div class="update-title">Cross-Agency Recognition</div>
+            <div class="update-desc">Other government agencies encouraged to treat AEOs as trusted partners — fewer duplicated checks.</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <div class="update-icon">🚀</div>
+          <div class="update-text">
+            <div class="update-title">Factory-to-Ship Exports</div>
+            <div class="update-desc">E-seal exports move directly from factory with minimal en-route checks and direct port loading.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="highlight-box">
+        <div>
+          <div class="big-number">+15</div>
+          <div class="big-label">Extra days of duty deferral gained</div>
+          <div class="big-sub">Budget 2026 doubled the deferral period from 15 to 30 days for AEO T2/T3 holders.</div>
+        </div>
+        <div style="width:100%; height:1px; background:var(--border-gold);"></div>
+        <div>
+          <div class="big-number">5 yrs</div>
+          <div class="big-label">Advance ruling validity — up from 3</div>
+          <div class="big-sub">Plan your import schedules and pricing with greater certainty over a longer horizon.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 6: CASH FLOW NUMBERS -->
+  <div class="slide slide-6" data-slide="6">
+    <div>
+      <div class="slide-label">The Numbers</div>
+      <div class="gold-rule"></div>
+      <div class="section-title">The <em>Cash-Flow</em><br>Benefit — Quantified</div>
+      <div class="body-text" style="margin-top:16px; font-size:15px;">
+        Even a modest business importing ₹1.5 crore monthly generates material annual savings from the 30-day deferral alone.
+      </div>
+      <table class="calc-table">
+        <tr><td>Monthly Import Value</td><td>₹1,50,00,000</td></tr>
+        <tr><td>Customs Duty Rate</td><td>10%</td></tr>
+        <tr><td>Duty per Shipment</td><td>₹15,00,000</td></tr>
+        <tr><td>Borrowing Cost</td><td>12% per annum</td></tr>
+        <tr><td>Previous Deferral</td><td>15 days</td></tr>
+        <tr class="highlight"><td>New Deferral (Budget 2026)</td><td>30 days</td></tr>
+        <tr class="highlight"><td>Extra Deferral Gained</td><td>+15 days</td></tr>
+      </table>
+    </div>
+    <div class="savings-display">
+      <div class="savings-card">
+        <div class="savings-label">Saved per shipment</div>
+        <div class="savings-amount">₹7,397</div>
+        <div class="savings-sub">interest cost eliminated per import</div>
+      </div>
+      <div class="savings-card">
+        <div class="savings-label">Annual savings (12 shipments)</div>
+        <div class="savings-amount">₹88,764</div>
+        <div class="savings-sub">financing cost reduction per year</div>
+      </div>
+      <div style="padding: 14px 0;">
+        <p style="font-size:12px; color:var(--text-muted); font-style:italic; line-height:1.7;">For MSMEs on tight margins, this translates directly into improved liquidity — every rupee freed from duty financing is a rupee available for operations and growth.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 7: EMI INTRO -->
+  <div class="slide slide-7" data-slide="7">
+    <div class="emi-tag">New · Circular No. 08/2026-Customs · 28 February 2026</div>
+    <div class="gold-rule centered"></div>
+    <div class="section-title">The Eligible Manufacturer<br><em>Importer (EMI) Scheme</em></div>
+    <div class="subtitle" style="margin: 12px auto 28px; max-width: 620px;">
+      A bridge pathway extending 30-day deferred duty benefits to qualifying manufacturers — without requiring full AEO certification.
+    </div>
+    <div class="emi-intro-grid">
+      <div class="emi-card">
+        <div class="emi-card-icon">🏗️</div>
+        <div class="emi-card-title">What It Provides</div>
+        <div class="emi-card-text">Deferred payment of Customs import duty — the same benefit as AEO T2/T3 — now available to eligible manufacturers without needing full AEO certification first.</div>
+      </div>
+      <div class="emi-card">
+        <div class="emi-card-icon">📅</div>
+        <div class="emi-card-title">Active Period</div>
+        <div class="emi-card-text">Facility available from 1 April 2026 to 31 March 2028. Applications are live on aeoindia.gov.in under the "Eligible Manufacturer Importer" tab from 1 March 2026.</div>
+      </div>
+      <div class="emi-card">
+        <div class="emi-card-icon">🎯</div>
+        <div class="emi-card-title">Strategic Intent</div>
+        <div class="emi-card-text">This is a bridge, not a destination. CBIC expects EMIs to obtain AEO T2/T3 accreditation within the facility period. The two-year window starts now.</div>
+      </div>
+      <div class="emi-card">
+        <div class="emi-card-icon">📞</div>
+        <div class="emi-card-title">Dedicated Helpdesk</div>
+        <div class="emi-card-text">EMI Helpline: emihelpdesk-dic@gov.in · 011-23310014. Direct support from DIC, CBIC for queries, grievances, and guidance.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 8: EMI ELIGIBILITY -->
+  <div class="slide slide-8" data-slide="8">
+    <div class="eligibility-col">
+      <div class="slide-label">EMI Eligibility</div>
+      <div class="gold-rule"></div>
+      <div class="section-title">Core<br><em>Criteria</em></div>
+      <div class="col-title" style="margin-top:20px;">Eligibility Conditions</div>
+      <div class="check-list">
+        <div class="check-item">
+          <span class="check">✦</span>
+          <span class="check-text"><strong>Manufacturer or Job-Worker Importer</strong> — under CGST Act Sec 2(72), or sending inputs to job worker under Sec 143</span>
+        </div>
+        <div class="check-item">
+          <span class="check">✦</span>
+          <span class="check-text"><strong>Valid IEC</strong> — active Importer Exporter Code from DGFT</span>
+        </div>
+        <div class="check-item">
+          <span class="check">✦</span>
+          <span class="check-text"><strong>EXIM Documents</strong> — minimum 25 Bills of Entry/Shipping Bills in previous FY. <span style="color:var(--gold);">MSMEs: relaxed to just 10</span></span>
+        </div>
+        <div class="check-item">
+          <span class="check">✦</span>
+          <span class="check-text"><strong>GST Registration</strong> — at least one active GSTIN with manufacturing declared in Form REG-01</span>
+        </div>
+        <div class="check-item">
+          <span class="check">✦</span>
+          <span class="check-text"><strong>Turnover</strong> — aggregate across all GSTINs under same PAN must exceed <span style="color:var(--gold);">₹5 Crore</span> in last FY</span>
+        </div>
+        <div class="check-item">
+          <span class="check">✦</span>
+          <span class="check-text"><strong>Business Continuity</strong> — minimum 2 financial years of activity before application date</span>
+        </div>
+      </div>
+      <div class="msme-callout">
+        <p><strong>MSME Relaxation:</strong> Just 10 EXIM documents required (vs 25 for others). Ensure your Udyam certificate is ready to upload with your application.</p>
+      </div>
+    </div>
+    <div class="eligibility-col">
+      <div class="col-title" style="margin-top:56px;">Compliance &amp; Clean Record</div>
+      <div class="check-list">
+        <div class="check-item">
+          <span class="check">✦</span>
+          <span class="check-text"><strong>All GSTR-3B returns filed</strong> for all active GSTINs as on application date</span>
+        </div>
+        <div class="check-item">
+          <span class="check">✦</span>
+          <span class="check-text"><strong>No tax collected but not deposited</strong> under GST, Central Excise, or Service Tax</span>
+        </div>
+        <div class="check-item">
+          <span class="check">✦</span>
+          <span class="check-text"><strong>Financial solvency</strong> — CA certificate in Appendix-III format. Not insolvent or under liquidation</span>
+        </div>
+        <div class="check-item">
+          <span class="check">✦</span>
+          <span class="check-text"><strong>No arrests or convictions</strong> — applicant, directors, partners must have clean record under Customs, Excise, GST</span>
+        </div>
+        <div class="check-item">
+          <span class="check">✦</span>
+          <span class="check-text"><strong>No pending prosecution</strong> under any applicable law</span>
+        </div>
+        <div class="check-item">
+          <span class="check">✦</span>
+          <span class="check-text"><strong>AEO-T1 holders</strong> who meet EMI criteria are also eligible to apply</span>
+        </div>
+      </div>
+      <div style="margin-top:24px; padding:16px 20px; border:1px solid var(--border-gold); background:rgba(255,255,255,0.02);">
+        <p style="font-size:11px; color:var(--text-muted); line-height:1.7;">Apply online at <strong style="color:var(--gold);">aeoindia.gov.in</strong> → Tab: "Eligible Manufacturer Importer". Upload Appendix-I form, supporting documents per Appendix-II, and CA certificate per Appendix-III.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 9: ROADMAP -->
+  <div class="slide slide-9" data-slide="9">
+    <div class="slide-label">Your Two-Year Journey</div>
+    <div class="gold-rule centered"></div>
+    <div class="section-title">EMI → AEO: The <em>Roadmap</em></div>
+    <div class="roadmap">
+      <div class="roadmap-step">
+        <div class="step-node">1</div>
+        <div class="step-content">
+          <div class="step-date">Mar 2026</div>
+          <div class="step-title">Apply for EMI</div>
+          <div class="step-desc">Submit on aeoindia.gov.in. Nodal person obtains ICEGATE login. Indicate flag 'D' in Bill of Entry.</div>
+        </div>
+      </div>
+      <div class="roadmap-step">
+        <div class="step-node">2</div>
+        <div class="step-content">
+          <div class="step-date">Apr 2026</div>
+          <div class="step-title">EMI Active</div>
+          <div class="step-desc">Deferred duty live from 1 April 2026. Monthly payment cycle begins under Deferred Payment Rules 2016.</div>
+        </div>
+      </div>
+      <div class="roadmap-step">
+        <div class="step-node">3</div>
+        <div class="step-content">
+          <div class="step-date">Yr 1–2</div>
+          <div class="step-title">Build AEO Readiness</div>
+          <div class="step-desc">Compile security SOPs, CCTV records, partner contracts. Ensure 25 EXIM documents. Engage CRM early.</div>
+        </div>
+      </div>
+      <div class="roadmap-step">
+        <div class="step-node">4</div>
+        <div class="step-content">
+          <div class="step-date">Month 1–3</div>
+          <div class="step-title">File AEO Application</div>
+          <div class="step-desc">Submit Annexures A–E (F for T3) to Chief Commissioner + AEO Programme Manager, DIC Delhi.</div>
+        </div>
+      </div>
+      <div class="roadmap-step target">
+        <div class="step-node">✓</div>
+        <div class="step-content">
+          <div class="step-date">Before Mar 2028</div>
+          <div class="step-title">AEO T2 or T3</div>
+          <div class="step-desc">Full AEO. Permanent deferral, no bank guarantee (T3), minimal scanning, MRA benefits globally.</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:32px; padding:16px 28px; border:1px solid var(--border-gold); background:rgba(201,151,58,0.05); max-width:720px; text-align:center;">
+      <p style="font-size:12px; color:var(--gold-pale); line-height:1.7;"><strong style="color:var(--gold);">Strategy:</strong> Apply for EMI now → Use the bridge period to build AEO readiness → Graduate to T2/T3 before March 2028. The scheme ends — the AEO benefits do not.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 10: PITFALLS -->
+  <div class="slide slide-10" data-slide="10">
+    <div style="grid-column: 1 / -1; margin-bottom:8px;">
+      <div class="slide-label">Common Mistakes</div>
+      <div class="gold-rule"></div>
+      <div class="section-title">Pitfalls to <em>Avoid</em></div>
+    </div>
+    <div class="pitfall-item">
+      <div class="pitfall-icon">⚠️</div>
+      <div class="pitfall-text">
+        <div class="pitfall-wrong">✗ Incomplete Annexures</div>
+        <div class="pitfall-right">Run a pre-submission audit of all Annexures A–F before filing. A single missing document delays the entire application.</div>
+      </div>
+    </div>
+    <div class="pitfall-item">
+      <div class="pitfall-icon">⚠️</div>
+      <div class="pitfall-text">
+        <div class="pitfall-wrong">✗ Poor CRM Engagement</div>
+        <div class="pitfall-right">Your Client Relationship Manager is your single escalation point. Proactive engagement prevents small issues from becoming show-stoppers.</div>
+      </div>
+    </div>
+    <div class="pitfall-item">
+      <div class="pitfall-icon">⚠️</div>
+      <div class="pitfall-text">
+        <div class="pitfall-wrong">✗ Overlooking MSME Relaxations</div>
+        <div class="pitfall-right">Explicitly document your MSME status and Udyam registration in the application. Without this, relaxed thresholds do not automatically apply.</div>
+      </div>
+    </div>
+    <div class="pitfall-item">
+      <div class="pitfall-icon">⚠️</div>
+      <div class="pitfall-text">
+        <div class="pitfall-wrong">✗ Weak Record-Keeping</div>
+        <div class="pitfall-right">Simple digital filing and regular backups are sufficient. Consistency matters more than complexity — but gaps in records are red flags.</div>
+      </div>
+    </div>
+    <div class="pitfall-item">
+      <div class="pitfall-icon">⚠️</div>
+      <div class="pitfall-text">
+        <div class="pitfall-wrong">✗ Ignoring Partner Security</div>
+        <div class="pitfall-right">Include security clauses in all supplier and logistics contracts. Request partner security profiles. This is assessed during verification.</div>
+      </div>
+    </div>
+    <div class="pitfall-item">
+      <div class="pitfall-icon">⚠️</div>
+      <div class="pitfall-text">
+        <div class="pitfall-wrong">✗ Late Renewals</div>
+        <div class="pitfall-right">Set calendar reminders: T1 = 30 days before expiry · T2 = 60 days · T3/LO = 90 days. Late renewal risks a compliance gap.</div>
+      </div>
+    </div>
+    <div class="pitfall-item">
+      <div class="pitfall-icon">⚠️</div>
+      <div class="pitfall-text">
+        <div class="pitfall-wrong">✗ Waiting on EMI</div>
+        <div class="pitfall-right">The EMI facility closes on 31 March 2028 and will not be extended. Businesses that delay may miss the bridge entirely.</div>
+      </div>
+    </div>
+    <div class="pitfall-item">
+      <div class="pitfall-icon">⚠️</div>
+      <div class="pitfall-text">
+        <div class="pitfall-wrong">✗ Assuming Cross-Agency Auto-Facilitation</div>
+        <div class="pitfall-right">Cross-agency recognition is not automatic. Request it proactively through your CRM for each regulatory body.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 11: WHO QUALIFIES -->
+  <div class="slide slide-11" data-slide="11">
+    <div>
+      <div class="slide-label">Readiness Check</div>
+      <div class="gold-rule"></div>
+      <div class="section-title">Is AEO/EMI<br><em>Right for You?</em></div>
+      <div class="body-text" style="margin-top:16px; font-size:15px;">
+        AEO is not the right fit for every business. A quick honest assessment will tell you where to start.
+      </div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:28px;">
+      <div class="qualify-yes">
+        <div class="qualify-header yes">Strong candidates — consider applying now</div>
+        <div class="qualify-item"><span class="dot green"></span>Regular importer with 10+ shipments per year and turnover above ₹5 crore</div>
+        <div class="qualify-item"><span class="dot green"></span>Manufacturer importing raw materials or capital goods</div>
+        <div class="qualify-item"><span class="dot green"></span>Exporter with time-sensitive supply chains and overseas buyer scrutiny</div>
+        <div class="qualify-item"><span class="dot green"></span>Business with clean GST and customs compliance record for 2+ years</div>
+        <div class="qualify-item"><span class="dot green"></span>MSME with Udyam registration and at least 10 EXIM documents last FY</div>
+      </div>
+      <div class="qualify-no">
+        <div class="qualify-header no">Build foundations first — then apply</div>
+        <div class="qualify-item"><span class="dot red"></span>Pending GSTR-3B returns or compliance gaps across GSTINs</div>
+        <div class="qualify-item"><span class="dot red"></span>Fewer than 10 EXIM documents in the last financial year</div>
+        <div class="qualify-item"><span class="dot red"></span>Any unresolved arrest, conviction, or prosecution under tax or customs laws</div>
+        <div class="qualify-item"><span class="dot red"></span>Business operating for less than 2 financial years</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 12: CTA -->
+  <div class="slide slide-12 slide-title-bg" data-slide="12">
+    <div class="cta-eyebrow">Ready to Begin</div>
+    <div class="cta-title">Start Your<br><em>AEO Journey</em> Today</div>
+    <div class="cta-subtitle">
+      The EMI scheme is open. The two-year runway to full AEO accreditation has begun. Businesses that act now will be certified AEO holders well before March 2028.
+    </div>
+    <div class="cta-buttons">
+      <a href="mailto:sanjeev@jurisnair.com" class="btn-primary">Speak to Juris Nair →</a>
+      <a href="https://www.aeoindia.gov.in" target="_blank" class="btn-secondary">Apply on aeoindia.gov.in</a>
+    </div>
+    <div class="contact-row">
+      <div class="contact-item">
+        <div class="c-label">Email</div>
+        <div class="c-value"><a href="mailto:sanjeev@jurisnair.com">sanjeev@jurisnair.com</a></div>
+      </div>
+      <div style="width:1px; height:32px; background:var(--border-gold);"></div>
+      <div class="contact-item">
+        <div class="c-label">Website</div>
+        <div class="c-value"><a href="https://www.jurisnair.com" target="_blank">www.jurisnair.com</a></div>
+      </div>
+      <div style="width:1px; height:32px; background:var(--border-gold);"></div>
+      <div class="contact-item">
+        <div class="c-label">AEO Portal</div>
+        <div class="c-value"><a href="https://www.aeoindia.gov.in" target="_blank">www.aeoindia.gov.in</a></div>
+      </div>
+      <div style="width:1px; height:32px; background:var(--border-gold);"></div>
+      <div class="contact-item">
+        <div class="c-label">EMI Helpdesk</div>
+        <div class="c-value">011-23310014</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /deck -->
+
+<!-- NAVIGATION -->
+<nav class="nav">
+  <div class="nav-brand">
+    Juris Nair
+    <span>Indirect Tax &amp; Trade Law · Mumbai</span>
+  </div>
+  <div class="nav-center">
+    <div class="nav-dots" id="navDots"></div>
+    <div class="nav-counter" id="navCounter">1 / 12</div>
+  </div>
+  <div class="nav-controls">
+    <button class="nav-btn" id="prevBtn" onclick="navigate(-1)" disabled>←</button>
+    <button class="nav-btn" id="nextBtn" onclick="navigate(1)">→</button>
+  </div>
+</nav>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  let current = 0;
+  let isAnimating = false;
+
+  // ── INIT: show first slide immediately, no transition ──
+  // Remove any stale 'active' from HTML, set first slide directly
+  slides.forEach(s => {
+    s.classList.remove('active');
+    s.style.opacity = '0';
+    s.style.transform = 'translateX(60px)';
+  });
+
+  // Show slide 0 instantly
+  slides[0].style.opacity = '1';
+  slides[0].style.transform = 'translateX(0)';
+  slides[0].style.pointerEvents = 'all';
+  slides[0].classList.add('active');
+
+  // After first paint, enable transitions on all slides
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      slides.forEach(s => s.classList.add('ready'));
+    });
+  });
+
+  // Build nav dots
+  const dotsContainer = document.getElementById('navDots');
+  slides.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'dot-indicator' + (i === 0 ? ' active' : '');
+    dot.onclick = () => goTo(i);
+    dotsContainer.appendChild(dot);
+  });
+
+  function updateUI() {
+    const dots = document.querySelectorAll('.dot-indicator');
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    document.getElementById('navCounter').textContent = `${current + 1} / ${totalSlides}`;
+    document.getElementById('prevBtn').disabled = current === 0;
+    document.getElementById('nextBtn').disabled = current === totalSlides - 1;
+    const pct = (current / (totalSlides - 1)) * 100;
+    document.getElementById('progressBar').style.width = pct + '%';
+  }
+
+  function goTo(index) {
+    if (isAnimating || index === current) return;
+    isAnimating = true;
+
+    const outgoing = slides[current];
+    const incoming = slides[index];
+    const dir = index > current ? 1 : -1;
+
+    // Outgoing: slide out
+    outgoing.classList.remove('active');
+    outgoing.classList.add('exit');
+    outgoing.style.opacity = '0';
+    outgoing.style.transform = `translateX(${-60 * dir}px)`;
+    outgoing.style.pointerEvents = 'none';
+
+    // Incoming: position off-screen instantly (no transition yet)
+    incoming.classList.remove('ready');
+    incoming.style.opacity = '0';
+    incoming.style.transform = `translateX(${60 * dir}px)`;
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        // Re-enable transition then animate in
+        incoming.classList.add('ready');
+        incoming.style.opacity = '1';
+        incoming.style.transform = 'translateX(0)';
+        incoming.style.pointerEvents = 'all';
+        incoming.classList.add('active');
+        current = index;
+        updateUI();
+
+        setTimeout(() => {
+          outgoing.classList.remove('exit');
+          outgoing.style.transform = 'translateX(60px)';
+          isAnimating = false;
+        }, 600);
+      });
+    });
+  }
+
+  function navigate(dir) {
+    const next = current + dir;
+    if (next >= 0 && next < totalSlides) goTo(next);
+  }
+
+  // Keyboard navigation
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') navigate(1);
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') navigate(-1);
+  });
+
+  // Touch / swipe
+  let touchStartX = 0;
+  document.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+  document.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) navigate(diff > 0 ? 1 : -1);
+  });
+
+  updateUI();
+</script>
+</body>
+</html>
