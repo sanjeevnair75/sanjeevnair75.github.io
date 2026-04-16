@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily BHC Orders Tracker | Juris Nair</title>
+  <meta name="description" content="Daily Bombay High Court orders tracker — filters Indirect Tax matters across all 5 benches. Internal tool by Juris Nair.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #B8974A;
+      --gold-light: #D4B878;
+      --dark: #0E0E0E;
+      --dark2: #161616;
+      --dark3: #1E1E1E;
+      --text: #E8E0D0;
+      --text-muted: #9A9080;
+      --border: rgba(184, 151, 74, 0.2);
+      --green: #4ADE80;
+      --yellow: #FBBF24;
+      --red: #F87171;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--dark);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.4rem 4rem;
+      background: rgba(14, 14, 14, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem; font-weight: 600;
+      color: var(--gold); letter-spacing: 0.05em; text-decoration: none;
+    }
+
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      color: var(--text-muted); text-decoration: none;
+      font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    .wrapper { max-width: 1200px; margin: 0 auto; padding: 8rem 2rem 4rem; }
+
+    .page-tag {
+      font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); border: 1px solid var(--border);
+      padding: 0.35rem 0.9rem; display: inline-block; margin-bottom: 1.5rem;
+    }
+
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3rem); font-weight: 600;
+      line-height: 1.15; margin-bottom: 0.8rem;
+    }
+    .page-title em { font-style: italic; color: var(--gold); }
+
+    .page-subtitle { color: var(--text-muted); font-size: 1rem; margin-bottom: 2rem; max-width: 700px; }
+
+    .controls {
+      display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;
+      padding: 1.5rem; background: var(--dark3);
+      border: 1px solid var(--border); border-radius: 4px;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      background: var(--gold); color: var(--dark);
+      padding: 0.85rem 1.8rem; border: none; border-radius: 2px;
+      font-family: 'DM Sans', sans-serif; font-size: 0.82rem;
+      font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+      cursor: pointer; transition: background 0.3s, transform 0.2s;
+    }
+    .btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+    .btn-outline {
+      background: transparent; color: var(--gold);
+      border: 1px solid var(--gold);
+    }
+    .btn-outline:hover { background: var(--gold); color: var(--dark); }
+
+    .filter-group { display: flex; gap: 0.6rem; align-items: center; margin-left: auto; }
+    .filter-group label { font-size: 0.78rem; color: var(--text-muted); }
+
+    select, input[type="text"] {
+      background: var(--dark2); color: var(--text);
+      border: 1px solid var(--border); padding: 0.55rem 0.9rem;
+      font-family: 'DM Sans', sans-serif; font-size: 0.88rem;
+      border-radius: 2px; outline: none; transition: border-color 0.3s;
+    }
+    select:focus, input:focus { border-color: var(--gold); }
+
+    .stats-row {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem; margin-bottom: 2rem;
+    }
+
+    .stat {
+      background: var(--dark3); border: 1px solid var(--border);
+      padding: 1.2rem; border-radius: 4px; text-align: center;
+    }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem; font-weight: 600; color: var(--gold);
+      line-height: 1; margin-bottom: 0.3rem;
+    }
+    .stat-label { font-size: 0.75rem; color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase; }
+
+    .status {
+      padding: 0.9rem 1.2rem; border-radius: 2px;
+      font-size: 0.88rem; margin-bottom: 1.5rem; display: none;
+    }
+    .status.loading {
+      background: rgba(184, 151, 74, 0.1); border-left: 3px solid var(--gold);
+      color: var(--text); display: block;
+    }
+    .status.error {
+      background: rgba(248, 113, 113, 0.1); border-left: 3px solid var(--red);
+      color: var(--red); display: block;
+    }
+    .status.success {
+      background: rgba(74, 222, 128, 0.1); border-left: 3px solid var(--green);
+      color: var(--green); display: block;
+    }
+
+    .table-wrap {
+      background: var(--dark3); border: 1px solid var(--border);
+      border-radius: 4px; overflow: hidden; margin-bottom: 2rem;
+    }
+
+    table {
+      width: 100%; border-collapse: collapse; font-size: 0.85rem;
+    }
+    thead {
+      background: var(--dark2);
+      border-bottom: 2px solid var(--gold);
+    }
+    th {
+      padding: 0.9rem 0.8rem; text-align: left;
+      color: var(--gold); font-weight: 500; font-size: 0.72rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    td {
+      padding: 0.8rem; border-bottom: 1px solid var(--border);
+      color: var(--text); vertical-align: top;
+    }
+    tr:hover td { background: rgba(184, 151, 74, 0.05); }
+
+    .pill {
+      display: inline-block; padding: 0.15rem 0.6rem;
+      font-size: 0.7rem; letter-spacing: 0.05em;
+      border-radius: 2px; font-weight: 500;
+    }
+    .pill.high { background: rgba(74, 222, 128, 0.15); color: var(--green); }
+    .pill.medium { background: rgba(251, 191, 36, 0.15); color: var(--yellow); }
+    .pill.low { background: rgba(248, 113, 113, 0.15); color: var(--red); }
+    .pill.none { background: var(--dark2); color: var(--text-muted); }
+
+    .pill.cat {
+      background: rgba(184, 151, 74, 0.15); color: var(--gold);
+    }
+
+    td a { color: var(--gold); text-decoration: none; }
+    td a:hover { text-decoration: underline; }
+
+    .empty-state {
+      padding: 4rem 2rem; text-align: center; color: var(--text-muted);
+    }
+    .empty-state .big { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--gold); margin-bottom: 0.5rem; }
+
+    .help-box {
+      margin-top: 2rem; padding: 1.5rem;
+      background: var(--dark3); border: 1px solid var(--border);
+      border-left: 3px solid var(--gold); border-radius: 2px;
+      font-size: 0.88rem; color: var(--text-muted); line-height: 1.8;
+    }
+    .help-box strong { color: var(--text); }
+
+    @media (max-width: 768px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .nav-links { display: none; }
+      .wrapper { padding: 6rem 1rem 3rem; }
+      .filter-group { margin-left: 0; width: 100%; }
+      table { font-size: 0.78rem; }
+      th, td { padding: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="passwordGate" style="position:fixed; inset:0; z-index:1000; background:#0E0E0E; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:2rem;">
+  <div style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:600; color:#B8974A; margin-bottom:0.4rem; letter-spacing:0.05em;">Juris Nair</div>
+  <div style="font-size:0.78rem; letter-spacing:0.2em; text-transform:uppercase; color:#9A9080; margin-bottom:2.5rem;">Internal Tool &middot; Access Required</div>
+  <form id="pwForm" style="display:flex; flex-direction:column; gap:1rem; width:100%; max-width:340px;">
+    <input type="password" id="pwInput" placeholder="Enter password" autofocus style="background:#1E1E1E; color:#E8E0D0; border:1px solid rgba(184,151,74,0.3); padding:0.9rem 1.1rem; font-family:'DM Sans',sans-serif; font-size:0.95rem; border-radius:2px; outline:none;" />
+    <button type="submit" style="background:#B8974A; color:#0E0E0E; border:none; padding:0.9rem; font-family:'DM Sans',sans-serif; font-size:0.82rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; border-radius:2px; cursor:pointer;">Access Tool</button>
+    <div id="pwError" style="color:#F87171; font-size:0.82rem; text-align:center; min-height:1rem;"></div>
+  </form>
+</div>
+
+<script>
+(function(){
+  var CORRECT = 'sanjradhappu110305#';
+  var gate = document.getElementById('passwordGate');
+  var form = document.getElementById('pwForm');
+  var input = document.getElementById('pwInput');
+  var err = document.getElementById('pwError');
+  // Check sessionStorage so user doesn't have to re-enter during the same browser session
+  if (sessionStorage.getItem('bhc_access') === 'ok') { gate.style.display='none'; return; }
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (input.value === CORRECT) {
+      sessionStorage.setItem('bhc_access', 'ok');
+      gate.style.display = 'none';
+    } else {
+      err.textContent = 'Incorrect password';
+      input.value = '';
+      input.focus();
+    }
+  });
+})();
+</script>
+
+<nav>
+  <a href="index.html" class="nav-logo">Juris Nair</a>
+  <ul class="nav-links">
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#blog">Insights</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="wrapper">
+  <span class="page-tag">Internal Tool</span>
+  <h1 class="page-title">Daily BHC Orders <em>Tracker</em></h1>
+  <p class="page-subtitle">
+    Fetches the latest judgments and orders across all five benches of the Bombay High Court —
+    Bombay, Aurangabad, Nagpur, Goa, and Kolhapur — and auto-flags Indirect Tax matters
+    by matching parties, keywords, and statutory references.
+  </p>
+
+  <div class="controls">
+    <button id="fetchBtn" class="btn">Fetch Latest Orders</button>
+    <button id="exportBtn" class="btn btn-outline" disabled>Export to CSV</button>
+    <div class="filter-group">
+      <label for="filterBench">Bench:</label>
+      <select id="filterBench">
+        <option value="">All Benches</option>
+        <option value="Bombay HC">Bombay</option>
+        <option value="Bombay HC Aurangabad">Aurangabad</option>
+        <option value="Bombay HC Nagpur">Nagpur</option>
+        <option value="Bombay HC Goa">Goa</option>
+        <option value="Bombay HC Kolhapur">Kolhapur</option>
+      </select>
+      <label for="filterIT">Show:</label>
+      <select id="filterIT">
+        <option value="all">All Orders</option>
+        <option value="it" selected>Indirect Tax only</option>
+      </select>
+      <input type="text" id="searchBox" placeholder="Search parties, case no..." />
+    </div>
+  </div>
+
+  <div id="statusBar" class="status"></div>
+
+  <div id="statsRow" class="stats-row" style="display:none;">
+    <div class="stat"><div class="stat-num" id="statTotal">0</div><div class="stat-label">Total Orders</div></div>
+    <div class="stat"><div class="stat-num" id="statIT">0</div><div class="stat-label">Indirect Tax</div></div>
+    <div class="stat"><div class="stat-num" id="statHigh">0</div><div class="stat-label">High Confidence</div></div>
+    <div class="stat"><div class="stat-num" id="statMedium">0</div><div class="stat-label">Medium</div></div>
+    <div class="stat"><div class="stat-num" id="statLow">0</div><div class="stat-label">For Review</div></div>
+  </div>
+
+  <div class="table-wrap">
+    <table id="ordersTable">
+      <thead>
+        <tr>
+          <th style="width:40px;">#</th>
+          <th style="width:160px;">Bench</th>
+          <th style="width:130px;">Case No.</th>
+          <th>Parties</th>
+          <th style="width:170px;">Coram</th>
+          <th style="width:90px;">Date</th>
+          <th style="width:80px;">Category</th>
+          <th style="width:85px;">Confidence</th>
+          <th style="width:50px;">PDF</th>
+        </tr>
+      </thead>
+      <tbody id="ordersBody">
+        <tr><td colspan="9" class="empty-state">
+          <div class="big">Ready to fetch</div>
+          <div>Click the button above to pull the latest orders from all five BHC benches.</div>
+        </td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="help-box">
+    <strong>How this tool works:</strong> The tracker fetches the "Recent Reported Orders / Judgments" table from the official Bombay High Court website (bombayhighcourt.gov.in) for each of the five benches. It then runs every entry through a keyword and party-name classifier to identify Indirect Tax matters — Customs, GST, Excise, Service Tax, Trade Remedy, FTP — and assigns a confidence level. The results appear in the table above, and can be exported to CSV for import into your register.<br><br>
+    <strong>Confidence levels:</strong> <span class="pill high">HIGH</span> two or more strong signals (e.g. "Commissioner of Customs" + "Bill of Entry") — <span class="pill medium">MEDIUM</span> one strong signal — <span class="pill low">LOW</span> only generic tax/revenue keywords, needs manual review.<br><br>
+    <strong>Note:</strong> Because browsers block direct cross-origin requests to government sites, this web tool uses a public CORS proxy (corsproxy.io) to route the request. If the fetch fails, use the Python script (bhc_daily_orders.py) instead — it has no such limitation.
+  </div>
+</div>
+
+<script>
+(function () {
+  const BENCHES = [
+    { code: 'B', name: 'Bombay HC' },
+    { code: 'A', name: 'Bombay HC Aurangabad' },
+    { code: 'N', name: 'Bombay HC Nagpur' },
+    { code: 'G', name: 'Bombay HC Goa' },
+    { code: 'K', name: 'Bombay HC Kolhapur' },
+  ];
+
+  const BASE = 'https://bombayhighcourt.gov.in/bhc';
+  const RECENT = BASE + '/front/recentjudgment';
+  // CORS proxy — required because government sites block browser XHR
+  const PROXY = 'https://corsproxy.io/?url=';
+
+  const KEYWORDS_HIGH = [
+    /\bCustoms?\b/i, /\bCGST\b/i, /\bSGST\b/i, /\bIGST\b/i, /\bGST\b/i,
+    /\bExcise\b/i, /\bService Tax\b/i, /\bCENVAT\b/i, /\bCESTAT\b/i,
+    /\bDGGI\b/i, /\bDRI\b/i, /\bCBIC\b/i, /\bCBEC\b/i, /\bDGFT\b/i,
+    /\bBill of Entry\b/i, /\bShow Cause Notice\b/i, /\bAnti.?Dumping\b/i,
+    /\bSafeguard Duty\b/i, /\bCAAR\b/i, /\bICEGATE\b/i,
+    /\bCustoms Act\b/i, /\bCGST Act\b/i, /\bIGST Act\b/i,
+  ];
+
+  const KEYWORDS_MEDIUM = [
+    /\bRevenue\b/i, /\bDuty\b/i, /\bDepartment of Revenue\b/i,
+    /\bMinistry of Finance\b/i, /\bFTP\b/i, /\bFEMA\b/i, /\bSEZ\b/i, /\bEPCG\b/i,
+    /\bPMLA\b/i, /\bEnforcement Directorate\b/i,
+    /\bAdvance Ruling\b/i, /\bAdvance Authorisation\b/i,
+  ];
+
+  const PARTY_HIGH = [
+    /Commissioner of Customs/i, /Commissioner of CGST/i,
+    /Commissioner of Central Excise/i, /Commissioner of Service Tax/i,
+    /Principal Commissioner of (?:Customs|CGST|Central Excise|Service Tax|GST)/i,
+    /Chief Commissioner of (?:Customs|CGST|GST|Central Excise)/i,
+    /Additional Commissioner of (?:Customs|CGST|Central Excise)/i,
+    /Directorate General of GST Intelligence/i,
+    /Directorate of Revenue Intelligence/i,
+    /Central Board of Indirect Taxes/i,
+  ];
+
+  function classify(text) {
+    const signals = [];
+    let category = 'N/A';
+    let highHits = 0, medHits = 0;
+
+    for (const re of KEYWORDS_HIGH) {
+      const m = text.match(re);
+      if (m) {
+        signals.push('keyword:' + m[0]);
+        highHits++;
+        if (category === 'N/A') {
+          const kw = m[0].toLowerCase();
+          if (/\b(c|s|i)?gst\b/.test(kw)) category = 'GST';
+          else if (/(custom|dri|bill of entry|caar|icegate|dggi)/.test(kw)) category = 'Customs';
+          else if (/(excise|cestat|cenvat)/.test(kw)) category = 'Excise';
+          else if (/service tax/.test(kw)) category = 'Service Tax';
+          else if (/(dump|safeguard)/.test(kw)) category = 'Trade Remedy';
+          else if (/dgft/.test(kw)) category = 'FTP';
+        }
+      }
+    }
+    for (const re of PARTY_HIGH) {
+      const m = text.match(re);
+      if (m) { signals.push('party:' + m[0]); highHits += 2; }
+    }
+    for (const re of KEYWORDS_MEDIUM) {
+      const m = text.match(re);
+      if (m) { signals.push('keyword:' + m[0]); medHits++; }
+    }
+
+    if (highHits >= 2) return { isIT: true, confidence: 'high', category: category === 'N/A' ? 'Indirect Tax' : category, signals: signals.slice(0, 6).join('; ') };
+    if (highHits === 1) return { isIT: true, confidence: 'medium', category: category === 'N/A' ? 'Indirect Tax' : category, signals: signals.slice(0, 6).join('; ') };
+    if (medHits >= 2) return { isIT: true, confidence: 'low', category: 'Possibly Indirect Tax (review)', signals: signals.slice(0, 6).join('; ') };
+    return { isIT: false, confidence: 'none', category: 'N/A', signals: '' };
+  }
+
+  function decodeHtml(s) {
+    const e = document.createElement('textarea');
+    e.innerHTML = s;
+    return e.value;
+  }
+
+  function cleanText(t) {
+    return decodeHtml(t.replace(/<br\s*\/?>/gi, ' ').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim());
+  }
+
+  function parseRows(html, benchName) {
+    const tbodyMatch = html.match(/<tbody[^>]*>([\s\S]*?)<\/tbody>/);
+    if (!tbodyMatch) return [];
+    const rowsHtml = tbodyMatch[1].match(/<tr[^>]*>[\s\S]*?<\/tr>/g) || [];
+    const out = [];
+    for (const row of rowsHtml) {
+      const cells = [...row.matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map(m => m[1]);
+      if (cells.length < 5) continue;
+      const matterNo = cleanText(cells[1]);
+      const parties = cleanText(cells[2]);
+      const coram = cleanText(cells[3]);
+      const dateHtml = cells[4];
+      const dateText = cleanText(dateHtml);
+      const dateMatch = dateText.match(/(\d{2}\/\d{2}\/\d{4})/);
+      const orderDate = dateMatch ? dateMatch[1] : '';
+      const linkMatch = dateHtml.match(/href="([^"]*download[^"]*)"/);
+      const pdfLink = linkMatch ? decodeHtml(linkMatch[1]) : '';
+      out.push({ bench: benchName, matterNo, parties, coram, orderDate, pdfLink });
+    }
+    return out;
+  }
+
+  async function fetchBench(bench) {
+    const url = PROXY + encodeURIComponent(BASE + '/bench/change?bench=' + bench.code);
+    try { await fetch(url); } catch (e) { /* ignore */ }
+    const allResults = [];
+    for (let page = 1; page <= 5; page++) {
+      const pageUrl = page === 1 ? RECENT : RECENT + '?page=' + page;
+      const resp = await fetch(PROXY + encodeURIComponent(pageUrl));
+      if (!resp.ok) break;
+      const html = await resp.text();
+      const rows = parseRows(html, bench.name);
+      if (!rows.length) break;
+      allResults.push(...rows);
+      if (!html.includes('page=' + (page + 1))) break;
+    }
+    return allResults;
+  }
+
+  let allOrders = [];
+
+  const $ = id => document.getElementById(id);
+  const statusBar = $('statusBar');
+  const fetchBtn = $('fetchBtn');
+  const exportBtn = $('exportBtn');
+
+  function setStatus(msg, cls) {
+    statusBar.className = 'status ' + cls;
+    statusBar.textContent = msg;
+  }
+
+  function renderTable() {
+    const bench = $('filterBench').value;
+    const itFilter = $('filterIT').value;
+    const search = $('searchBox').value.toLowerCase();
+    const filtered = allOrders.filter(o => {
+      if (bench && o.bench !== bench) return false;
+      if (itFilter === 'it' && !o.isIT) return false;
+      if (search) {
+        const blob = (o.parties + ' ' + o.matterNo + ' ' + o.coram).toLowerCase();
+        if (!blob.includes(search)) return false;
+      }
+      return true;
+    });
+
+    const tbody = $('ordersBody');
+    if (!filtered.length) {
+      tbody.innerHTML = '<tr><td colspan="9" class="empty-state"><div class="big">No results</div><div>Try adjusting the filters above.</div></td></tr>';
+      return;
+    }
+
+    tbody.innerHTML = filtered.map((o, i) => {
+      const confClass = o.confidence || 'none';
+      const catPill = o.isIT ? '<span class="pill cat">' + o.category + '</span>' : '';
+      const confPill = o.isIT ? '<span class="pill ' + confClass + '">' + confClass.toUpperCase() + '</span>' : '<span class="pill none">—</span>';
+      const pdfCell = o.pdfLink ? '<a href="' + o.pdfLink + '" target="_blank" rel="noopener">PDF ↗</a>' : '—';
+      return '<tr>'
+        + '<td>' + (i + 1) + '</td>'
+        + '<td>' + o.bench + '</td>'
+        + '<td>' + o.matterNo + '</td>'
+        + '<td>' + o.parties + '</td>'
+        + '<td>' + o.coram + '</td>'
+        + '<td>' + o.orderDate + '</td>'
+        + '<td>' + catPill + '</td>'
+        + '<td>' + confPill + '</td>'
+        + '<td>' + pdfCell + '</td>'
+        + '</tr>';
+    }).join('');
+  }
+
+  function renderStats() {
+    $('statsRow').style.display = allOrders.length ? 'grid' : 'none';
+    $('statTotal').textContent = allOrders.length;
+    $('statIT').textContent = allOrders.filter(o => o.isIT).length;
+    $('statHigh').textContent = allOrders.filter(o => o.confidence === 'high').length;
+    $('statMedium').textContent = allOrders.filter(o => o.confidence === 'medium').length;
+    $('statLow').textContent = allOrders.filter(o => o.confidence === 'low').length;
+  }
+
+  async function doFetch() {
+    fetchBtn.disabled = true;
+    exportBtn.disabled = true;
+    allOrders = [];
+    setStatus('Fetching orders from 5 benches. This takes about 30 seconds...', 'loading');
+
+    try {
+      for (const bench of BENCHES) {
+        setStatus('Fetching ' + bench.name + '...', 'loading');
+        const orders = await fetchBench(bench);
+        for (const o of orders) {
+          const combined = o.parties + ' ' + o.matterNo + ' ' + o.coram;
+          const c = classify(combined);
+          Object.assign(o, c);
+          allOrders.push(o);
+        }
+      }
+      setStatus('Fetched ' + allOrders.length + ' orders across all 5 benches. '
+        + allOrders.filter(o => o.isIT).length + ' Indirect Tax matches.', 'success');
+      renderStats();
+      renderTable();
+      exportBtn.disabled = false;
+    } catch (e) {
+      setStatus('Fetch failed: ' + e.message + '. If this persists, use the Python script (bhc_daily_orders.py) instead.', 'error');
+    } finally {
+      fetchBtn.disabled = false;
+    }
+  }
+
+  function exportCSV() {
+    if (!allOrders.length) return;
+    const headers = ['Sr.', 'Source', 'Bench', 'Case Details', 'Order Date', 'Parties', 'Coram', 'Order Link', 'Indirect Tax?', 'Confidence', 'Category', 'Matched Signals'];
+    const esc = v => '"' + String(v || '').replace(/"/g, '""') + '"';
+    const lines = [headers.map(esc).join(',')];
+    allOrders.forEach((o, i) => {
+      lines.push([
+        i + 1, 'Bombay HC', o.bench, o.matterNo, o.orderDate,
+        o.parties, o.coram, o.pdfLink,
+        o.isIT ? 'YES' : 'NO', o.confidence, o.category, o.signals
+      ].map(esc).join(','));
+    });
+    const blob = new Blob([lines.join('\n')], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'daily_orders_' + new Date().toISOString().slice(0, 10) + '.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  fetchBtn.addEventListener('click', doFetch);
+  exportBtn.addEventListener('click', exportCSV);
+  ['filterBench', 'filterIT', 'searchBox'].forEach(id => {
+    $(id).addEventListener('input', renderTable);
+    $(id).addEventListener('change', renderTable);
+  });
+})();
+</script>
+
+</body>
+</html>
