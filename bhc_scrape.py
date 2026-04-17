@@ -1,22 +1,34 @@
 #!/usr/bin/env python3
 """
-BHC Daily Orders Scraper - GitHub Actions Runner
-Scrapes all 5 Bombay High Court benches, classifies Indirect Tax matters,
-and writes the results to data/latest.json for the web tool to consume.
+BHC Daily Orders Scraper v2 - With PDF Content Scanning
+Scrapes all 5 Bombay High Court benches, classifies Indirect Tax matters
+using THREE-PASS classification:
+  Pass 1 - Party name classifier (fast, current logic)
+  Pass 2 - PDF content scanner (for borderline cases)
+  Pass 3 - Known tax-litigant watchlist
 
-Run by: .github/workflows/bhc-daily.yml
 Produces: data/latest.json  +  data/archive/YYYY-MM-DD.json
 """
 
 import urllib.request
 import urllib.parse
+import urllib.error
 import re
 import html as html_lib
 import json
-import os
+import io
+import time
 from datetime import datetime, timezone, timedelta
 from http.cookiejar import CookieJar
 from pathlib import Path
+
+# Optional PDF support - fail gracefully if missing
+try:
+    from pypdf import PdfReader
+    PDF_AVAILABLE = True
+except ImportError:
+    PDF_AVAILABLE = False
+    print('WARNING: pypdf not installed. PDF content scanning disabled.')
 
 
 # ======================================================================
@@ -35,7 +47,11 @@ BASE_URL = 'https://bombayhighcourt.gov.in/bhc'
 RECENT_URL = f'{BASE_URL}/front/recentjudgment'
 CHANGE_URL = f'{BASE_URL}/bench/change?bench='
 MAX_PAGES = 10
-USER_AGENT = 'Mozilla/5.0 (compatible; JurisNair-Tracker/1.0; +https://www.jurisnair.com)'
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+PDF_MAX_PAGES = 3
+PDF_MAX_BYTES = 5_000_000
+PDF_TIMEOUT = 20
+PDF_MAX_SCANS = 80
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
@@ -51,6 +67,7 @@ KEYWORDS_HIGH = [
     r'\bBill of Entry\b', r'\bShow Cause Notice\b', r'\bAnti.?Dumping\b',
     r'\bSafeguard Duty\b', r'\bCAAR\b', r'\bICEGATE\b',
     r'\bCustoms Act\b', r'\bCGST Act\b', r'\bIGST Act\b',
+    r'\bMGST Act\b', r'\bFinance Act\b',
 ]
 
 KEYWORDS_MEDIUM = [
@@ -74,8 +91,52 @@ PARTY_HIGH = [
     r'Central Board of Indirect Taxes',
 ]
 
+# Known frequent indirect-tax litigants — if one of these appears as a party
+# AND the other party is Union of India / Commissioner / etc., we scan the PDF.
+KNOWN_TAX_LITIGANTS = [
+    r'\bK\s*[-.]?\s*Line\b',
+    r'\bReliance Industries\b',
+    r'\bTata Steel\b', r'\bTata Motors\b', r'\bTata Electronics\b', r'\bTata Consultancy\b',
+    r'\bSamsung\b',
+    r'\bVolkswagen\b', r'\bSkoda\b', r'\bAudi\b',
+    r'\bLupin\b', r'\bSun Pharma\b', r'\bGlenmark\b',
+    r'\bCipla\b', r'\bDr\.?\s*Reddy', r'\bBiocon\b',
+    r'\bLarsen\s*&?\s*Toubro\b',
+    r'\bBharti Airtel\b', r'\bVodafone\b',
+    r'\bAdani\b', r'\bHindalco\b', r'\bVedanta\b',
+    r'\bMaruti\b', r'\bMahindra\b', r'\bBajaj Auto\b',
+    r'\bMahanagar Gas\b',
+    r'\bShell India\b', r'\bBPCL\b', r'\bHPCL\b', r'\bONGC\b',
+    r'\bHindustan Unilever\b', r'\bColgate\b', r'\bNestle\b',
+    r'\bMondelez\b', r'\bPepsiCo\b',
+]
 
-def classify(text):
+ADVERSARY_PATTERNS = [
+    r'\bUnion of India\b', r'\bState of Maharashtra\b',
+    r'\bCommissioner\b', r'\bDeputy Commissioner\b',
+    r'\bDirectorate\b', r'\bAssistant Commissioner\b',
+    r'\bJt\.?\s*Commissioner\b', r'\bAddl\.?\s*Commissioner\b',
+]
+
+
+def category_from_keyword(kw):
+    kw_lower = kw.lower()
+    if re.search(r'\b(?:c|s|i)?gst\b', kw_lower):
+        return 'GST'
+    if any(x in kw_lower for x in ['custom', 'dri', 'bill of entry', 'caar', 'icegate', 'dggi']):
+        return 'Customs'
+    if any(x in kw_lower for x in ['excise', 'cestat', 'cenvat']):
+        return 'Excise'
+    if 'service tax' in kw_lower:
+        return 'Service Tax'
+    if 'dump' in kw_lower or 'safeguard' in kw_lower:
+        return 'Trade Remedy'
+    if 'dgft' in kw_lower:
+        return 'FTP'
+    return 'N/A'
+
+
+def classify_text(text):
     signals = []
     category = 'N/A'
     high_hits = 0
@@ -88,19 +149,9 @@ def classify(text):
             signals.append(f'keyword:{kw}')
             high_hits += 1
             if category == 'N/A':
-                kw_lower = kw.lower()
-                if re.search(r'\b(?:c|s|i)?gst\b', kw_lower):
-                    category = 'GST'
-                elif any(x in kw_lower for x in ['custom', 'dri', 'bill of entry', 'caar', 'icegate', 'dggi']):
-                    category = 'Customs'
-                elif any(x in kw_lower for x in ['excise', 'cestat', 'cenvat']):
-                    category = 'Excise'
-                elif 'service tax' in kw_lower:
-                    category = 'Service Tax'
-                elif 'dump' in kw_lower or 'safeguard' in kw_lower:
-                    category = 'Trade Remedy'
-                elif 'dgft' in kw_lower:
-                    category = 'FTP'
+                cat = category_from_keyword(kw)
+                if cat != 'N/A':
+                    category = cat
 
     for pattern in PARTY_HIGH:
         matches = re.findall(pattern, text, re.IGNORECASE)
@@ -115,14 +166,25 @@ def classify(text):
             signals.append(f'keyword:{matches[0]}')
             med_hits += 1
 
-    if high_hits >= 2:
-        return True, 'high', (category if category != 'N/A' else 'Indirect Tax'), '; '.join(signals[:6])
-    elif high_hits == 1:
-        return True, 'medium', (category if category != 'N/A' else 'Indirect Tax'), '; '.join(signals[:6])
-    elif med_hits >= 2:
-        return True, 'low', 'Possibly Indirect Tax (review)', '; '.join(signals[:6])
+    return high_hits, med_hits, category, signals
+
+
+def classify_from_parties(text):
+    high, med, category, signals = classify_text(text)
+    if high >= 2:
+        return True, 'high', (category if category != 'N/A' else 'Indirect Tax'), '; '.join(signals[:6]), False
+    elif high == 1:
+        return True, 'medium', (category if category != 'N/A' else 'Indirect Tax'), '; '.join(signals[:6]), False
+    elif med >= 2:
+        return True, 'low', 'Possibly Indirect Tax (review)', '; '.join(signals[:6]), True
     else:
-        return False, 'none', 'N/A', ''
+        return False, 'none', 'N/A', '', False
+
+
+def is_watchlist_suspect(text):
+    has_known = any(re.search(p, text, re.IGNORECASE) for p in KNOWN_TAX_LITIGANTS)
+    has_adversary = any(re.search(p, text, re.IGNORECASE) for p in ADVERSARY_PATTERNS)
+    return has_known and has_adversary
 
 
 # ======================================================================
@@ -132,14 +194,30 @@ def classify(text):
 def make_opener():
     cj = CookieJar()
     opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
-    opener.addheaders = [('User-Agent', USER_AGENT)]
+    opener.addheaders = [
+        ('User-Agent', USER_AGENT),
+        ('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9'),
+        ('Accept-Language', 'en-US,en;q=0.9'),
+    ]
     return opener
 
 
-def fetch(opener, url):
-    req = urllib.request.Request(url, headers={'User-Agent': USER_AGENT})
-    with opener.open(req, timeout=30) as response:
-        return response.read().decode('utf-8', errors='replace')
+def fetch(opener, url, max_retries=3):
+    for attempt in range(max_retries):
+        try:
+            req = urllib.request.Request(url, headers={'User-Agent': USER_AGENT})
+            with opener.open(req, timeout=30) as response:
+                return response.read().decode('utf-8', errors='replace')
+        except urllib.error.HTTPError as e:
+            if e.code == 503 and attempt < max_retries - 1:
+                time.sleep(3 + attempt * 2)
+                continue
+            raise
+        except Exception:
+            if attempt < max_retries - 1:
+                time.sleep(2)
+                continue
+            raise
 
 
 def clean_text(t):
@@ -210,6 +288,66 @@ def scrape_bench(bench_code, bench_name):
 
 
 # ======================================================================
+# PDF SCANNING (PASS 2)
+# ======================================================================
+
+def extract_pdf_text(pdf_url):
+    if not PDF_AVAILABLE or not pdf_url:
+        return ''
+    try:
+        req = urllib.request.Request(pdf_url, headers={'User-Agent': USER_AGENT})
+        with urllib.request.urlopen(req, timeout=PDF_TIMEOUT) as response:
+            content_length = response.headers.get('Content-Length')
+            if content_length and int(content_length) > PDF_MAX_BYTES:
+                return ''
+            data = response.read(PDF_MAX_BYTES)
+        reader = PdfReader(io.BytesIO(data))
+        text = ''
+        for i, page in enumerate(reader.pages[:PDF_MAX_PAGES]):
+            try:
+                text += page.extract_text() + '\n'
+            except Exception:
+                continue
+        return text
+    except Exception:
+        return ''
+
+
+def rescan_with_pdf(record, scan_counter):
+    if scan_counter[0] >= PDF_MAX_SCANS:
+        return False
+    text = extract_pdf_text(record['pdfLink'])
+    scan_counter[0] += 1
+    if not text:
+        return False
+
+    high, med, category, signals = classify_text(text)
+    if high >= 2:
+        record['isIT'] = True
+        record['confidence'] = 'high'
+        record['category'] = category if category != 'N/A' else 'Indirect Tax'
+        record['signals'] = 'PDF: ' + '; '.join(signals[:6])
+        record['pdfScanned'] = True
+        return True
+    elif high == 1:
+        record['isIT'] = True
+        record['confidence'] = 'medium'
+        record['category'] = category if category != 'N/A' else 'Indirect Tax'
+        record['signals'] = 'PDF: ' + '; '.join(signals[:6])
+        record['pdfScanned'] = True
+        return True
+    elif med >= 2:
+        record['isIT'] = True
+        record['confidence'] = 'low'
+        record['category'] = 'Possibly Indirect Tax (PDF keywords)'
+        record['signals'] = 'PDF: ' + '; '.join(signals[:6])
+        record['pdfScanned'] = True
+        return True
+    record['pdfScanned'] = True
+    return False
+
+
+# ======================================================================
 # MAIN
 # ======================================================================
 
@@ -218,7 +356,7 @@ def main():
     date_str = now_ist.strftime('%Y-%m-%d')
     timestamp_str = now_ist.strftime('%d %B %Y, %I:%M %p IST')
 
-    print(f'Juris Nair BHC Tracker - Daily Run')
+    print(f'Juris Nair BHC Tracker - Daily Run (v2 with PDF scanning)')
     print(f'Time: {timestamp_str}')
     print('-' * 50)
 
@@ -228,26 +366,54 @@ def main():
             records = scrape_bench(bench_code, bench_name)
             all_records.extend(records)
         except Exception as e:
-            print(f'  ERROR: {e}')
+            print(f'  ERROR scraping {bench_name}: {e}')
 
     if not all_records:
         print('No records fetched. Exiting without overwriting.')
         return
 
-    print(f'\nTotal: {len(all_records)}. Classifying...')
+    print(f'\nTotal: {len(all_records)}. Running Pass 1 (party-name classifier)...')
 
+    pdf_scan_queue = []
     for rec in all_records:
         combined_text = f"{rec['parties']} {rec['matterNo']} {rec['coram']}"
-        is_it, conf, cat, sig = classify(combined_text)
+        is_it, conf, cat, sig, needs_rescan = classify_from_parties(combined_text)
         rec['isIT'] = is_it
         rec['confidence'] = conf
         rec['category'] = cat
         rec['signals'] = sig
+        rec['pdfScanned'] = False
+
+        if needs_rescan or is_watchlist_suspect(combined_text):
+            if rec.get('pdfLink'):
+                pdf_scan_queue.append(rec)
+
+    pass1_count = sum(1 for r in all_records if r['isIT'])
+    print(f'Pass 1: {pass1_count} Indirect Tax matches from party names')
+
+    if pdf_scan_queue and PDF_AVAILABLE:
+        print(f'\nPass 2: Scanning {min(len(pdf_scan_queue), PDF_MAX_SCANS)} PDFs for deeper classification...')
+        scan_counter = [0]
+        upgraded = 0
+        newly_flagged = 0
+        for rec in pdf_scan_queue:
+            was_flagged_before = rec['isIT']
+            prev_conf = rec['confidence']
+            if rescan_with_pdf(rec, scan_counter):
+                if not was_flagged_before:
+                    newly_flagged += 1
+                elif rec['confidence'] != prev_conf:
+                    upgraded += 1
+            time.sleep(0.5)
+        print(f'Pass 2 complete: {newly_flagged} newly flagged, {upgraded} upgraded, {scan_counter[0]} PDFs scanned')
+    elif pdf_scan_queue:
+        print('Pass 2 SKIPPED: pypdf not available')
 
     it_count = sum(1 for r in all_records if r['isIT'])
     high = sum(1 for r in all_records if r['confidence'] == 'high')
     med = sum(1 for r in all_records if r['confidence'] == 'medium')
     low = sum(1 for r in all_records if r['confidence'] == 'low')
+    pdf_scanned = sum(1 for r in all_records if r.get('pdfScanned'))
 
     bench_stats = {}
     for r in all_records:
@@ -266,11 +432,11 @@ def main():
         'highCount': high,
         'mediumCount': med,
         'lowCount': low,
+        'pdfScannedCount': pdf_scanned,
         'benchStats': bench_stats,
         'orders': all_records,
     }
 
-    # Write to /data folder
     data_dir = Path('data')
     data_dir.mkdir(exist_ok=True)
     archive_dir = data_dir / 'archive'
@@ -286,7 +452,7 @@ def main():
 
     print(f'\nWrote: {latest_path}')
     print(f'Wrote: {archive_path}')
-    print(f'\nTotal: {len(all_records)} | IT: {it_count} (high:{high} med:{med} low:{low})')
+    print(f'\nFinal: {len(all_records)} orders | IT: {it_count} (high:{high} med:{med} low:{low}) | {pdf_scanned} PDFs scanned')
     print('Done.')
 
 
