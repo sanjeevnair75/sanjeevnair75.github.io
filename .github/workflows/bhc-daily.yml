@@ -12,6 +12,7 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -20,6 +21,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pypdf
 
       - name: Run BHC scraper
         run: python bhc_scrape.py
@@ -32,6 +36,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Daily BHC orders update — $(date +'%Y-%m-%d')"
+            git commit -m "Daily BHC orders update - $(date +'%Y-%m-%d')"
             git push
           fi
