@@ -2,8 +2,13 @@ name: BHC Daily Orders Scraper
 
 on:
   schedule:
-    # Runs Monday-Saturday at 2:00 PM UTC (7:30 PM IST)
-    - cron: '0 14 * * 1-6'
+    # Runs every 4 hours during Indian business hours (Mon-Sat)
+    # Times in UTC | Equivalent IST
+    # 04:00 UTC   = 09:30 AM IST  (morning)
+    # 08:00 UTC   = 01:30 PM IST  (post-lunch)
+    # 12:00 UTC   = 05:30 PM IST  (evening)
+    # 16:00 UTC   = 09:30 PM IST  (end of day)
+    - cron: '0 4,8,12,16 * * 1-6'
   workflow_dispatch:  # Also allow manual triggering from the Actions tab
 
 permissions:
@@ -36,6 +41,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Daily BHC orders update - $(date +'%Y-%m-%d')"
+            git commit -m "BHC orders update - $(date +'%Y-%m-%d %H:%M UTC')"
             git push
           fi
