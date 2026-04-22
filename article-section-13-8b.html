@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A Decade-Long Distortion Ends. A New One Begins. Section 13(8)(b) and the Limits of Legislative Cure | Juris Nair</title>
+  <meta name="description" content="The Finance Act, 2026 omits Section 13(8)(b) of the IGST Act with effect from 30 March 2026. A critical analysis of what was cured, what was left behind, and the new asymmetry introduced on the inbound side.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #B8974A;
+      --gold-light: #D4B878;
+      --dark: #0E0E0E;
+      --dark2: #161616;
+      --dark3: #1E1E1E;
+      --text: #E8E0D0;
+      --text-muted: #9A9080;
+      --border: rgba(184,151,74,0.2);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--dark);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.4rem 4rem;
+      background: rgba(14,14,14,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+      text-decoration: none;
+    }
+
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    .nav-cta {
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold) !important;
+      padding: 0.5rem 1.4rem;
+      border-radius: 2px;
+      transition: background 0.3s, color 0.3s !important;
+    }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--dark) !important; }
+
+    .article-wrapper {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 8rem 2rem 5rem;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+      transition: gap 0.3s;
+    }
+    .back-link:hover { gap: 0.8rem; }
+
+    .article-tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.9rem;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 600;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .article-title em { font-style: italic; color: var(--gold); }
+
+    .article-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .article-meta-item { font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.05em; }
+    .article-meta-item strong { color: var(--text); font-weight: 500; }
+
+    .article-cover {
+      width: 100%;
+      border-radius: 4px;
+      margin-bottom: 3rem;
+      border: 1px solid var(--border);
+    }
+
+    .article-body { font-size: 0.97rem; color: var(--text-muted); line-height: 1.9; }
+    .article-body p { margin-bottom: 1.5rem; }
+
+    .article-body h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 2.5rem 0 1rem;
+      padding-left: 1rem;
+      border-left: 3px solid var(--gold);
+    }
+
+    .article-body h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--gold);
+      margin: 2rem 0 0.5rem;
+    }
+
+    .article-body strong { color: var(--text); font-weight: 500; }
+
+    .article-body ul, .article-body ol {
+      margin: 1rem 0 1.5rem 1.5rem;
+    }
+
+    .article-body li { margin-bottom: 0.8rem; }
+
+    .highlight-box {
+      background: var(--dark3);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      border-radius: 2px;
+    }
+
+    .highlight-box p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--text);
+      margin: 0;
+    }
+
+    .case-ref {
+      background: var(--dark3);
+      border: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 2px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .case-ref strong { color: var(--gold); }
+
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .compare-card {
+      background: var(--dark3);
+      border: 1px solid var(--border);
+      padding: 1.2rem 1.5rem;
+      border-radius: 4px;
+    }
+
+    .compare-card .label {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .compare-card .value {
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .article-footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .author-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text);
+      display: block;
+    }
+
+    .author-title { font-size: 0.8rem; color: var(--text-muted); display: block; margin-top: 0.3rem; }
+    .author-disclaimer { font-size: 0.75rem; color: var(--text-muted); font-style: italic; margin-top: 0.8rem; display: block; line-height: 1.6; }
+
+    footer {
+      background: var(--dark2);
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--gold);
+    }
+
+    .footer-copy { font-size: 0.78rem; color: var(--text-muted); }
+
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+
+    @media (max-width: 768px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .nav-links { display: none; }
+      .article-wrapper { padding: 6rem 1.5rem 3rem; }
+      .compare-grid { grid-template-columns: 1fr; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Juris Nair</a>
+  <ul class="nav-links">
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#blog">Insights</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="article-wrapper">
+
+  <a href="index.html#blog" class="back-link">&larr; Back to Insights</a>
+
+  <span class="article-tag">GST &middot; IGST &middot; Intermediary Services &middot; OECD</span>
+
+  <h1 class="article-title">A Decade-Long Distortion Ends.<br><em>A New One Begins.</em></h1>
+  <p class="article-subtitle">Section 13(8)(b), the OECD principles, and the limits of legislative cure</p>
+
+  <div class="article-meta">
+    <span class="article-meta-item"><strong>Statute</strong> Finance Act, 2026</span>
+    <span class="article-meta-item"><strong>Effective</strong> 30 March 2026</span>
+    <span class="article-meta-item"><strong>Published</strong> 22 April 2026</span>
+    <span class="article-meta-item"><strong>Author</strong> Sanjeev Nair</span>
+  </div>
+
+  <img src="section_13_8b_cover.png" alt="A Decade-Long Distortion Ends. A New One Begins." class="article-cover" />
+
+  <div class="article-body">
+
+    <p>The omission of Section 13(8)(b) of the IGST Act, 2017 by the Finance Act, 2026, which received Presidential assent on 30 March 2026, has been welcomed across the indirect tax community as a long-overdue correction. Indian intermediaries supplying services to foreign principals will now be governed by the default rule under Section 13(2): place of supply is the location of the recipient. For exporters, the doors to zero-rating, LUT-based supply and unrestricted ITC have finally opened.</p>
+
+    <div class="highlight-box">
+      <p>The relief is real. But the celebration is also a little premature, and in places, a little misdirected. The amendment treats the symptom rather than the disease. It looks forward but not back. And in aligning India with international principle on one side of the cross-border transaction, it has quietly opened a fresh divergence on the other.</p>
+    </div>
+
+    <p>This piece attempts to step back from the immediate compliance choreography and look at what really happened, and what did not.</p>
+
+    <h2>1. The International Baseline: Destination and Neutrality</h2>
+
+    <p>Any serious conversation about place of supply for cross-border services must begin with the OECD's International VAT/GST Guidelines (2017), endorsed by the OECD Council in September 2016 and now treated globally as the reference framework for the design of national VAT/GST systems.</p>
+
+    <p>Two principles run through the Guidelines.</p>
+
+    <p>The first is the <strong>destination principle</strong>: tax on internationally traded services and intangibles should accrue to the jurisdiction of consumption, not the jurisdiction of the supplier. The second is the <strong>neutrality principle</strong>: VAT should not distort business decisions, and should fall equally on similarly situated taxpayers regardless of whether the transaction is domestic or cross-border.</p>
+
+    <p>For business-to-business supplies of services, the Guidelines operationalize these principles through what is called the Main Rule under Guideline 3.2. The place of taxation is the location of the customer, with collection effected through reverse charge on the recipient. The European Union codifies the same position in Article 44 of the VAT Directive. The United Kingdom, Singapore, Australia and New Zealand all apply recipient-location for B2B services as the general rule.</p>
+
+    <p>Intermediary services are not treated differently. In the EU, B2B intermediary services follow the Article 44 general rule. HMRC's VAT Notice 741A is explicit: the place of supply of B2B intermediary services is where the customer belongs. A special rule for intermediaries, Article 46, exists, but it applies only to B2C transactions and even then deems the place of supply to be where the underlying transaction takes place, not where the intermediary sits.</p>
+
+    <p>So the international position, both in principle and in the leading codifications, has long been settled. A B2B intermediary supplying to an overseas business customer is taxable at the customer's location, not the supplier's.</p>
+
+    <h2>2. How India Came to Be the Outlier, and Why the Courts Did Not Intervene</h2>
+
+    <p>Why, then, did India fix the place of supply of intermediary services at the location of the supplier?</p>
+
+    <p>The answer is partly historical and partly administrative. When Rule 9(c) of the Place of Provision of Service Rules, 2012 was framed under the erstwhile Service Tax regime, the EU itself was still operating under the pre-2010 dispensation in which intermediaries were broadly taxed at origin. The 2010 EU VAT package, Directive 2008/8/EC, moved B2B services decisively to destination, but Rule 9(c) had already been drafted on the older template. When GST came in 2017, the rule was carried forward, more or less unexamined, into Section 13(8)(b) of the IGST Act.</p>
+
+    <p>The administrative case for it ran along familiar lines. Supplier-location is easier to monitor. It avoids the difficulty of verifying foreign recipient details and foreign exchange flows. Before the Bombay High Court in <em>Dharmendra M. Jani</em>, the Revenue went further: the Additional Solicitor General submitted that taxing intermediaries at the location of the supplier supports the Make in India programme by encouraging foreign customers to set up units in India. That submission is on the record of the proceedings and reflects the policy logic the government was prepared to articulate in open court.</p>
+
+    <p>Whatever the rationale, the result was that India stood as a conspicuous outlier in the global architecture.</p>
+
+    <p>What is striking, and what is not widely discussed in the current commentary cycle, is that the courts did not rescue taxpayers from this outlier position. <strong>They upheld it.</strong></p>
+
+    <div class="case-ref">
+      The Gujarat High Court in <strong>Material Recycling Association of India v. Union of India [2020 (41) GSTL 225 (Guj.)]</strong>, decided on 24 July 2020, repelled a constitutional challenge to Section 13(8)(b) and held the provision valid. In <strong>Dharmendra M. Jani v. Union of India</strong>, a Division Bench of the Bombay High Court split in June 2021. Justice Ujjal Bhuyan held the provision ultra vires Articles 245, 246A, 269A and 286(1)(b). Justice Abhay Ahuja disagreed and held it constitutionally valid. On reference, Justice G.S. Kulkarni agreed with Justice Ahuja in April 2023 and upheld the validity. The Division Bench, in June 2023, confirmed that Sections 13(8)(b) and 8(2) of the IGST Act are legal, valid and constitutional.
+    </div>
+
+    <p>So across every occasion on which constitutional validity was squarely placed before a court, the provision was upheld. The destination-principle critique lived in Justice Bhuyan's dissent and in taxpayer submissions, and nowhere else. It never became binding ratio.</p>
+
+    <p>This matters for how we read the 2026 amendment. <strong>The Finance Act, 2026 has not ratified a settled judicial consensus.</strong> Parliament has gone further than the judiciary was willing to go, and has legislated a result that the courts had twice declined to give. Whether the amendment is therefore best understood as a belated recognition that the judiciary was wrong, or as a political decision that the provision was simply bad design whatever its constitutional pedigree, is a question on which practitioners will hold different views. The one thing that cannot now be said is that Parliament caught up with the courts.</p>
+
+    <h2>3. The Real Disease Was Characterization, Not the Proxy</h2>
+
+    <p>This is the point that gets least attention, and the one I find most worth stating plainly.</p>
+
+    <p>The damage caused by Section 13(8)(b) over the last nine years was not, in most cases, a function of the rule itself. The rule was constitutionally valid. <strong>The damage came from how the rule was paired with classification on the ground.</strong> Once it became known across the field formations that classifying a transaction as intermediary produced a place of supply within India, and therefore defeated export status, denied refund, and created a demand, the classification call began to skew predictably in one direction.</p>
+
+    <p>Marketing services, IT support, business development, sourcing assistance, consulting engagements with overseas group companies, outsourced BPO arrangements, back-office support for foreign principals: a remarkable number of these were re-characterized as intermediary services in adjudication, even where the contracts and conduct showed principal-to-principal supply. CBIC's own <strong>Circular No. 159/15/2021-GST</strong> set out the correct three-party test, the disclosed-agency requirement and the carve-out for principal-to-principal arrangements. On paper, the position was clear. On the ground, the Circular was honoured selectively.</p>
+
+    <p>The pattern is visible in the very cases where taxpayers eventually won. When relief came, it came almost invariably on characterization, not on the validity of Section 13(8)(b).</p>
+
+    <div class="case-ref">
+      The Punjab and Haryana High Court in <strong>Genpact India Pvt. Ltd. v. Union of India [CWP-6048-2021 (O&amp;M), decided 11 November 2022]</strong> held that BPO services rendered by Genpact India to its foreign affiliate under a Master Services Sub-Contracting Agreement were on a principal-to-principal basis and did not constitute intermediary services within Section 2(13). The Bombay High Court in <strong>IDP Education India Pvt. Ltd. v. Union of India [2025 (5) TMI 729]</strong> held that educational consultancy services to foreign universities, where consideration flowed in foreign exchange under a principal-to-principal contract, qualified as export of services and not intermediary. The Delhi High Court in <strong>Commissioner, DGST Delhi v. Global Opportunities Pvt. Ltd.</strong> reached the same conclusion on educational consultancy commissions. The Karnataka High Court, in 2025, held that support services rendered to an overseas affiliate on a principal-to-principal basis fell outside the intermediary definition.
+    </div>
+
+    <p>These are not constitutional victories. They are classification victories. The courts repeatedly told the Revenue that the transaction before them was not an intermediary transaction at all, and that the question of Section 13(8)(b) therefore did not arise.</p>
+
+    <div class="highlight-box">
+      <p>The proxy was the lock. The bias was the hand that turned the key.</p>
+    </div>
+
+    <h2>4. The Cure Is Prospective by Design, and the Past Is Left to the Courts</h2>
+
+    <p>The Finance Act, 2026 has done something elegant in its simplicity. It has removed the lock. From 30 March 2026, even if a transaction is correctly characterized as intermediary, the place of supply moves to the recipient and the export benefits flow.</p>
+
+    <p>But it has done nothing about the years of accumulated litigation that preceded 30 March 2026. Section 13(8)(b) has been omitted without a saving clause, and it has been suggested in some commentary that past demands and rejected refund claims should therefore fall consequentially. That view is not supported by the current jurisprudence.</p>
+
+    <p>The Supreme Court in <strong>Fibre Boards (P) Ltd. v. CIT [(2015) 10 SCC 333]</strong> held that omission of a provision in a Central Act is a form of repeal for the purposes of Section 6 of the General Clauses Act, 1897, and that accrued rights and liabilities under the omitted provision survive. <strong>Shree Bhagwati Steel Rolling Mills v. CCE [(2015) 17 SCC 469]</strong> followed that position. The earlier contrary view in <em>Rayala Corporation (1969)</em> stands overruled, and the narrower view in <em>Kolhapur Canesugar Works v. Union of India [(2000) 2 SCC 536]</em> now operates mainly in the context of delegated legislation.</p>
+
+    <p>Applied to Section 13(8)(b), the consequence is straightforward:</p>
+
+    <ul>
+      <li>Demands raised under the provision before 30 March 2026 continue to be enforceable.</li>
+      <li>Refunds already denied under the provision remain denied unless reversed on merits through the appellate process.</li>
+      <li>Pending SCNs are adjudicated on the basis of the law as it stood at the relevant taxable event, as the Supreme Court in <strong>Vazir Sultan Tobacco Co. Ltd. [1996 (83) ELT 3 (SC)]</strong> had long ago laid down.</li>
+    </ul>
+
+    <p>The criticism here is not that the Revenue is being obstinate. The Revenue's position on past matters is legally sound. <strong>The criticism is of Parliament.</strong> If the legislature wanted to wipe the slate, the vehicles existed. An express retrospective operation could have been enacted. A saving-clause-in-reverse extinguishing pending proceedings could have been drafted. A one-time amnesty scheme paired with the amendment could have been notified, along the lines of the Sabka Vishwas scheme for legacy service tax and excise matters. None of this was done. <strong>The approximately three thousand three hundred crore rupees of pending demands and rejected refunds that continue to hang in the system are therefore the deliberate casualty of a prospective-only fix, not a drafting oversight.</strong></p>
+
+    <h2>5. The New Asymmetry: Aligned Outbound, Misaligned Inbound</h2>
+
+    <p>For Indian intermediaries serving foreign principals, the amendment brings the outbound side into alignment with the OECD Main Rule. That is the celebrated outcome.</p>
+
+    <p>Less discussed is what happens on the inbound side. An Indian business engaging a foreign intermediary, a UAE sourcing agent for a Mumbai trading house, a Singapore distribution facilitator for an Indian fund, a London introducer for an Indian financial services firm, must now self-assess IGST at 18% under reverse charge as an import of intermediary service, and issue a self-invoice under Section 31(3)(f) of the CGST Act.</p>
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="label">Before 30 March 2026</div>
+        <div class="value">POS of foreign intermediary service = location of foreign supplier. Not an import of service. No RCM. No Indian GST.</div>
+      </div>
+      <div class="compare-card">
+        <div class="label">From 30 March 2026</div>
+        <div class="value">POS = location of Indian recipient. Qualifies as import of service. RCM at 18% self-assessed. Self-invoice required.</div>
+      </div>
+    </div>
+
+    <p>Where the foreign jurisdiction follows the OECD Main Rule, the service will already have been zero-rated abroad on the basis that the customer is in India. So in those cases, the result is a single layer of Indian tax, economically clean and ITC-eligible in the same GSTR-3B return period if used for taxable supplies.</p>
+
+    <p>The friction lies elsewhere. It lies in the neutrality consequence. For businesses making only taxable outward supplies, this largely washes out. For exporters operating under LUT, the RCM ITC is refundable under Section 54(3) read with Rule 89 as refund of unutilized input tax credit, but the working-capital lag and refund processing time are real costs. <strong>For businesses with significant exempt outputs, such as insurance companies, certain securities activity and education and real estate services, Rule 42 and Rule 43 reversal applies, and a portion of the RCM ITC is lost permanently to the common credit pool.</strong></p>
+
+    <div class="highlight-box">
+      <p>Neutrality, in the OECD sense, requires that VAT not distort the choice between sourcing a service domestically versus from abroad. The old Section 13(8)(b) violated neutrality by penalizing Indian exporters who served foreign customers. The new dispensation, in bringing foreign intermediary services into the RCM net, introduces a fresh source of friction at the other end. India has not eliminated the neutrality breach. It has moved it.</p>
+    </div>
+
+    <h2>6. Sectoral Impact: Outbound Relief and Inbound Exposure</h2>
+
+    <p>The asymmetry plays out differently across sectors, and the sectors most affected on the outbound side are not the same as the sectors most affected on the inbound side.</p>
+
+    <h3>Outbound Beneficiaries</h3>
+    <p>IT and ITeS companies providing software support, data services and managed services to overseas principals. BPO and KPO operators running back-office, analytics and research mandates for foreign clients. Consulting and advisory firms acting for overseas institutions. Logistics and freight-forwarding agents handling foreign clients' India leg. Sub-brokers and distribution agents in financial services facilitating cross-border investment flows. Property and real estate agents facilitating NRI buyers and foreign investors. For these sectors, the amendment is transformative.</p>
+
+    <h3>Inbound Exposure</h3>
+    <p>Pharmaceutical companies using foreign sourcing agents for API procurement and regulatory facilitation. Commodity traders engaging foreign brokers and introducers. Financial services firms working with overseas distribution facilitators and fund introducers. Consumer goods companies using foreign commission agents for procurement of inputs. Logistics operators engaging overseas booking agents. Export houses paying commission to overseas sales representatives. These flows, which have not attracted Indian GST for nine years, now come into the RCM net.</p>
+
+    <div class="highlight-box">
+      <p>Indian recipients of foreign intermediary services should not wait for an SCN to discover their RCM exposure. The exposure is not merely the tax: it is interest under Section 50 for delayed payment, and potential penal consequences for non-issuance of self-invoice.</p>
+    </div>
+
+    <h2>7. The Classification Problem Has Not Gone Anywhere</h2>
+
+    <p>The definition of intermediary under Section 2(13) is unchanged. CBIC Circular No. 159/15/2021-GST continues to apply. The three-party test, the disclosed-agency requirement, the carve-out for sub-contractors and principal-to-principal arrangements, all of it remains the live battleground.</p>
+
+    <p>What has changed is which side of the transaction benefits from the classification call. Before 30 March 2026, the field formations had every incentive to find intermediary characterization in Indian exporter cases, because it defeated the export claim. <strong>After 30 March 2026, on the inbound side, they will have every incentive to find intermediary characterization in foreign-supplier transactions, because it triggers RCM on the Indian recipient.</strong> The classification battle has not ended. It has switched sides.</p>
+
+    <p>The <em>Genpact, IDP Education, Global Opportunities</em> and Karnataka HC line of authority, which ran in taxpayers' favour on the outbound side, will now be cited by the Revenue on the inbound side to bring foreign service flows into the RCM net. The same doctrinal tools will be used to reach opposite results, because the incentive has reversed.</p>
+
+    <p><strong>Contracts and conduct should be reviewed before the SCN, not after.</strong></p>
+
+    <h2>8. What a Principled Fix Would Have Looked Like</h2>
+
+    <p>If the diagnosis in this piece is right, that the disease was characterization bias rather than the place of supply proxy, then the principled fix would have looked rather different.</p>
+
+    <ul>
+      <li>It would have included a saving clause, or an amnesty scheme, that allowed pending matters to be closed on the basis of the changed policy direction rather than left to litigate on an omitted provision.</li>
+      <li>It would have come paired with a revised CBIC Circular sharpening the principal-to-principal carve-out and providing illustrative scenarios for the sectors most affected, on both the outbound and the inbound side.</li>
+      <li>It would have included an internal instruction to field formations on the changed incentive structure and the need for consistent application of the Section 2(13) tests regardless of which side of the cross-border transaction is being examined.</li>
+    </ul>
+
+    <p>None of this requires legislation. It requires only administrative will. And in its absence, the omission of Section 13(8)(b), welcome as it is on its own terms, leaves the underlying institutional pattern undisturbed.</p>
+
+    <h2>9. A Closing Note</h2>
+
+    <p>There is a recurring shape to indirect tax reform in India. A long-running irritant is identified, a fix is enacted, and the fix is structured to look ahead rather than to clean up behind. Past disputes are left to find their own way through the courts. New asymmetries are introduced because the cure is local rather than systemic. Genuine alignment with international principle is approached, but in instalments and on one side of the transaction at a time.</p>
+
+    <p>The omission of Section 13(8)(b) is a real and meaningful step. It removes a structural distortion that the courts had found constitutionally acceptable but that Parliament has now chosen to correct on policy grounds. For Indian exporters of intermediary services, this is a moment of cash-flow relief and competitive recalibration.</p>
+
+    <p>But there is a particular irony in what has happened. The Revenue won the constitutional argument in Gujarat in 2020. It won again before the referral judge in Bombay in 2023. It won once more before the Division Bench later the same year. And having won, and having defended Section 13(8)(b) all the way through in the language of Make in India and level playing field, <strong>the government has now quietly conceded, through the Finance Act, 2026, that the taxpayers were right on substance if not on constitutional form.</strong> The provision has been legislated out, with effect from 30 March 2026, without argument and without saving the past.</p>
+
+    <p>The taxpayers who carried the cost of that nine-year defence, through denied refunds, choked working capital and years of litigation, are left where they were, to fight their individual matters on characterization in the appellate forums. The government has changed its mind. The casualties of its earlier position remain casualties.</p>
+
+    <div class="highlight-box">
+      <p>That, in the end, is what the 2026 amendment does and does not do. It removes the lock. It leaves the bias. It concedes what it successfully defended. It does not reach back.</p>
+    </div>
+
+    <p>Until it does, the celebration should be tempered with the recognition that we have corrected a design, but not an institutional pattern.</p>
+
+  </div>
+
+  <div class="article-footer">
+    <span class="author-name">Sanjeev Nair</span>
+    <span class="author-title">Advocate, Bombay High Court | Indirect Tax, Trade &amp; Regulatory Law</span>
+    <span class="author-disclaimer">Views expressed are personal. The author is a legal practitioner specializing in indirect tax laws. This article is for informational purposes only and does not constitute legal advice.</span>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">Juris Nair</div>
+  <p class="footer-copy">&copy; 2026 Juris Nair. All rights reserved. | sanjeev@jurisnair.com</p>
+  <div class="footer-links">
+    <a href="index.html#home">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#blog">Insights</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
