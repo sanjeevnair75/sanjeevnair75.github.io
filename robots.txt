@@ -1,0 +1,11 @@
+# www.jurisnair.com - robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow internal tools and data folders
+Disallow: /bhc-tracker.html
+Disallow: /data/
+
+# Sitemap location
+Sitemap: https://www.jurisnair.com/sitemap.xml
