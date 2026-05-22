@@ -99,8 +99,6 @@ jobs:
       - name: Move outputs to data/caar
         run: |
           mkdir -p data/caar
-          # Use 'cp' instead of 'mv' so a partial set doesn't break the run.
-          # Also use shell wildcards so missing files just print a warning.
           cd scrapers/caar
           for f in mumbai_rulings.csv mumbai_rulings.json \
                    mumbai_orders.csv mumbai_orders.json \
@@ -116,7 +114,6 @@ jobs:
               echo "  Skipped (not produced): $f"
             fi
           done
-          # Move the dashboard HTML to repo root
           if [ -f caar-tracker.html ]; then
             cp caar-tracker.html ../../caar-tracker.html
             echo "  Copied: caar-tracker.html to repo root"
@@ -137,6 +134,9 @@ jobs:
             echo "No changes to commit. CAAR data unchanged this cycle."
           else
             git commit -m "CAAR weekly refresh: $(date -u +%Y-%m-%d)"
-            git push
+            # Pull latest changes from remote first, with rebase so our commit
+            # ends up on top of any concurrent commits.
+            git pull --rebase origin main
+            git push origin main
             echo "Changes committed and pushed."
           fi
