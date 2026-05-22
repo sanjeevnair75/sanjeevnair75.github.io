@@ -42,52 +42,91 @@ jobs:
         working-directory: scrapers/caar
         run: |
           python caar_unified_scraper.py
-          echo "Scraping done. Files produced:"
-          ls -la *.csv *.json
+          echo "Scraping done. Files produced in $(pwd):"
+          ls -la *.csv *.json 2>/dev/null || echo "No CSV/JSON found!"
 
       - name: Post-process (issue classification + year)
         working-directory: scrapers/caar
         run: |
           python postprocess.py
+          echo "Post-process done. Files in $(pwd):"
+          ls -la *.csv *.json 2>/dev/null
 
       - name: Build HTML dashboard
         working-directory: scrapers/caar
         run: |
           python build_dashboard.py
+          ls -la caar-tracker.html 2>/dev/null
 
       - name: Build Excel workbook
         working-directory: scrapers/caar
         run: |
           python build_excel.py
+          ls -la caar_analytics.xlsx 2>/dev/null
+
+      - name: Verify outputs exist
+        run: |
+          echo "Contents of scrapers/caar/:"
+          ls -la scrapers/caar/
+          echo "---"
+          echo "Checking for expected output files..."
+          for f in scrapers/caar/mumbai_rulings.csv \
+                   scrapers/caar/mumbai_orders.csv \
+                   scrapers/caar/delhi_rulings.csv \
+                   scrapers/caar/delhi_orders.csv \
+                   scrapers/caar/caar_all.csv \
+                   scrapers/caar/caar_all_enriched.csv \
+                   scrapers/caar/caar_analytics.xlsx \
+                   scrapers/caar/caar-tracker.html; do
+            if [ -f "$f" ]; then
+              echo "  OK: $f ($(stat -c%s "$f") bytes)"
+            else
+              echo "  MISSING: $f"
+            fi
+          done
 
       - name: Snapshot previous data (for change tracking)
         run: |
           mkdir -p data/caar/snapshots
           if [ -f data/caar/caar_all.csv ]; then
             SNAPSHOT_DATE=$(date -u +%Y-%m-%d)
-            cp data/caar/caar_all.csv "data/caar/snapshots/caar_all_${SNAPSHOT_DATE}.csv" || true
+            cp data/caar/caar_all.csv "data/caar/snapshots/caar_all_${SNAPSHOT_DATE}.csv"
+            echo "Snapshot saved: data/caar/snapshots/caar_all_${SNAPSHOT_DATE}.csv"
+          else
+            echo "No existing caar_all.csv to snapshot (first run)."
           fi
 
       - name: Move outputs to data/caar
         run: |
           mkdir -p data/caar
-          mv scrapers/caar/caar_all.csv data/caar/caar_all.csv
-          mv scrapers/caar/caar_all.json data/caar/caar_all.json
-          mv scrapers/caar/caar_all_enriched.csv data/caar/caar_all_enriched.csv
-          mv scrapers/caar/caar_all_enriched.json data/caar/caar_all_enriched.json
-          mv scrapers/caar/caar_analytics.xlsx data/caar/caar_analytics.xlsx
-          mv scrapers/caar/mumbai_rulings.csv data/caar/mumbai_rulings.csv
-          mv scrapers/caar/mumbai_rulings.json data/caar/mumbai_rulings.json
-          mv scrapers/caar/mumbai_orders.csv data/caar/mumbai_orders.csv
-          mv scrapers/caar/mumbai_orders.json data/caar/mumbai_orders.json
-          mv scrapers/caar/delhi_rulings.csv data/caar/delhi_rulings.csv
-          mv scrapers/caar/delhi_rulings.json data/caar/delhi_rulings.json
-          mv scrapers/caar/delhi_orders.csv data/caar/delhi_orders.csv
-          mv scrapers/caar/delhi_orders.json data/caar/delhi_orders.json
-          mv scrapers/caar/caar-tracker.html caar-tracker.html
-          ls -la data/caar/
+          # Use 'cp' instead of 'mv' so a partial set doesn't break the run.
+          # Also use shell wildcards so missing files just print a warning.
+          cd scrapers/caar
+          for f in mumbai_rulings.csv mumbai_rulings.json \
+                   mumbai_orders.csv mumbai_orders.json \
+                   delhi_rulings.csv delhi_rulings.json \
+                   delhi_orders.csv delhi_orders.json \
+                   caar_all.csv caar_all.json \
+                   caar_all_enriched.csv caar_all_enriched.json \
+                   caar_analytics.xlsx; do
+            if [ -f "$f" ]; then
+              cp "$f" "../../data/caar/$f"
+              echo "  Copied: $f"
+            else
+              echo "  Skipped (not produced): $f"
+            fi
+          done
+          # Move the dashboard HTML to repo root
+          if [ -f caar-tracker.html ]; then
+            cp caar-tracker.html ../../caar-tracker.html
+            echo "  Copied: caar-tracker.html to repo root"
+          else
+            echo "  WARNING: caar-tracker.html not found!"
+          fi
+          cd ../..
           echo "---"
-          ls -la caar-tracker.html
+          echo "Contents of data/caar/:"
+          ls -la data/caar/
 
       - name: Commit and push updates
         run: |
