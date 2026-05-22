@@ -1,0 +1,103 @@
+name: CAAR Weekly Refresh
+
+on:
+  schedule:
+    # Every Sunday at 04:00 IST = 22:30 UTC Saturday
+    - cron: '30 22 * * 6'
+  workflow_dispatch:  # Manual trigger via "Run workflow" button in GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-caar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Cache pip packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-caar-${{ hashFiles('scrapers/caar/requirements.txt') }}
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r scrapers/caar/requirements.txt
+
+      - name: Install Playwright Chromium
+        run: |
+          python -m playwright install chromium --with-deps
+
+      - name: Run CAAR scraper
+        working-directory: scrapers/caar
+        run: |
+          python caar_unified_scraper.py
+          echo "Scraping done. Files produced:"
+          ls -la *.csv *.json
+
+      - name: Post-process (issue classification + year)
+        working-directory: scrapers/caar
+        run: |
+          python postprocess.py
+
+      - name: Build HTML dashboard
+        working-directory: scrapers/caar
+        run: |
+          python build_dashboard.py
+
+      - name: Build Excel workbook
+        working-directory: scrapers/caar
+        run: |
+          python build_excel.py
+
+      - name: Snapshot previous data (for change tracking)
+        run: |
+          mkdir -p data/caar/snapshots
+          if [ -f data/caar/caar_all.csv ]; then
+            SNAPSHOT_DATE=$(date -u +%Y-%m-%d)
+            cp data/caar/caar_all.csv "data/caar/snapshots/caar_all_${SNAPSHOT_DATE}.csv" || true
+          fi
+
+      - name: Move outputs to data/caar
+        run: |
+          mkdir -p data/caar
+          mv scrapers/caar/caar_all.csv data/caar/caar_all.csv
+          mv scrapers/caar/caar_all.json data/caar/caar_all.json
+          mv scrapers/caar/caar_all_enriched.csv data/caar/caar_all_enriched.csv
+          mv scrapers/caar/caar_all_enriched.json data/caar/caar_all_enriched.json
+          mv scrapers/caar/caar_analytics.xlsx data/caar/caar_analytics.xlsx
+          mv scrapers/caar/mumbai_rulings.csv data/caar/mumbai_rulings.csv
+          mv scrapers/caar/mumbai_rulings.json data/caar/mumbai_rulings.json
+          mv scrapers/caar/mumbai_orders.csv data/caar/mumbai_orders.csv
+          mv scrapers/caar/mumbai_orders.json data/caar/mumbai_orders.json
+          mv scrapers/caar/delhi_rulings.csv data/caar/delhi_rulings.csv
+          mv scrapers/caar/delhi_rulings.json data/caar/delhi_rulings.json
+          mv scrapers/caar/delhi_orders.csv data/caar/delhi_orders.csv
+          mv scrapers/caar/delhi_orders.json data/caar/delhi_orders.json
+          mv scrapers/caar/caar-tracker.html caar-tracker.html
+          ls -la data/caar/
+          echo "---"
+          ls -la caar-tracker.html
+
+      - name: Commit and push updates
+        run: |
+          git config user.name "CAAR Bot"
+          git config user.email "caar-bot@jurisnair.com"
+          git add data/caar/ caar-tracker.html
+          if git diff --staged --quiet; then
+            echo "No changes to commit. CAAR data unchanged this cycle."
+          else
+            git commit -m "CAAR weekly refresh: $(date -u +%Y-%m-%d)"
+            git push
+            echo "Changes committed and pushed."
+          fi
