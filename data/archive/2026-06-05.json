@@ -1,6 +1,6 @@
 {
-  "generated": "05 June 2026, 08:42 PM IST",
-  "generatedISO": "2026-06-05T20:42:34.999509+05:30",
+  "generated": "05 June 2026, 11:28 PM IST",
+  "generatedISO": "2026-06-05T23:28:44.080112+05:30",
   "dateStr": "2026-06-05",
   "totalOrders": 1,
   "indirectTaxCount": 0,
@@ -22,7 +22,7 @@
       "orderDate": "05/06/2026",
       "orderType": "Civil",
       "isJudgment": true,
-      "pdfLink": "https://bombayhighcourt.gov.in/bhc/file/download/eyJpdiI6IkpiS3VOWDRZQytRVi9rNVVEdVM0cFE9PSIsInZhbHVlIjoiajlIaFlEVVZKVXJyaVVOcnB4NXg5d1NCbjhBQ1BGMmxZalRZc0hOU0xVWWxKYjVBdGdmSmRpcXQ2OEttTzllNjJkd293RE9CQjRPUmJKNWFmYTNCbG9ZWWliSVYwemllYVVBQUlmVlVaZkk9IiwibWFjIjoiMzljMWZmMjVjMTkyNDg0ZWZhM2Y5OGZlNDgxNjQ2YTRiMDk5NGMyMzFhNzM1OWRiOThlYTEzMjEzNGNlMzRjNiIsInRhZyI6IiJ9?expires=1780674171&signature=88fc41ad95f708110590f72d64648f9e44982dd83e6c28c7a1232e5711717f05",
+      "pdfLink": "https://bombayhighcourt.gov.in/bhc/file/download/eyJpdiI6InZBWE9pK3QzcDJlSVFWWHBwSzU1clE9PSIsInZhbHVlIjoidXZQMTlKSDZaOUhNSzRWaE9JalorOHJpaUpBT3dtd09KMW1teXB6dHVXVHpxUFpSelpzWHdONmQ3VFZMQ3JRSUIvT0oxa2F6RzVjdHRLVHFXa3BoVWZFMFh4bHhpOGhGUE1FSE9OS3YzSjA9IiwibWFjIjoiOTgwYTAwOWMyOTA0MGNjNmY2MDgwNjY3YTk0ZTdmNDRkZTIyOTQ1ZTQ3NDZkNjNjMDA3NTU5OWMzOGE3NWExMiIsInRhZyI6IiJ9?expires=1780684144&signature=a6c496f7183e0e96526149a7289644d1b201c0eb749d36c2cedc9de986bf43c5",
       "bench": "Bombay HC Nagpur",
       "isIT": false,
       "confidence": "none",
