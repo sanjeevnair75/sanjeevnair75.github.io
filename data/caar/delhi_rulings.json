@@ -3,6 +3,18 @@
     "section": "Delhi Rulings",
     "page_no": 1,
     "sl_no_on_page": "1",
+    "applicant": "M/s. Samsung India Electronics Pvt Ltd",
+    "date_application": "23.01.2026",
+    "date_ruling": "08.06.2026",
+    "subject": "",
+    "ruling_no": "CAAR/Del/Samsung/11/2026-27",
+    "pdf_link": "",
+    "pdf_available": "NO"
+  },
+  {
+    "section": "Delhi Rulings",
+    "page_no": 1,
+    "sl_no_on_page": "2",
     "applicant": "M/s R.B.S. Traders, C/O-Lt.",
     "date_application": "30.01.2026",
     "date_ruling": "27.05.2026",
@@ -14,7 +26,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 1,
-    "sl_no_on_page": "2",
+    "sl_no_on_page": "3",
     "applicant": "M/s V.G. Enterprises",
     "date_application": "02.03.2026",
     "date_ruling": "12.05.2026",
@@ -26,7 +38,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 1,
-    "sl_no_on_page": "3",
+    "sl_no_on_page": "4",
     "applicant": "M/s Think Smart Consultant Private Limited",
     "date_application": "30.03.2026",
     "date_ruling": "04.05.2025",
@@ -38,7 +50,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 1,
-    "sl_no_on_page": "4",
+    "sl_no_on_page": "5",
     "applicant": "M/s Samsung India Electronics Private Limited",
     "date_application": "16.12.2025",
     "date_ruling": "04.05.2025",
@@ -50,7 +62,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 1,
-    "sl_no_on_page": "5",
+    "sl_no_on_page": "6",
     "applicant": "M/s Toyota Tsusho India Pvt Ltd",
     "date_application": "03.02.2026",
     "date_ruling": "04.05.2026",
@@ -62,7 +74,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 1,
-    "sl_no_on_page": "6",
+    "sl_no_on_page": "7",
     "applicant": "M/s. Samsung India Electronics Pvt Ltd",
     "date_application": "23.01.2026",
     "date_ruling": "24.04.2026",
@@ -74,7 +86,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 1,
-    "sl_no_on_page": "7",
+    "sl_no_on_page": "8",
     "applicant": "M/s SWIFT DECORS, JAKHAL ROAD, SUNAM, SANGRUR, Punjab, 148028",
     "date_application": "04.02.2026",
     "date_ruling": "22.04.2026",
@@ -86,7 +98,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 1,
-    "sl_no_on_page": "8",
+    "sl_no_on_page": "9",
     "applicant": "M/s Samsung India Electronics Private Limited",
     "date_application": "17.11.2025",
     "date_ruling": "20.04.2026",
@@ -98,7 +110,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 1,
-    "sl_no_on_page": "9",
+    "sl_no_on_page": "10",
     "applicant": "M/s. Samsung India Electronics Pvt Ltd",
     "date_application": "15.04.2026",
     "date_ruling": "20.04.2026",
@@ -109,8 +121,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 1,
-    "sl_no_on_page": "10",
+    "page_no": 2,
+    "sl_no_on_page": "11",
     "applicant": "M/s Navitasys India Private Limited",
     "date_application": "14.10.2025",
     "date_ruling": "08.04.2026",
@@ -122,7 +134,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 2,
-    "sl_no_on_page": "11",
+    "sl_no_on_page": "12",
     "applicant": "M/s Solterra Technologies Pvt Ltds",
     "date_application": "09.12.2025",
     "date_ruling": "08.04.2026",
@@ -134,7 +146,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 2,
-    "sl_no_on_page": "12",
+    "sl_no_on_page": "13",
     "applicant": "M/s Kingshine Laminates Private Limited",
     "date_application": "06.01.2026",
     "date_ruling": "12.02.2026",
@@ -146,7 +158,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 2,
-    "sl_no_on_page": "13",
+    "sl_no_on_page": "14",
     "applicant": "M/s Vivo Mobile India Private Limited",
     "date_application": "16.12.2025",
     "date_ruling": "30.03.2026",
@@ -158,7 +170,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 2,
-    "sl_no_on_page": "14",
+    "sl_no_on_page": "15",
     "applicant": "M/s Samsung India Electronics Private Limited",
     "date_application": "17.11.2025",
     "date_ruling": "02.03.2026",
@@ -170,7 +182,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 2,
-    "sl_no_on_page": "15",
+    "sl_no_on_page": "16",
     "applicant": "M/s Vivo Mobile India Private Limited",
     "date_application": "30.07.2025",
     "date_ruling": "16.02.2026",
@@ -182,7 +194,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 2,
-    "sl_no_on_page": "16",
+    "sl_no_on_page": "17",
     "applicant": "M/s Volvo Auto India Private Limited",
     "date_application": "16.12.2025",
     "date_ruling": "17.02.2026",
@@ -194,7 +206,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 2,
-    "sl_no_on_page": "17",
+    "sl_no_on_page": "18",
     "applicant": "M/s Samsung Display Noida Pvt Ltd",
     "date_application": "03.12.2025",
     "date_ruling": "31.01.2026",
@@ -206,7 +218,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 2,
-    "sl_no_on_page": "18",
+    "sl_no_on_page": "19",
     "applicant": "M/s Danisco India Private Limted",
     "date_application": "10.02.2025",
     "date_ruling": "30.12.2025",
@@ -218,7 +230,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 2,
-    "sl_no_on_page": "19",
+    "sl_no_on_page": "20",
     "applicant": "M/s Danisco India Private Limted",
     "date_application": "10.02.2025",
     "date_ruling": "30.12.2025",
@@ -229,8 +241,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 2,
-    "sl_no_on_page": "20",
+    "page_no": 3,
+    "sl_no_on_page": "21",
     "applicant": "M/s VinFast Auto India Private Limited",
     "date_application": "12.08.2025",
     "date_ruling": "31.01.2026",
@@ -242,7 +254,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 3,
-    "sl_no_on_page": "21",
+    "sl_no_on_page": "22",
     "applicant": "M/s Shri Balaji Multi Designs Private Limited",
     "date_application": "06.01.2025",
     "date_ruling": "31.01.2026",
@@ -254,7 +266,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 3,
-    "sl_no_on_page": "22",
+    "sl_no_on_page": "23",
     "applicant": "M/s SP Traders",
     "date_application": "22.12.2025",
     "date_ruling": "31.01.2026",
@@ -266,7 +278,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 3,
-    "sl_no_on_page": "23",
+    "sl_no_on_page": "24",
     "applicant": "M/s Shloka Valves (P) Ltd",
     "date_application": "23.10.2025",
     "date_ruling": "31.01.2026",
@@ -278,7 +290,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 3,
-    "sl_no_on_page": "24",
+    "sl_no_on_page": "25",
     "applicant": "M/s Pooja Rice Industries",
     "date_application": "24.12.2025",
     "date_ruling": "30.01.2026",
@@ -290,7 +302,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 3,
-    "sl_no_on_page": "25",
+    "sl_no_on_page": "26",
     "applicant": "M/s Lords Interior Private Limited",
     "date_application": "16.12.2025",
     "date_ruling": "31.01.2026",
@@ -302,7 +314,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 3,
-    "sl_no_on_page": "26",
+    "sl_no_on_page": "27",
     "applicant": "M/s. Samsung Display Noida Private Limited",
     "date_application": "17.10.2025",
     "date_ruling": "21.01.2026",
@@ -314,7 +326,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 3,
-    "sl_no_on_page": "27",
+    "sl_no_on_page": "28",
     "applicant": "M/s Sacred Nuts Private Ltd",
     "date_application": "16.07.2025",
     "date_ruling": "15.01.2026",
@@ -326,7 +338,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 3,
-    "sl_no_on_page": "28",
+    "sl_no_on_page": "29",
     "applicant": "M/s V. G. Enterprises",
     "date_application": "27.10.2025",
     "date_ruling": "15.01.2026",
@@ -338,7 +350,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 3,
-    "sl_no_on_page": "29",
+    "sl_no_on_page": "30",
     "applicant": "M/s Danisco India Pvt Ltd.",
     "date_application": "10.07.2025",
     "date_ruling": "16.12.2025",
@@ -349,8 +361,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 3,
-    "sl_no_on_page": "30",
+    "page_no": 4,
+    "sl_no_on_page": "31",
     "applicant": "M/s Danisco India Pvt Ltd.",
     "date_application": "15.05.2025",
     "date_ruling": "19.11.2025",
@@ -362,7 +374,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 4,
-    "sl_no_on_page": "31",
+    "sl_no_on_page": "32",
     "applicant": "M/s Danisco India Pvt Ltd.",
     "date_application": "15.05.2025",
     "date_ruling": "18.11.2025",
@@ -374,7 +386,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 4,
-    "sl_no_on_page": "32",
+    "sl_no_on_page": "33",
     "applicant": "M/s Furo Enterprises",
     "date_application": "20.06.2025",
     "date_ruling": "04.11.2025",
@@ -386,7 +398,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 4,
-    "sl_no_on_page": "33",
+    "sl_no_on_page": "34",
     "applicant": "M/s Honeywell International (India) Pvt. Ltd.",
     "date_application": "02.05.2025",
     "date_ruling": "16.10.2025",
@@ -398,7 +410,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 4,
-    "sl_no_on_page": "34",
+    "sl_no_on_page": "35",
     "applicant": "M/s Mitsubishi Electric India Private Limited",
     "date_application": "11.09.2025",
     "date_ruling": "01.01.2026",
@@ -410,7 +422,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 4,
-    "sl_no_on_page": "35",
+    "sl_no_on_page": "36",
     "applicant": "M/s India Medtronic Private Limited",
     "date_application": "29.09.2025",
     "date_ruling": "05.12.2025",
@@ -422,7 +434,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 4,
-    "sl_no_on_page": "36",
+    "sl_no_on_page": "37",
     "applicant": "M/s India Medtronic Private Limited",
     "date_application": "04.09.2025",
     "date_ruling": "22.12.2025",
@@ -434,7 +446,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 4,
-    "sl_no_on_page": "37",
+    "sl_no_on_page": "38",
     "applicant": "M/s Starlink Satellite Communication Private Limited",
     "date_application": "04.09.2025",
     "date_ruling": "31.12.2025",
@@ -446,7 +458,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 4,
-    "sl_no_on_page": "38",
+    "sl_no_on_page": "39",
     "applicant": "M/s India Medtronic Private Limited",
     "date_application": "02.09.2025",
     "date_ruling": "19.12.2025",
@@ -458,7 +470,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 4,
-    "sl_no_on_page": "39",
+    "sl_no_on_page": "40",
     "applicant": "M/s ATL Battery Technology (India) Private Limited",
     "date_application": "08.05.2025",
     "date_ruling": "18.12.2025",
@@ -469,8 +481,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 4,
-    "sl_no_on_page": "40",
+    "page_no": 5,
+    "sl_no_on_page": "41",
     "applicant": "M/s Qaigen India Pvt. Ltd.",
     "date_application": "18.12.2024",
     "date_ruling": "18.12.2025",
@@ -482,7 +494,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 5,
-    "sl_no_on_page": "41",
+    "sl_no_on_page": "42",
     "applicant": "M/s Qaigen India Pvt. Ltd.",
     "date_application": "25.12.2025",
     "date_ruling": "17.12.2025",
@@ -494,7 +506,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 5,
-    "sl_no_on_page": "42",
+    "sl_no_on_page": "43",
     "applicant": "M/s ATL Battery Technology (India) Private Limited",
     "date_application": "08.05.2025",
     "date_ruling": "18.12.2025",
@@ -506,7 +518,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 5,
-    "sl_no_on_page": "43",
+    "sl_no_on_page": "44",
     "applicant": "M/s India Medtronic Private Limited",
     "date_application": "04.09.2025",
     "date_ruling": "08.12.2025",
@@ -518,7 +530,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 5,
-    "sl_no_on_page": "44",
+    "sl_no_on_page": "45",
     "applicant": "M/s India Medtronic Private Limited",
     "date_application": "04.09.2025",
     "date_ruling": "05.12.2025",
@@ -530,7 +542,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 5,
-    "sl_no_on_page": "45",
+    "sl_no_on_page": "46",
     "applicant": "M/s India Medtronic Private Limited",
     "date_application": "04.09.2025",
     "date_ruling": "04.12.2025",
@@ -542,7 +554,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 5,
-    "sl_no_on_page": "46",
+    "sl_no_on_page": "47",
     "applicant": "M/s Qiagen India Pvt Ltd",
     "date_application": "24.12.2024",
     "date_ruling": "01.12.2025",
@@ -554,7 +566,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 5,
-    "sl_no_on_page": "47",
+    "sl_no_on_page": "48",
     "applicant": "M/s Qiagen India Pvt Ltd",
     "date_application": "24.12.2024",
     "date_ruling": "26.11.2025",
@@ -566,7 +578,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 5,
-    "sl_no_on_page": "48",
+    "sl_no_on_page": "49",
     "applicant": "M/s ATL battery Technology India Pvt Ltd",
     "date_application": "08.05.2025",
     "date_ruling": "26.11.2025",
@@ -578,7 +590,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 5,
-    "sl_no_on_page": "49",
+    "sl_no_on_page": "50",
     "applicant": "M/s Stufa Manufacturing Enterprises",
     "date_application": "04.09.2025",
     "date_ruling": "24.11.2025",
@@ -589,8 +601,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 5,
-    "sl_no_on_page": "50",
+    "page_no": 6,
+    "sl_no_on_page": "51",
     "applicant": "M/s Qiagen India Pvt Ltd",
     "date_application": "19.12.2024",
     "date_ruling": "19.11.2025",
@@ -602,7 +614,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 6,
-    "sl_no_on_page": "51",
+    "sl_no_on_page": "52",
     "applicant": "M/s Hingpu Overseas",
     "date_application": "13.05.2025",
     "date_ruling": "13.11.2025",
@@ -614,7 +626,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 6,
-    "sl_no_on_page": "52",
+    "sl_no_on_page": "53",
     "applicant": "M/s Vivo Mobile India Limited",
     "date_application": "03.01.2025",
     "date_ruling": "12.11.2025",
@@ -626,7 +638,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 6,
-    "sl_no_on_page": "53",
+    "sl_no_on_page": "54",
     "applicant": "M/s Rohde & Schwarz India Private Limited",
     "date_application": "16.04.2025",
     "date_ruling": "23.10.2025",
@@ -638,7 +650,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 6,
-    "sl_no_on_page": "54",
+    "sl_no_on_page": "55",
     "applicant": "M/s Rohde & Schwarz India Private Limited",
     "date_application": "16.04.2025",
     "date_ruling": "22.10.2025",
@@ -650,7 +662,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 6,
-    "sl_no_on_page": "55",
+    "sl_no_on_page": "56",
     "applicant": "M/s Rohde & Schwarz India Private Limited",
     "date_application": "19.05.2025",
     "date_ruling": "17.10.2025",
@@ -662,7 +674,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 6,
-    "sl_no_on_page": "56",
+    "sl_no_on_page": "57",
     "applicant": "M/s Samsung India Electronics Private Limited",
     "date_application": "11.06.2025",
     "date_ruling": "14.10.2025",
@@ -674,7 +686,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 6,
-    "sl_no_on_page": "57",
+    "sl_no_on_page": "58",
     "applicant": "M/s Samkwang India Electronics Private Limited",
     "date_application": "04.06.2025",
     "date_ruling": "14.10.2025",
@@ -686,7 +698,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 6,
-    "sl_no_on_page": "58",
+    "sl_no_on_page": "59",
     "applicant": "M/s QIAGEN India Pvt. Ltd.",
     "date_application": "18.12.2024",
     "date_ruling": "11.08.2025",
@@ -698,7 +710,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 6,
-    "sl_no_on_page": "59",
+    "sl_no_on_page": "60",
     "applicant": "M/s Bird flight Services Pvt Ltd",
     "date_application": "20.06.2025",
     "date_ruling": "07.10.2025",
@@ -709,8 +721,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 6,
-    "sl_no_on_page": "60",
+    "page_no": 7,
+    "sl_no_on_page": "61",
     "applicant": "M/s Shri Ganesh International",
     "date_application": "05.06.2025",
     "date_ruling": "07.10.2025",
@@ -722,7 +734,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 7,
-    "sl_no_on_page": "61",
+    "sl_no_on_page": "62",
     "applicant": "M/s Hewlett Packard Enterprise India Pvt Ltd",
     "date_application": "08.05.2025",
     "date_ruling": "01.10.2025",
@@ -734,7 +746,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 7,
-    "sl_no_on_page": "62",
+    "sl_no_on_page": "63",
     "applicant": "M/s Uniqlo India Pvt. Ltd.",
     "date_application": "13.12.2024",
     "date_ruling": "24.07.2025",
@@ -746,7 +758,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 7,
-    "sl_no_on_page": "63",
+    "sl_no_on_page": "64",
     "applicant": "M/s Samsung India Electronics Private Limited",
     "date_application": "20.12.2024",
     "date_ruling": "20.06.2025",
@@ -758,7 +770,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 7,
-    "sl_no_on_page": "64",
+    "sl_no_on_page": "65",
     "applicant": "M/s Samsung India Electronics (P) Ltd.",
     "date_application": "11.07.2025",
     "date_ruling": "01.10.2025",
@@ -770,7 +782,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 7,
-    "sl_no_on_page": "65",
+    "sl_no_on_page": "66",
     "applicant": "M/s TXD India Technology Pvt. Limited",
     "date_application": "28.04.2025",
     "date_ruling": "22.09.2025",
@@ -782,7 +794,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 7,
-    "sl_no_on_page": "66",
+    "sl_no_on_page": "67",
     "applicant": "M/s Samsung Display Noida Private Limited",
     "date_application": "19.05.2025",
     "date_ruling": "12.09.2025",
@@ -794,7 +806,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 7,
-    "sl_no_on_page": "67",
+    "sl_no_on_page": "68",
     "applicant": "M/s JSW MG Motor India Pvt. Limited",
     "date_application": "27.01.2025",
     "date_ruling": "16.09.2025",
@@ -806,7 +818,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 7,
-    "sl_no_on_page": "68",
+    "sl_no_on_page": "69",
     "applicant": "M/s Canon India Pvt. Ltd",
     "date_application": "28-04-2025",
     "date_ruling": "18-08-2025",
@@ -818,7 +830,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 7,
-    "sl_no_on_page": "69",
+    "sl_no_on_page": "70",
     "applicant": "M/s Veesan International Trading Private Limited",
     "date_application": "04-06-2025",
     "date_ruling": "11-08-2025",
@@ -829,8 +841,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 7,
-    "sl_no_on_page": "70",
+    "page_no": 8,
+    "sl_no_on_page": "71",
     "applicant": "M/s Gauma Apparels Internatio (OPC) Pvt Ltd",
     "date_application": "05-06-2025",
     "date_ruling": "11-08-2025",
@@ -842,7 +854,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 8,
-    "sl_no_on_page": "71",
+    "sl_no_on_page": "72",
     "applicant": "M/s Le Mei Plastic Manufacturing Private Limited",
     "date_application": "05-03-2025",
     "date_ruling": "06-08-2025",
@@ -854,7 +866,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 8,
-    "sl_no_on_page": "72",
+    "sl_no_on_page": "73",
     "applicant": "M/s Mitsubishi Electric Automotive India Private Limited",
     "date_application": "05.03.2025",
     "date_ruling": "30.07.2025",
@@ -866,7 +878,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 8,
-    "sl_no_on_page": "73",
+    "sl_no_on_page": "74",
     "applicant": "M/s Amazon Wholesale India Private Limited",
     "date_application": "11-04-2025",
     "date_ruling": "28-07-2025",
@@ -878,7 +890,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 8,
-    "sl_no_on_page": "74",
+    "sl_no_on_page": "75",
     "applicant": "M/s Sun Max Solar Pvt Ltd",
     "date_application": "21.11.2024",
     "date_ruling": "24.07.2025",
@@ -886,18 +898,6 @@
     "ruling_no": "CAAR/Del/Sunmax/41/2025",
     "pdf_link": "https://www.cbic.gov.in/CONTENTREPO/VPNcontents/CAAR/caar-del-41-25092025.pdf",
     "pdf_available": "YES"
-  },
-  {
-    "section": "Delhi Rulings",
-    "page_no": 8,
-    "sl_no_on_page": "75",
-    "applicant": "M/s Amazon Wholesale India Private Limited",
-    "date_application": "12.03.2025",
-    "date_ruling": "20.06.2025",
-    "subject": "Import of \"4K Streaming Media Player [Model No. CL32P4] (Fire TV Stick 4K Select)\" with Alexa voice",
-    "ruling_no": "CAAR/Del/Amazon/35/2025",
-    "pdf_link": "",
-    "pdf_available": "NO"
   },
   {
     "section": "Delhi Rulings",
@@ -916,10 +916,10 @@
     "page_no": 8,
     "sl_no_on_page": "77",
     "applicant": "M/s Amazon Wholesale India Private Limited",
-    "date_application": "13.12.2024",
+    "date_application": "12.03.2025",
     "date_ruling": "20.06.2025",
-    "subject": "EchoShow 5(3rd Generation), Model No. H97N6S",
-    "ruling_no": "CAAR/Del/Amazon/34/2025",
+    "subject": "Import of \"4K Streaming Media Player [Model No. CL32P4] (Fire TV Stick 4K Select)\" with Alexa voice",
+    "ruling_no": "CAAR/Del/Amazon/35/2025",
     "pdf_link": "",
     "pdf_available": "NO"
   },
@@ -940,6 +940,18 @@
     "page_no": 8,
     "sl_no_on_page": "79",
     "applicant": "M/s Amazon Wholesale India Private Limited",
+    "date_application": "13.12.2024",
+    "date_ruling": "20.06.2025",
+    "subject": "EchoShow 5(3rd Generation), Model No. H97N6S",
+    "ruling_no": "CAAR/Del/Amazon/34/2025",
+    "pdf_link": "",
+    "pdf_available": "NO"
+  },
+  {
+    "section": "Delhi Rulings",
+    "page_no": 8,
+    "sl_no_on_page": "80",
+    "applicant": "M/s Amazon Wholesale India Private Limited",
     "date_application": "16.12.2024",
     "date_ruling": "20.06.2025",
     "subject": "Alexa Voice remote, Model No. PA38CA",
@@ -949,8 +961,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 8,
-    "sl_no_on_page": "80",
+    "page_no": 9,
+    "sl_no_on_page": "81",
     "applicant": "M/s Aptiv Component India Private Limited",
     "date_application": "22.01.2025",
     "date_ruling": "04.06.2025",
@@ -962,7 +974,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 9,
-    "sl_no_on_page": "81",
+    "sl_no_on_page": "82",
     "applicant": "M/s Wabtec Locomotive Private Limited",
     "date_application": "06.02.2025",
     "date_ruling": "04.06.2025",
@@ -974,7 +986,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 9,
-    "sl_no_on_page": "82",
+    "sl_no_on_page": "83",
     "applicant": "M/s Vivo Mobile India Pvt. Ltd",
     "date_application": "26.11.2024",
     "date_ruling": "20.05.2025",
@@ -986,7 +998,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 9,
-    "sl_no_on_page": "83",
+    "sl_no_on_page": "84",
     "applicant": "M/s Canon India Pvt Ltd",
     "date_application": "27.11.2024",
     "date_ruling": "20.05.2025",
@@ -998,7 +1010,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 9,
-    "sl_no_on_page": "84",
+    "sl_no_on_page": "85",
     "applicant": "M/s Aptiv Component India Private limited",
     "date_application": "22.01.2025",
     "date_ruling": "07.05.2025",
@@ -1010,7 +1022,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 9,
-    "sl_no_on_page": "85",
+    "sl_no_on_page": "86",
     "applicant": "M/s Aptiv Component India Private limited",
     "date_application": "22.01.2025",
     "date_ruling": "07.05.2025",
@@ -1022,7 +1034,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 9,
-    "sl_no_on_page": "86",
+    "sl_no_on_page": "87",
     "applicant": "M/s Star Enterprises",
     "date_application": "16-12-2024",
     "date_ruling": "18-02-2025",
@@ -1034,7 +1046,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 9,
-    "sl_no_on_page": "87",
+    "sl_no_on_page": "88",
     "applicant": "M/s Star Enterprises",
     "date_application": "16-12-2024",
     "date_ruling": "18-02-2025",
@@ -1046,7 +1058,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 9,
-    "sl_no_on_page": "88",
+    "sl_no_on_page": "89",
     "applicant": "M/s Star Enterprises",
     "date_application": "16-12-2024",
     "date_ruling": "18-02-2025",
@@ -1058,7 +1070,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 9,
-    "sl_no_on_page": "89",
+    "sl_no_on_page": "90",
     "applicant": "M/s Akam Impex",
     "date_application": "13.12.2024",
     "date_ruling": "18.02.2025",
@@ -1069,8 +1081,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 9,
-    "sl_no_on_page": "90",
+    "page_no": 10,
+    "sl_no_on_page": "91",
     "applicant": "M/s Akam Impex",
     "date_application": "13.12.2024",
     "date_ruling": "18.02.2025",
@@ -1082,7 +1094,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 10,
-    "sl_no_on_page": "91",
+    "sl_no_on_page": "92",
     "applicant": "M/s Perfect Trading Co.",
     "date_application": "11.10.2024",
     "date_ruling": "03.02.2025",
@@ -1094,7 +1106,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 10,
-    "sl_no_on_page": "92",
+    "sl_no_on_page": "93",
     "applicant": "M/s Clarion India Private Limited",
     "date_application": "24.09.2024",
     "date_ruling": "24.01.2025",
@@ -1106,7 +1118,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 10,
-    "sl_no_on_page": "93",
+    "sl_no_on_page": "94",
     "applicant": "M/s Amazon Wholesale India Private Limited",
     "date_application": "30.10.2024",
     "date_ruling": "24.01.2025",
@@ -1118,7 +1130,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 10,
-    "sl_no_on_page": "94",
+    "sl_no_on_page": "95",
     "applicant": "M/s Apple Operations International (Ltd.)",
     "date_application": "09-10-2024",
     "date_ruling": "23.01.2025",
@@ -1130,7 +1142,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 10,
-    "sl_no_on_page": "95",
+    "sl_no_on_page": "96",
     "applicant": "M/s Apple Operations International (Ltd.)",
     "date_application": "09-10-2024",
     "date_ruling": "23.01.2025",
@@ -1142,7 +1154,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 10,
-    "sl_no_on_page": "96",
+    "sl_no_on_page": "97",
     "applicant": "M/s Apple Operations International (Ltd.)",
     "date_application": "09-10-2024",
     "date_ruling": "23.01.2025",
@@ -1154,7 +1166,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 10,
-    "sl_no_on_page": "97",
+    "sl_no_on_page": "98",
     "applicant": "M/s Apple Operations International (Ltd.)",
     "date_application": "09-10-2024",
     "date_ruling": "23.01.2025",
@@ -1166,7 +1178,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 10,
-    "sl_no_on_page": "98",
+    "sl_no_on_page": "99",
     "applicant": "M/s Apple Operations International (Ltd.)",
     "date_application": "09-10-2024",
     "date_ruling": "23.01.2025",
@@ -1178,7 +1190,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 10,
-    "sl_no_on_page": "99",
+    "sl_no_on_page": "100",
     "applicant": "M/s Apple Operations International (Ltd.)",
     "date_application": "09-10-2024",
     "date_ruling": "23.01.2025",
@@ -1189,8 +1201,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 10,
-    "sl_no_on_page": "100",
+    "page_no": 11,
+    "sl_no_on_page": "101",
     "applicant": "M/s Apple Operations International (Ltd.)",
     "date_application": "09-10-2024",
     "date_ruling": "23.01.2025",
@@ -1202,7 +1214,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 11,
-    "sl_no_on_page": "101",
+    "sl_no_on_page": "102",
     "applicant": "M/s Apple Operations International (Ltd.)",
     "date_application": "09-10-2024",
     "date_ruling": "23.01.2025",
@@ -1214,7 +1226,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 11,
-    "sl_no_on_page": "102",
+    "sl_no_on_page": "103",
     "applicant": "M/s Apple Operations International (Ltd.)",
     "date_application": "09-10-2024",
     "date_ruling": "22.01.2025",
@@ -1226,7 +1238,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 11,
-    "sl_no_on_page": "103",
+    "sl_no_on_page": "104",
     "applicant": "M/s Apple Operations International (Ltd.)",
     "date_application": "09-10-2024",
     "date_ruling": "22.01.2025",
@@ -1238,7 +1250,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 11,
-    "sl_no_on_page": "104",
+    "sl_no_on_page": "105",
     "applicant": "M/s Apple Operations International (Ltd.)",
     "date_application": "09-10-2024",
     "date_ruling": "22.01.2025",
@@ -1250,7 +1262,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 11,
-    "sl_no_on_page": "105",
+    "sl_no_on_page": "106",
     "applicant": "M/s Apple Operations International (Ltd.)",
     "date_application": "09-10-2024",
     "date_ruling": "21.01.2025",
@@ -1262,7 +1274,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 11,
-    "sl_no_on_page": "106",
+    "sl_no_on_page": "107",
     "applicant": "M/s Akam Impex",
     "date_application": "13.12.2024",
     "date_ruling": "14.01.2025",
@@ -1274,7 +1286,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 11,
-    "sl_no_on_page": "107",
+    "sl_no_on_page": "108",
     "applicant": "M/s BYD India Private Limited",
     "date_application": "28.10.2024",
     "date_ruling": "14.01.2025",
@@ -1286,7 +1298,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 11,
-    "sl_no_on_page": "108",
+    "sl_no_on_page": "109",
     "applicant": "M/s Kodarma Chemi (p) ltds",
     "date_application": "09.10.2024",
     "date_ruling": "08.01.2025",
@@ -1298,7 +1310,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 11,
-    "sl_no_on_page": "109",
+    "sl_no_on_page": "110",
     "applicant": "M/s shri ram overseas",
     "date_application": "16.10.2024",
     "date_ruling": "08.01.2025",
@@ -1309,8 +1321,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 11,
-    "sl_no_on_page": "110",
+    "page_no": 12,
+    "sl_no_on_page": "111",
     "applicant": "M/s shri ram overseas",
     "date_application": "16.10.2024",
     "date_ruling": "08.01.2025",
@@ -1322,7 +1334,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 12,
-    "sl_no_on_page": "111",
+    "sl_no_on_page": "112",
     "applicant": "M/s Star Enterprise",
     "date_application": "03.10.2024",
     "date_ruling": "31.12.2024",
@@ -1334,7 +1346,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 12,
-    "sl_no_on_page": "112",
+    "sl_no_on_page": "113",
     "applicant": "Danisco India Pvt. Ltd.",
     "date_application": "24.09.2024",
     "date_ruling": "30.12.2024",
@@ -1346,7 +1358,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 12,
-    "sl_no_on_page": "113",
+    "sl_no_on_page": "114",
     "applicant": "Danisco India Pvt. Ltd.",
     "date_application": "24.09.2024",
     "date_ruling": "30.12.2024",
@@ -1358,7 +1370,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 12,
-    "sl_no_on_page": "114",
+    "sl_no_on_page": "115",
     "applicant": "Danisco India Pvt. Ltd.",
     "date_application": "24.09.2024",
     "date_ruling": "30.12.2024",
@@ -1370,7 +1382,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 12,
-    "sl_no_on_page": "115",
+    "sl_no_on_page": "116",
     "applicant": "Star Enterprise",
     "date_application": "24.09.2024",
     "date_ruling": "27.12.2024",
@@ -1382,7 +1394,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 12,
-    "sl_no_on_page": "116",
+    "sl_no_on_page": "117",
     "applicant": "Danisco India Pvt. Ltd.",
     "date_application": "23.09.2024",
     "date_ruling": "27.12.2024",
@@ -1394,7 +1406,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 12,
-    "sl_no_on_page": "117",
+    "sl_no_on_page": "118",
     "applicant": "Danisco India Pvt. Ltd",
     "date_application": "24.09.2024",
     "date_ruling": "26.12.2024",
@@ -1406,7 +1418,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 12,
-    "sl_no_on_page": "118",
+    "sl_no_on_page": "119",
     "applicant": "R V International",
     "date_application": "23.09.2024",
     "date_ruling": "24.12.2024",
@@ -1418,7 +1430,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 12,
-    "sl_no_on_page": "119",
+    "sl_no_on_page": "120",
     "applicant": "R V International",
     "date_application": "23.09.2024",
     "date_ruling": "24.12.2024",
@@ -1429,8 +1441,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 12,
-    "sl_no_on_page": "120",
+    "page_no": 13,
+    "sl_no_on_page": "121",
     "applicant": "Samsung India Electronics Private Limited",
     "date_application": "12.09.2024",
     "date_ruling": "24.12.2024",
@@ -1442,7 +1454,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 13,
-    "sl_no_on_page": "121",
+    "sl_no_on_page": "122",
     "applicant": "Lujee International Company Ltd",
     "date_application": "24.09.2024",
     "date_ruling": "24.12.2024",
@@ -1454,7 +1466,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 13,
-    "sl_no_on_page": "122",
+    "sl_no_on_page": "123",
     "applicant": "Lujee International Company Ltd",
     "date_application": "24.09.2024",
     "date_ruling": "24.12.2024",
@@ -1466,7 +1478,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 13,
-    "sl_no_on_page": "123",
+    "sl_no_on_page": "124",
     "applicant": "Lujee International Company Ltd",
     "date_application": "24.09.2024",
     "date_ruling": "24.12.2024",
@@ -1478,7 +1490,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 13,
-    "sl_no_on_page": "124",
+    "sl_no_on_page": "125",
     "applicant": "Betel Nuts Suppliers LLP",
     "date_application": "23.09.2024",
     "date_ruling": "23.12.2024",
@@ -1490,7 +1502,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 13,
-    "sl_no_on_page": "125",
+    "sl_no_on_page": "126",
     "applicant": "Lujee International Company Ltd",
     "date_application": "24.09.2024",
     "date_ruling": "23.12.2024",
@@ -1502,7 +1514,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 13,
-    "sl_no_on_page": "126",
+    "sl_no_on_page": "127",
     "applicant": "Lujee International Company Ltd",
     "date_application": "24.09.2024",
     "date_ruling": "23.12.2024",
@@ -1514,7 +1526,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 13,
-    "sl_no_on_page": "127",
+    "sl_no_on_page": "128",
     "applicant": "R V International",
     "date_application": "23.09.2024",
     "date_ruling": "23.12.2024",
@@ -1526,7 +1538,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 13,
-    "sl_no_on_page": "128",
+    "sl_no_on_page": "129",
     "applicant": "R V International",
     "date_application": "23.09.2024",
     "date_ruling": "20.12.2024",
@@ -1538,7 +1550,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 13,
-    "sl_no_on_page": "129",
+    "sl_no_on_page": "130",
     "applicant": "Lujee International Company Ltd",
     "date_application": "24.09.2024",
     "date_ruling": "20.12.2024",
@@ -1549,8 +1561,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 13,
-    "sl_no_on_page": "130",
+    "page_no": 14,
+    "sl_no_on_page": "131",
     "applicant": "Mystique Impex Pvt. Ltd.",
     "date_application": "09.09.2024",
     "date_ruling": "20.12.2024",
@@ -1562,7 +1574,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 14,
-    "sl_no_on_page": "131",
+    "sl_no_on_page": "132",
     "applicant": "R V International",
     "date_application": "24.09.2024",
     "date_ruling": "20.12.2024",
@@ -1574,7 +1586,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 14,
-    "sl_no_on_page": "132",
+    "sl_no_on_page": "133",
     "applicant": "Vapa Overseas Pvt Ltd",
     "date_application": "24.09.2024",
     "date_ruling": "20.12.2024",
@@ -1586,7 +1598,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 14,
-    "sl_no_on_page": "133",
+    "sl_no_on_page": "134",
     "applicant": "Plumage Solutions Private Limited",
     "date_application": "17.09.2024",
     "date_ruling": "20.12.2024",
@@ -1598,7 +1610,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 14,
-    "sl_no_on_page": "134",
+    "sl_no_on_page": "135",
     "applicant": "M/s Plumage Solutions Pvt Ltd.",
     "date_application": "17-09-2024",
     "date_ruling": "18-12-2024",
@@ -1610,7 +1622,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 14,
-    "sl_no_on_page": "135",
+    "sl_no_on_page": "136",
     "applicant": "M/s Plumage Solutions Pvt Ltd.",
     "date_application": "17-09-2024",
     "date_ruling": "17-12-2024",
@@ -1622,7 +1634,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 14,
-    "sl_no_on_page": "136",
+    "sl_no_on_page": "137",
     "applicant": "M/s Danisco India Pvt. Ltd",
     "date_application": "24.09.2024",
     "date_ruling": "11.12.2024",
@@ -1634,7 +1646,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 14,
-    "sl_no_on_page": "137",
+    "sl_no_on_page": "138",
     "applicant": "M/s Lujee International Company Ltd",
     "date_application": "24.09.2024",
     "date_ruling": "11.12.2024",
@@ -1646,7 +1658,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 14,
-    "sl_no_on_page": "138",
+    "sl_no_on_page": "139",
     "applicant": "M/s Amazon Wholesale India Pvt Ltd",
     "date_application": "23.08.2024",
     "date_ruling": "10.12.2024",
@@ -1658,7 +1670,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 14,
-    "sl_no_on_page": "139",
+    "sl_no_on_page": "140",
     "applicant": "M/s Winone Precision Technology India Pvt Ltd",
     "date_application": "05.09.2024",
     "date_ruling": "11.12.2024",
@@ -1669,8 +1681,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 14,
-    "sl_no_on_page": "140",
+    "page_no": 15,
+    "sl_no_on_page": "141",
     "applicant": "Oppo Mobiles India Pvt. Ltd",
     "date_application": "12.08.2024",
     "date_ruling": "06.12.2024",
@@ -1682,7 +1694,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 15,
-    "sl_no_on_page": "141",
+    "sl_no_on_page": "142",
     "applicant": "Star Enterprises",
     "date_application": "03.10.2024",
     "date_ruling": "05.12.2024",
@@ -1694,7 +1706,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 15,
-    "sl_no_on_page": "142",
+    "sl_no_on_page": "143",
     "applicant": "N.K. International",
     "date_application": "15.10.2024",
     "date_ruling": "05.12.2024",
@@ -1706,7 +1718,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 15,
-    "sl_no_on_page": "143",
+    "sl_no_on_page": "144",
     "applicant": "shri ram overseas",
     "date_application": "16.10.2024",
     "date_ruling": "05.12.2024",
@@ -1718,7 +1730,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 15,
-    "sl_no_on_page": "144",
+    "sl_no_on_page": "145",
     "applicant": "Canon India Pvt. Ltd.",
     "date_application": "23.08.2024",
     "date_ruling": "28.11.2024",
@@ -1730,7 +1742,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 15,
-    "sl_no_on_page": "145",
+    "sl_no_on_page": "146",
     "applicant": "Winone Precision Technology India Pvt Ltd",
     "date_application": "05.09.2024",
     "date_ruling": "28.11.2024",
@@ -1742,7 +1754,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 15,
-    "sl_no_on_page": "146",
+    "sl_no_on_page": "147",
     "applicant": "Lujee International Company Ltd",
     "date_application": "30.08.2024",
     "date_ruling": "21.11.2024",
@@ -1754,7 +1766,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 15,
-    "sl_no_on_page": "147",
+    "sl_no_on_page": "148",
     "applicant": "N.K. International",
     "date_application": "15.10.2024",
     "date_ruling": "21.11.2024",
@@ -1766,7 +1778,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 15,
-    "sl_no_on_page": "148",
+    "sl_no_on_page": "149",
     "applicant": "Lujee International Company Ltd",
     "date_application": "24.09.2024",
     "date_ruling": "21.11.2024",
@@ -1778,7 +1790,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 15,
-    "sl_no_on_page": "149",
+    "sl_no_on_page": "150",
     "applicant": "Lujee International Company Ltd",
     "date_application": "24.09.2024",
     "date_ruling": "21.11.2024",
@@ -1789,8 +1801,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 15,
-    "sl_no_on_page": "150",
+    "page_no": 16,
+    "sl_no_on_page": "151",
     "applicant": "Lujee International Company Ltd",
     "date_application": "30.08.2024",
     "date_ruling": "21.11.2024",
@@ -1802,7 +1814,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 16,
-    "sl_no_on_page": "151",
+    "sl_no_on_page": "152",
     "applicant": "Sunwoda Electronic India Pvt. Ltd.",
     "date_application": "28.08.2024",
     "date_ruling": "20.11.2024",
@@ -1814,7 +1826,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 16,
-    "sl_no_on_page": "152",
+    "sl_no_on_page": "153",
     "applicant": "Sunwoda Electronic India Pvt. Ltd.",
     "date_application": "28.08.2024",
     "date_ruling": "20.11.2024",
@@ -1826,7 +1838,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 16,
-    "sl_no_on_page": "153",
+    "sl_no_on_page": "154",
     "applicant": "Sunwoda Electronic India Pvt. Ltd.",
     "date_application": "28.08.2024",
     "date_ruling": "20.11.2024",
@@ -1838,7 +1850,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 16,
-    "sl_no_on_page": "154",
+    "sl_no_on_page": "155",
     "applicant": "M/s Betel Nuts Suppliers LLP",
     "date_application": "23.09.2024",
     "date_ruling": "01.11.2024",
@@ -1850,7 +1862,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 16,
-    "sl_no_on_page": "155",
+    "sl_no_on_page": "156",
     "applicant": "M/s Betel Nuts Suppliers LLP",
     "date_application": "23.09.2024",
     "date_ruling": "01.11.2024",
@@ -1862,7 +1874,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 16,
-    "sl_no_on_page": "156",
+    "sl_no_on_page": "157",
     "applicant": "M/s Lujee International Company Ltd",
     "date_application": "24.09.2024",
     "date_ruling": "01.11.2024",
@@ -1874,7 +1886,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 16,
-    "sl_no_on_page": "157",
+    "sl_no_on_page": "158",
     "applicant": "M/s Maa Devsar Traders",
     "date_application": "12.08.2024",
     "date_ruling": "01.11.2024",
@@ -1886,7 +1898,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 16,
-    "sl_no_on_page": "158",
+    "sl_no_on_page": "159",
     "applicant": "M/s Maa Devsar Traders",
     "date_application": "12.08.2024",
     "date_ruling": "01.11.2024",
@@ -1898,7 +1910,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 16,
-    "sl_no_on_page": "159",
+    "sl_no_on_page": "160",
     "applicant": "M/s R V International",
     "date_application": "23.09.2024",
     "date_ruling": "01.11.2024",
@@ -1909,8 +1921,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 16,
-    "sl_no_on_page": "160",
+    "page_no": 17,
+    "sl_no_on_page": "161",
     "applicant": "M/s Maa Devsar Traders",
     "date_application": "12.08.2024",
     "date_ruling": "01.11.2024",
@@ -1922,7 +1934,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 17,
-    "sl_no_on_page": "161",
+    "sl_no_on_page": "162",
     "applicant": "M/s Maa Devsar Traders",
     "date_application": "12.08.2024",
     "date_ruling": "01.11.2024",
@@ -1934,7 +1946,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 17,
-    "sl_no_on_page": "162",
+    "sl_no_on_page": "163",
     "applicant": "M/s Lujee International Company Ltd",
     "date_application": "30.08.2024",
     "date_ruling": "29.10.2024",
@@ -1946,7 +1958,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 17,
-    "sl_no_on_page": "163",
+    "sl_no_on_page": "164",
     "applicant": "M/s Solum India Hightech Pvt. Ltd",
     "date_application": "15.07.2024",
     "date_ruling": "22.10.2024",
@@ -1958,7 +1970,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 17,
-    "sl_no_on_page": "164",
+    "sl_no_on_page": "165",
     "applicant": "M/s Morya Traders.",
     "date_application": "15.07.2024",
     "date_ruling": "17.10.2024",
@@ -1970,7 +1982,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 17,
-    "sl_no_on_page": "165",
+    "sl_no_on_page": "166",
     "applicant": "M/s Cuthber Passion LLP.",
     "date_application": "29.07.2024",
     "date_ruling": "14.10.2024",
@@ -1982,7 +1994,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 17,
-    "sl_no_on_page": "166",
+    "sl_no_on_page": "167",
     "applicant": "M/s Cuthber Passion LLP.",
     "date_application": "29.07.2024",
     "date_ruling": "14.10.2024",
@@ -1994,7 +2006,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 17,
-    "sl_no_on_page": "167",
+    "sl_no_on_page": "168",
     "applicant": "M/s Cuthber Passion LLP.",
     "date_application": "29.07.2024",
     "date_ruling": "10.10.2024",
@@ -2006,7 +2018,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 17,
-    "sl_no_on_page": "168",
+    "sl_no_on_page": "169",
     "applicant": "M/s Cuthber Passion LLP.",
     "date_application": "29.07.2024",
     "date_ruling": "14.10.2024",
@@ -2018,7 +2030,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 17,
-    "sl_no_on_page": "169",
+    "sl_no_on_page": "170",
     "applicant": "M/s Danisco India (P) Ltd.",
     "date_application": "25.06.2024",
     "date_ruling": "10.10.2024",
@@ -2029,8 +2041,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 17,
-    "sl_no_on_page": "170",
+    "page_no": 18,
+    "sl_no_on_page": "171",
     "applicant": "M/s Danisco India (P) Ltd.",
     "date_application": "25.06.2024",
     "date_ruling": "10.10.2024",
@@ -2042,7 +2054,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 18,
-    "sl_no_on_page": "171",
+    "sl_no_on_page": "172",
     "applicant": "M/s Arista Networks.",
     "date_application": "20.06.2024",
     "date_ruling": "08.10.2024",
@@ -2054,7 +2066,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 18,
-    "sl_no_on_page": "172",
+    "sl_no_on_page": "173",
     "applicant": "M/s RV international",
     "date_application": "31.07.2024",
     "date_ruling": "03.10.2024",
@@ -2066,7 +2078,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 18,
-    "sl_no_on_page": "173",
+    "sl_no_on_page": "174",
     "applicant": "M/s Wood Tech Indutries",
     "date_application": "09.08.2024",
     "date_ruling": "30.09.2024",
@@ -2078,7 +2090,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 18,
-    "sl_no_on_page": "174",
+    "sl_no_on_page": "175",
     "applicant": "M/s Saga International",
     "date_application": "01.07.2024",
     "date_ruling": "30.09.2024",
@@ -2090,7 +2102,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 18,
-    "sl_no_on_page": "175",
+    "sl_no_on_page": "176",
     "applicant": "M/s Arista Networks limited",
     "date_application": "20.06.2024",
     "date_ruling": "26.09.2024",
@@ -2102,7 +2114,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 18,
-    "sl_no_on_page": "176",
+    "sl_no_on_page": "177",
     "applicant": "M/s Arista Networks limited",
     "date_application": "20.06.2024",
     "date_ruling": "26.09.2024",
@@ -2114,7 +2126,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 18,
-    "sl_no_on_page": "177",
+    "sl_no_on_page": "178",
     "applicant": "M/s Nokia Solutions",
     "date_application": "05.07.2024",
     "date_ruling": "26.09.2024",
@@ -2126,7 +2138,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 18,
-    "sl_no_on_page": "178",
+    "sl_no_on_page": "179",
     "applicant": "M/s Nokia Solutions",
     "date_application": "05.07.2024",
     "date_ruling": "26.09.2024",
@@ -2138,7 +2150,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 18,
-    "sl_no_on_page": "179",
+    "sl_no_on_page": "180",
     "applicant": "M/s Rawder Petroleum Pvt. Ltd.",
     "date_application": "18.06.2024",
     "date_ruling": "19.09.2024",
@@ -2149,8 +2161,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 18,
-    "sl_no_on_page": "180",
+    "page_no": 19,
+    "sl_no_on_page": "181",
     "applicant": "M/s Forever New Apparels Pvt. Ltd. (31/2024).",
     "date_application": "26.06.2024",
     "date_ruling": "19.09.2024",
@@ -2162,7 +2174,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 19,
-    "sl_no_on_page": "181",
+    "sl_no_on_page": "182",
     "applicant": "M/s Di Pec Exim LLP (75/2024).",
     "date_application": "31.07.2024",
     "date_ruling": "19.09.2024",
@@ -2174,7 +2186,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 19,
-    "sl_no_on_page": "182",
+    "sl_no_on_page": "183",
     "applicant": "M/s Cuthbert Passion LLP (71/2024)",
     "date_application": "29.07.2024",
     "date_ruling": "19.09.2024",
@@ -2186,7 +2198,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 19,
-    "sl_no_on_page": "183",
+    "sl_no_on_page": "184",
     "applicant": "M/s RV International (77/2024).",
     "date_application": "31.07.2024",
     "date_ruling": "11.09.2024",
@@ -2198,7 +2210,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 19,
-    "sl_no_on_page": "184",
+    "sl_no_on_page": "185",
     "applicant": "M/s Saga International (61/2024)",
     "date_application": "01.07.2024",
     "date_ruling": "09.09.2024",
@@ -2210,7 +2222,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 19,
-    "sl_no_on_page": "185",
+    "sl_no_on_page": "186",
     "applicant": "M/s Saga International (59/2024)",
     "date_application": "01.07.2024",
     "date_ruling": "09.09.2024",
@@ -2222,7 +2234,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 19,
-    "sl_no_on_page": "186",
+    "sl_no_on_page": "187",
     "applicant": "M/s RV International.",
     "date_application": "31.07.2024",
     "date_ruling": "30.08.2024",
@@ -2234,7 +2246,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 19,
-    "sl_no_on_page": "187",
+    "sl_no_on_page": "188",
     "applicant": "M/s Cutberth Passion LLP.",
     "date_application": "29.07.2024",
     "date_ruling": "30.08.2024",
@@ -2246,7 +2258,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 19,
-    "sl_no_on_page": "188",
+    "sl_no_on_page": "189",
     "applicant": "M/s Forever New Apparels Pvt. Ltd. (30/2024)",
     "date_application": "26.04.2024",
     "date_ruling": "27.08.2024",
@@ -2258,7 +2270,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 19,
-    "sl_no_on_page": "189",
+    "sl_no_on_page": "190",
     "applicant": "M/s Forever New Apparels Pvt. Ltd. (32/2024)",
     "date_application": "26.04.2024",
     "date_ruling": "27.08.2024",
@@ -2269,8 +2281,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 19,
-    "sl_no_on_page": "190",
+    "page_no": 20,
+    "sl_no_on_page": "191",
     "applicant": "M/s Lujee International Company Ltd. (44/2024).",
     "date_application": "18.06.2024",
     "date_ruling": "21.08.2024",
@@ -2282,7 +2294,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 20,
-    "sl_no_on_page": "191",
+    "sl_no_on_page": "192",
     "applicant": "M/s Lujee International Company Ltd. (43/2024).",
     "date_application": "18.06.2024",
     "date_ruling": "21.08.2024",
@@ -2294,7 +2306,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 20,
-    "sl_no_on_page": "192",
+    "sl_no_on_page": "193",
     "applicant": "M/s Lujee International Company Ltd. (42/2024).",
     "date_application": "18.06.2024",
     "date_ruling": "21.08.2024",
@@ -2306,7 +2318,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 20,
-    "sl_no_on_page": "193",
+    "sl_no_on_page": "194",
     "applicant": "M/s Lujee International Company Ltd.(50/2024)",
     "date_application": "18.06.2024",
     "date_ruling": "19.08.2024",
@@ -2318,7 +2330,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 20,
-    "sl_no_on_page": "194",
+    "sl_no_on_page": "195",
     "applicant": "M/s BMW India Pvt. Ltd",
     "date_application": "27.05.2024",
     "date_ruling": "16.08.2024",
@@ -2330,7 +2342,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 20,
-    "sl_no_on_page": "195",
+    "sl_no_on_page": "196",
     "applicant": "M/s Lujee International Company Ltd.(56/2024).",
     "date_application": "25.06.2024",
     "date_ruling": "06.08.2024",
@@ -2342,7 +2354,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 20,
-    "sl_no_on_page": "196",
+    "sl_no_on_page": "197",
     "applicant": "M/s Amazon Wholesale India Pvt. Ltd. (35/2024).",
     "date_application": "06.05.2024",
     "date_ruling": "02.08.2024",
@@ -2354,7 +2366,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 20,
-    "sl_no_on_page": "197",
+    "sl_no_on_page": "198",
     "applicant": "M/s DI PEC Exim LLP (37/2024).",
     "date_application": "04.06.2024",
     "date_ruling": "31.07.2024",
@@ -2366,7 +2378,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 20,
-    "sl_no_on_page": "198",
+    "sl_no_on_page": "199",
     "applicant": "M/s DI PEC Exim LLP (36/2024).",
     "date_application": "04.06.2024",
     "date_ruling": "26.07.2024",
@@ -2378,7 +2390,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 20,
-    "sl_no_on_page": "199",
+    "sl_no_on_page": "200",
     "applicant": "M/s DI PEC Exim LLP (35/2024).",
     "date_application": "04.06.2024",
     "date_ruling": "26.07.2024",
@@ -2389,8 +2401,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 20,
-    "sl_no_on_page": "200",
+    "page_no": 21,
+    "sl_no_on_page": "201",
     "applicant": "M/s DI PEC Exim LLP (34/2024).",
     "date_application": "04.06.2024",
     "date_ruling": "25.07.2024",
@@ -2402,7 +2414,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 21,
-    "sl_no_on_page": "201",
+    "sl_no_on_page": "202",
     "applicant": "M/s Inditex Trent Retail India Pvt. Ltd.",
     "date_application": "01.05.2024",
     "date_ruling": "19.07.2024",
@@ -2414,7 +2426,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 21,
-    "sl_no_on_page": "202",
+    "sl_no_on_page": "203",
     "applicant": "M/s DI PEC Exim LLP (45/2024).",
     "date_application": "04.06.2024",
     "date_ruling": "16.07.2024",
@@ -2426,7 +2438,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 21,
-    "sl_no_on_page": "203",
+    "sl_no_on_page": "204",
     "applicant": "M/s DI PEC Exim LLP (44/2024)",
     "date_application": "04.06.2024",
     "date_ruling": "10.07.2024",
@@ -2438,7 +2450,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 21,
-    "sl_no_on_page": "204",
+    "sl_no_on_page": "205",
     "applicant": "M/s Exim Incorporation",
     "date_application": "19.06.2024",
     "date_ruling": "05.07.2024",
@@ -2450,7 +2462,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 21,
-    "sl_no_on_page": "205",
+    "sl_no_on_page": "206",
     "applicant": "M/s Prenda Creations India Pvt. Ltd.",
     "date_application": "16.04.2024",
     "date_ruling": "26.06.2024",
@@ -2462,7 +2474,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 21,
-    "sl_no_on_page": "206",
+    "sl_no_on_page": "207",
     "applicant": "M/s ShreeHari Ananta Overseas Pvt. Ltd.",
     "date_application": "13.05.2024",
     "date_ruling": "28.06.2024",
@@ -2474,7 +2486,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 21,
-    "sl_no_on_page": "207",
+    "sl_no_on_page": "208",
     "applicant": "M/s Winone Precision Technology India Pvt. Ltd.",
     "date_application": "01.04.2024",
     "date_ruling": "24.06.2024",
@@ -2486,7 +2498,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 21,
-    "sl_no_on_page": "208",
+    "sl_no_on_page": "209",
     "applicant": "M/s Winone Precision Technology India Pvt. Ltd.",
     "date_application": "01.04.2024",
     "date_ruling": "24.06.2024",
@@ -2498,7 +2510,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 21,
-    "sl_no_on_page": "209",
+    "sl_no_on_page": "210",
     "applicant": "M/s Denso Haryana Pvt. Ltd.",
     "date_application": "26.03.2024",
     "date_ruling": "06.06.2024",
@@ -2509,8 +2521,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 21,
-    "sl_no_on_page": "210",
+    "page_no": 22,
+    "sl_no_on_page": "211",
     "applicant": "M/s Denso Haryana Pvt. Ltd.",
     "date_application": "26.03.2024",
     "date_ruling": "06.06.2024",
@@ -2522,7 +2534,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 22,
-    "sl_no_on_page": "211",
+    "sl_no_on_page": "212",
     "applicant": "M/s Denso Haryana Pvt. Ltd.",
     "date_application": "26.03.2024",
     "date_ruling": "06.06.2024",
@@ -2534,7 +2546,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 22,
-    "sl_no_on_page": "212",
+    "sl_no_on_page": "213",
     "applicant": "M/Samsung Display Noida Pvt Ltd. (16/2024)",
     "date_application": "11/03/2024",
     "date_ruling": "04/06/2024",
@@ -2546,7 +2558,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 22,
-    "sl_no_on_page": "213",
+    "sl_no_on_page": "214",
     "applicant": "M/s Denso Haryana Private Limited (23/2024).",
     "date_application": "26.03.2024",
     "date_ruling": "30.05.2024",
@@ -2558,7 +2570,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 22,
-    "sl_no_on_page": "214",
+    "sl_no_on_page": "215",
     "applicant": "M/s Denso Haryana Private Limited (19/2024)",
     "date_application": "26.03.2024",
     "date_ruling": "30.05.2024",
@@ -2570,7 +2582,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 22,
-    "sl_no_on_page": "215",
+    "sl_no_on_page": "216",
     "applicant": "M/s Vaibhav Enterprises.",
     "date_application": "18.03.2024",
     "date_ruling": "27.05.2024",
@@ -2582,7 +2594,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 22,
-    "sl_no_on_page": "216",
+    "sl_no_on_page": "217",
     "applicant": "M/s Exim Incorporation.",
     "date_application": "30.04.2024",
     "date_ruling": "27.05.2024",
@@ -2594,7 +2606,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 22,
-    "sl_no_on_page": "217",
+    "sl_no_on_page": "218",
     "applicant": "M/s Elentec India Pvt Ltd.",
     "date_application": "05.03.2024",
     "date_ruling": "21.05.2024",
@@ -2606,7 +2618,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 22,
-    "sl_no_on_page": "218",
+    "sl_no_on_page": "219",
     "applicant": "M/s Haritaki FZC",
     "date_application": "23.02.2024",
     "date_ruling": "16.05.2024",
@@ -2618,7 +2630,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 22,
-    "sl_no_on_page": "219",
+    "sl_no_on_page": "220",
     "applicant": "M/s RV International.",
     "date_application": "06.03.2024",
     "date_ruling": "09.05.2024",
@@ -2629,8 +2641,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 22,
-    "sl_no_on_page": "220",
+    "page_no": 23,
+    "sl_no_on_page": "221",
     "applicant": "M/s Vapa Overseas Pvt Ltd.",
     "date_application": "06.03.2024",
     "date_ruling": "09.05.2024",
@@ -2642,7 +2654,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 23,
-    "sl_no_on_page": "221",
+    "sl_no_on_page": "222",
     "applicant": "M/s Vaibhav Enterprises.",
     "date_application": "18.03.2024",
     "date_ruling": "06.05.2024",
@@ -2654,7 +2666,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 23,
-    "sl_no_on_page": "222",
+    "sl_no_on_page": "223",
     "applicant": "M/s Vivo Mobile India Pvt Ltd.",
     "date_application": "26.12.2024",
     "date_ruling": "26.04.2024",
@@ -2666,7 +2678,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 23,
-    "sl_no_on_page": "223",
+    "sl_no_on_page": "224",
     "applicant": "M/s remarkable AS (06/2024)",
     "date_application": "30.01.2024",
     "date_ruling": "25.04.2024",
@@ -2678,7 +2690,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 23,
-    "sl_no_on_page": "224",
+    "sl_no_on_page": "225",
     "applicant": "M/s remarkable AS (05/2024)",
     "date_application": "30.01.2024",
     "date_ruling": "25.04.2024",
@@ -2690,7 +2702,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 23,
-    "sl_no_on_page": "225",
+    "sl_no_on_page": "226",
     "applicant": "M/s remarkable AS (04/2024)",
     "date_application": "30.01.2024",
     "date_ruling": "25.04.2024",
@@ -2702,7 +2714,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 23,
-    "sl_no_on_page": "226",
+    "sl_no_on_page": "227",
     "applicant": "M/s remarkable AS (03/2024)",
     "date_application": "30.01.2024",
     "date_ruling": "25.04.2024",
@@ -2714,7 +2726,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 23,
-    "sl_no_on_page": "227",
+    "sl_no_on_page": "228",
     "applicant": "M/s Shriprop Aerospace Pvt Ltd",
     "date_application": "18.01.2024",
     "date_ruling": "26.03.2024",
@@ -2726,7 +2738,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 23,
-    "sl_no_on_page": "228",
+    "sl_no_on_page": "229",
     "applicant": "M/s A-One Traders",
     "date_application": "07.12.2023",
     "date_ruling": "04.03.2024",
@@ -2738,7 +2750,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 23,
-    "sl_no_on_page": "229",
+    "sl_no_on_page": "230",
     "applicant": "M/s Perfect Trading Co.",
     "date_application": "04.01.2024",
     "date_ruling": "28.02.2024",
@@ -2749,8 +2761,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 23,
-    "sl_no_on_page": "230",
+    "page_no": 24,
+    "sl_no_on_page": "231",
     "applicant": "M/s Narang Machinery Store.",
     "date_application": "30.11.2023",
     "date_ruling": "27.02.2024",
@@ -2762,7 +2774,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 24,
-    "sl_no_on_page": "231",
+    "sl_no_on_page": "232",
     "applicant": "M/s Vivo Mobile India Pvt. Ltd.",
     "date_application": "03.11.2023",
     "date_ruling": "01.02.2024",
@@ -2774,7 +2786,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 24,
-    "sl_no_on_page": "232",
+    "sl_no_on_page": "233",
     "applicant": "M/s Perfect Trading Co. (61/2023)",
     "date_application": "28.11.2023",
     "date_ruling": "05.01.2024",
@@ -2786,7 +2798,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 24,
-    "sl_no_on_page": "233",
+    "sl_no_on_page": "234",
     "applicant": "M/s Perfect Trading Co. (62/2023)",
     "date_application": "28.11.2023",
     "date_ruling": "05.01.2024",
@@ -2798,7 +2810,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 24,
-    "sl_no_on_page": "234",
+    "sl_no_on_page": "235",
     "applicant": "M/s Boston Scientific India Pvt. Ltd.",
     "date_application": "26.09.2023",
     "date_ruling": "22.12.2023",
@@ -2810,7 +2822,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 24,
-    "sl_no_on_page": "235",
+    "sl_no_on_page": "236",
     "applicant": "M/s Solae Company India Pvt. Ltd.",
     "date_application": "02.08.2023",
     "date_ruling": "13.12.2023",
@@ -2822,7 +2834,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 24,
-    "sl_no_on_page": "236",
+    "sl_no_on_page": "237",
     "applicant": "M/s Vivo Mobile India Pvt Ltd (50/2023)",
     "date_application": "22.09.2023",
     "date_ruling": "13.12.2023",
@@ -2834,7 +2846,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 24,
-    "sl_no_on_page": "237",
+    "sl_no_on_page": "238",
     "applicant": "M/s Amazon Wholesale India Pvt. Ltd",
     "date_application": "15.09.2023",
     "date_ruling": "08.12.2023",
@@ -2846,7 +2858,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 24,
-    "sl_no_on_page": "238",
+    "sl_no_on_page": "239",
     "applicant": "M/s Blue star Limited",
     "date_application": "13.07.2023",
     "date_ruling": "05.12.2023",
@@ -2858,7 +2870,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 24,
-    "sl_no_on_page": "239",
+    "sl_no_on_page": "240",
     "applicant": "M/s Supertron Electronics Pvt Ltd",
     "date_application": "03.10.2023",
     "date_ruling": "04.12.2023",
@@ -2869,8 +2881,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 24,
-    "sl_no_on_page": "240",
+    "page_no": 25,
+    "sl_no_on_page": "241",
     "applicant": "M/s Yubico AB",
     "date_application": "14.03.2023",
     "date_ruling": "30.11.2023",
@@ -2882,7 +2894,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 25,
-    "sl_no_on_page": "241",
+    "sl_no_on_page": "242",
     "applicant": "M/s United Spirits Ltd",
     "date_application": "02.05.2023",
     "date_ruling": "24.11.2023",
@@ -2894,7 +2906,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 25,
-    "sl_no_on_page": "242",
+    "sl_no_on_page": "243",
     "applicant": "M/s Shree Durga Traders (43)",
     "date_application": "09.08.2023",
     "date_ruling": "17.11.2023",
@@ -2906,7 +2918,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 25,
-    "sl_no_on_page": "243",
+    "sl_no_on_page": "244",
     "applicant": "M/s Shree Durga Traders (42)",
     "date_application": "09.08.2023",
     "date_ruling": "17.11.2023",
@@ -2918,7 +2930,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 25,
-    "sl_no_on_page": "244",
+    "sl_no_on_page": "245",
     "applicant": "M/s Shree Durga Traders (41)",
     "date_application": "09.08.2023",
     "date_ruling": "17.11.2023",
@@ -2930,7 +2942,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 25,
-    "sl_no_on_page": "245",
+    "sl_no_on_page": "246",
     "applicant": "M/s Jai Shree Krishna Impex",
     "date_application": "02.08.2023",
     "date_ruling": "17.11.2023",
@@ -2942,7 +2954,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 25,
-    "sl_no_on_page": "246",
+    "sl_no_on_page": "247",
     "applicant": "M/s Three Bond India Pvt Ltd.",
     "date_application": "08.05.2023",
     "date_ruling": "09.11.2023",
@@ -2954,7 +2966,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 25,
-    "sl_no_on_page": "247",
+    "sl_no_on_page": "248",
     "applicant": "M/s Qualcomm India Pvt Ltd.",
     "date_application": "24.01.2023",
     "date_ruling": "01.11.2023",
@@ -2966,7 +2978,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 25,
-    "sl_no_on_page": "248",
+    "sl_no_on_page": "249",
     "applicant": "M/s Amazon Wholesale India Pvt. Ltd.",
     "date_application": "02.03.2023",
     "date_ruling": "27.09.2023",
@@ -2978,7 +2990,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 25,
-    "sl_no_on_page": "249",
+    "sl_no_on_page": "250",
     "applicant": "M/s Nikon India Pvt Ltd",
     "date_application": "07.05.2023",
     "date_ruling": "19.09.2023",
@@ -2989,8 +3001,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 25,
-    "sl_no_on_page": "250",
+    "page_no": 26,
+    "sl_no_on_page": "251",
     "applicant": "M/s Fresenius Kabi Oncology Limited",
     "date_application": "10.04.2023",
     "date_ruling": "31.08.2023",
@@ -3002,7 +3014,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 26,
-    "sl_no_on_page": "251",
+    "sl_no_on_page": "252",
     "applicant": "M/s Supertron Electronics Pvt Ltd",
     "date_application": "14.04.2023",
     "date_ruling": "21.08.2023",
@@ -3014,7 +3026,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 26,
-    "sl_no_on_page": "252",
+    "sl_no_on_page": "253",
     "applicant": "M/s Shree Hari Ananta Overseas Pvt Ltd",
     "date_application": "18.05.2023",
     "date_ruling": "04.08.2023",
@@ -3026,7 +3038,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 26,
-    "sl_no_on_page": "253",
+    "sl_no_on_page": "254",
     "applicant": "M/s Samsung India Electronics Pvt Ltd",
     "date_application": "16.03.2023",
     "date_ruling": "31.07.2023",
@@ -3038,7 +3050,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 26,
-    "sl_no_on_page": "254",
+    "sl_no_on_page": "255",
     "applicant": "M/s Samsung India Electronics Pvt Ltd",
     "date_application": "10.04.2023",
     "date_ruling": "26.07.2023",
@@ -3050,7 +3062,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 26,
-    "sl_no_on_page": "255",
+    "sl_no_on_page": "256",
     "applicant": "M/s Amazon Wholesale India Private Limited",
     "date_application": "23.12.2022",
     "date_ruling": "12.07.2023",
@@ -3062,7 +3074,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 26,
-    "sl_no_on_page": "256",
+    "sl_no_on_page": "257",
     "applicant": "M/s Halliburton Offshore Services Inc.",
     "date_application": "27.12.2022",
     "date_ruling": "28.06.2023",
@@ -3074,7 +3086,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 26,
-    "sl_no_on_page": "257",
+    "sl_no_on_page": "258",
     "applicant": "M/s Baker Hughes Singapore Pte.",
     "date_application": "06.01.2023",
     "date_ruling": "28.06.2023",
@@ -3086,7 +3098,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 26,
-    "sl_no_on_page": "258",
+    "sl_no_on_page": "259",
     "applicant": "M/s BJ Services Company Middle East Ltd.",
     "date_application": "21.12.2023",
     "date_ruling": "28.06.2023",
@@ -3098,7 +3110,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 26,
-    "sl_no_on_page": "259",
+    "sl_no_on_page": "260",
     "applicant": "M/s Socomec India Private Limited.",
     "date_application": "19.12.2022",
     "date_ruling": "06.06.2023",
@@ -3109,8 +3121,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 26,
-    "sl_no_on_page": "260",
+    "page_no": 27,
+    "sl_no_on_page": "261",
     "applicant": "M/s Baker Hughes Oilfield Services Private Limited.",
     "date_application": "25.01.2023",
     "date_ruling": "28.04.2023",
@@ -3122,7 +3134,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 27,
-    "sl_no_on_page": "261",
+    "sl_no_on_page": "262",
     "applicant": "M/s Superton Electronics Private Limited.",
     "date_application": "20.12.2022",
     "date_ruling": "09.05.2023",
@@ -3134,7 +3146,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 27,
-    "sl_no_on_page": "262",
+    "sl_no_on_page": "263",
     "applicant": "M/s Amazon wholesale India Private Limited",
     "date_application": "19.09.2022",
     "date_ruling": "19.04.2023",
@@ -3146,7 +3158,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 27,
-    "sl_no_on_page": "263",
+    "sl_no_on_page": "264",
     "applicant": "M/s Amazon wholesale India Private Limited",
     "date_application": "03.10.2022",
     "date_ruling": "27.03.2023",
@@ -3158,7 +3170,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 27,
-    "sl_no_on_page": "264",
+    "sl_no_on_page": "265",
     "applicant": "M/s Supertron Electronics Private Limited",
     "date_application": "11.11.2022",
     "date_ruling": "09.03.2023",
@@ -3170,7 +3182,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 27,
-    "sl_no_on_page": "265",
+    "sl_no_on_page": "266",
     "applicant": "M/s Wholesome Essentials",
     "date_application": "15.11.2022",
     "date_ruling": "23.02.2023",
@@ -3182,7 +3194,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 27,
-    "sl_no_on_page": "266",
+    "sl_no_on_page": "267",
     "applicant": "M/s Hitachi Astemo FIE Private Limited",
     "date_application": "30.08.2022",
     "date_ruling": "02.02.2023",
@@ -3194,7 +3206,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 27,
-    "sl_no_on_page": "267",
+    "sl_no_on_page": "268",
     "applicant": "M/s Canon India Private Limited",
     "date_application": "01.09.2022",
     "date_ruling": "24.01.2023",
@@ -3206,7 +3218,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 27,
-    "sl_no_on_page": "268",
+    "sl_no_on_page": "269",
     "applicant": "M/s Canon India Private Limited",
     "date_application": "01.09.2022",
     "date_ruling": "13.01.2023",
@@ -3218,7 +3230,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 27,
-    "sl_no_on_page": "269",
+    "sl_no_on_page": "270",
     "applicant": "M/s Supertron Electronics Private Limited",
     "date_application": "10.08.2022",
     "date_ruling": "05.01.2023",
@@ -3229,8 +3241,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 27,
-    "sl_no_on_page": "270",
+    "page_no": 28,
+    "sl_no_on_page": "271",
     "applicant": "M/s Holitech India Pvt. Ltd",
     "date_application": "04.04.2022",
     "date_ruling": "29.12.2022",
@@ -3242,7 +3254,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 28,
-    "sl_no_on_page": "271",
+    "sl_no_on_page": "272",
     "applicant": "M/s Supertron Electronics Private Limited",
     "date_application": "03.02.2022",
     "date_ruling": "23.12.2022",
@@ -3254,7 +3266,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 28,
-    "sl_no_on_page": "272",
+    "sl_no_on_page": "273",
     "applicant": "M/s Green Infra Clean Wind Power Limited.",
     "date_application": "26.09.2022",
     "date_ruling": "24.11.2022",
@@ -3266,7 +3278,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 28,
-    "sl_no_on_page": "273",
+    "sl_no_on_page": "274",
     "applicant": "M/s SMI- Amtek Cranshaft Pvt. Ltd.",
     "date_application": "29.08.2022",
     "date_ruling": "21.11.2022",
@@ -3278,7 +3290,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 28,
-    "sl_no_on_page": "274",
+    "sl_no_on_page": "275",
     "applicant": "M/s HP India Sales Pvt. Ltd",
     "date_application": "23.05.2022",
     "date_ruling": "18.11.2022",
@@ -3290,7 +3302,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 28,
-    "sl_no_on_page": "275",
+    "sl_no_on_page": "276",
     "applicant": "M/s Canon India Pvt Ltd 7th Floor Tower B Building No. 5 DFL Epitome DLF Phase III Gurugram Haryana\nRead More..",
     "date_application": "29.04.2022",
     "date_ruling": "19.09.2022",
@@ -3302,7 +3314,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 28,
-    "sl_no_on_page": "276",
+    "sl_no_on_page": "277",
     "applicant": "M/s Amazon Wholesale (India) Private Limited",
     "date_application": "17.08.2021",
     "date_ruling": "12.09.2022",
@@ -3314,7 +3326,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 28,
-    "sl_no_on_page": "277",
+    "sl_no_on_page": "278",
     "applicant": "M/s Mitsubishi Electric India Pvt Ltd",
     "date_application": "20.01.2022",
     "date_ruling": "30.08.2022",
@@ -3326,7 +3338,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 28,
-    "sl_no_on_page": "278",
+    "sl_no_on_page": "279",
     "applicant": "M/s HQ Lamps Manufacturing Co. Pvt Ltd",
     "date_application": "21.03.2022",
     "date_ruling": "08.08.2022",
@@ -3338,7 +3350,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 28,
-    "sl_no_on_page": "279",
+    "sl_no_on_page": "280",
     "applicant": "M/s Volvo Auto India Pvt Ltd",
     "date_application": "26.04.2022",
     "date_ruling": "04.08.2022",
@@ -3349,8 +3361,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 28,
-    "sl_no_on_page": "280",
+    "page_no": 29,
+    "sl_no_on_page": "281",
     "applicant": "M/s Shreedhra Agro LLP",
     "date_application": "04.02.2022",
     "date_ruling": "22.06.2022",
@@ -3362,7 +3374,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 29,
-    "sl_no_on_page": "281",
+    "sl_no_on_page": "282",
     "applicant": "M/s Nuttish Exim India Pvt Ltd",
     "date_application": "15.04.2021",
     "date_ruling": "02.05.2022",
@@ -3374,7 +3386,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 29,
-    "sl_no_on_page": "282",
+    "sl_no_on_page": "283",
     "applicant": "M/s Sharp Business System (India) Pvt Ltd",
     "date_application": "08.10.2021",
     "date_ruling": "19.04.2022",
@@ -3386,7 +3398,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 29,
-    "sl_no_on_page": "283",
+    "sl_no_on_page": "284",
     "applicant": "M/s Harmony Plastics Pvt Ltd",
     "date_application": "09.04.2021",
     "date_ruling": "31.01.2022",
@@ -3398,7 +3410,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 29,
-    "sl_no_on_page": "284",
+    "sl_no_on_page": "285",
     "applicant": "M/s Amazon Wholesale India Pvt Ltd",
     "date_application": "10.09.2021",
     "date_ruling": "27.01.2022",
@@ -3410,7 +3422,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 29,
-    "sl_no_on_page": "285",
+    "sl_no_on_page": "286",
     "applicant": "M/s Evans Consoles Corporation",
     "date_application": "21.07.2021",
     "date_ruling": "13.01.2022",
@@ -3422,7 +3434,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 29,
-    "sl_no_on_page": "286",
+    "sl_no_on_page": "287",
     "applicant": "M/s G.G. Enterprises",
     "date_application": "03.07.2021",
     "date_ruling": "10.01.2022",
@@ -3434,7 +3446,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 29,
-    "sl_no_on_page": "287",
+    "sl_no_on_page": "288",
     "applicant": "M/s UBS Exports International Pvt Ltd",
     "date_application": "09.09.2021",
     "date_ruling": "20.12.2021",
@@ -3446,7 +3458,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 29,
-    "sl_no_on_page": "288",
+    "sl_no_on_page": "289",
     "applicant": "M/s P.G. International",
     "date_application": "29.07.2021",
     "date_ruling": "26.11.2021",
@@ -3458,7 +3470,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 29,
-    "sl_no_on_page": "289",
+    "sl_no_on_page": "290",
     "applicant": "M/s Vaibhav Enterprises",
     "date_application": "29.07.2021",
     "date_ruling": "21.10.2021",
@@ -3469,8 +3481,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 29,
-    "sl_no_on_page": "290",
+    "page_no": 30,
+    "sl_no_on_page": "291",
     "applicant": "M/s Spraytec India Ltd",
     "date_application": "09-07-2020",
     "date_ruling": "05.10.2021",
@@ -3482,7 +3494,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 30,
-    "sl_no_on_page": "291",
+    "sl_no_on_page": "292",
     "applicant": "M/s Volvo Auto India Pvt. Ltd",
     "date_application": "14.05.2021",
     "date_ruling": "10.09.2021",
@@ -3494,7 +3506,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 30,
-    "sl_no_on_page": "292",
+    "sl_no_on_page": "293",
     "applicant": "M/s Amazon Wholsale India Private Limited",
     "date_application": "12.03.2021",
     "date_ruling": "10.08.2021",
@@ -3506,7 +3518,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 30,
-    "sl_no_on_page": "293",
+    "sl_no_on_page": "294",
     "applicant": "M/s Amazon Wholesale India Private Limited",
     "date_application": "12.03.2021",
     "date_ruling": "20.07.2021",
@@ -3518,7 +3530,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 30,
-    "sl_no_on_page": "294",
+    "sl_no_on_page": "295",
     "applicant": "M/s Exor Overseas",
     "date_application": "19.04.2021",
     "date_ruling": "16.07.2021",
@@ -3530,7 +3542,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 30,
-    "sl_no_on_page": "295",
+    "sl_no_on_page": "296",
     "applicant": "M/s Amazon Wholesale India Pvt. Ltd.",
     "date_application": "12.03.2021",
     "date_ruling": "05.07.2021",
@@ -3542,7 +3554,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 30,
-    "sl_no_on_page": "296",
+    "sl_no_on_page": "297",
     "applicant": "M/s Amazon Wholesale India Pvt. Ltd.",
     "date_application": "12.03.2021",
     "date_ruling": "28.06.2021",
@@ -3554,7 +3566,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 30,
-    "sl_no_on_page": "297",
+    "sl_no_on_page": "298",
     "applicant": "M/s Amazon Wholesale India Pvt. Ltd.",
     "date_application": "12.03.2021",
     "date_ruling": "24.06.2021",
@@ -3566,7 +3578,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 30,
-    "sl_no_on_page": "298",
+    "sl_no_on_page": "299",
     "applicant": "M/s Shri Tirupati Balaji Overseas",
     "date_application": "15.03.2021",
     "date_ruling": "14.06.2021",
@@ -3578,7 +3590,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 30,
-    "sl_no_on_page": "299",
+    "sl_no_on_page": "300",
     "applicant": "M/s Sarveshwari Industries",
     "date_application": "10.03.2021",
     "date_ruling": "04.06.2021",
@@ -3589,8 +3601,8 @@
   },
   {
     "section": "Delhi Rulings",
-    "page_no": 30,
-    "sl_no_on_page": "300",
+    "page_no": 31,
+    "sl_no_on_page": "301",
     "applicant": "M/s The NUT Co.",
     "date_application": "05.03.2021",
     "date_ruling": "04.06.2021",
@@ -3602,7 +3614,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 31,
-    "sl_no_on_page": "301",
+    "sl_no_on_page": "302",
     "applicant": "M/s Naman Agri Impex Pvt. Ltd.",
     "date_application": "01.03.2021",
     "date_ruling": "31.05.2021",
@@ -3614,7 +3626,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 31,
-    "sl_no_on_page": "302",
+    "sl_no_on_page": "303",
     "applicant": "M/s Inspiration Idea Innovation & Productions Pvt. Ltd.",
     "date_application": "01.03.2021",
     "date_ruling": "31.05.2021",
@@ -3626,7 +3638,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 31,
-    "sl_no_on_page": "303",
+    "sl_no_on_page": "304",
     "applicant": "M/s Morchhadi Traders",
     "date_application": "01.03.2021",
     "date_ruling": "31.05.2021",
@@ -3638,7 +3650,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 31,
-    "sl_no_on_page": "304",
+    "sl_no_on_page": "305",
     "applicant": "M/s Cosmos International",
     "date_application": "01.03.2021",
     "date_ruling": "31.05.2021",
@@ -3650,7 +3662,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 31,
-    "sl_no_on_page": "305",
+    "sl_no_on_page": "306",
     "applicant": "M/s Great Nut Impex Pvt. Ltd.",
     "date_application": "23.02.2021",
     "date_ruling": "20.05.2021",
@@ -3662,7 +3674,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 31,
-    "sl_no_on_page": "306",
+    "sl_no_on_page": "307",
     "applicant": "M/s Perfect Trading Co.",
     "date_application": "25.02.2021",
     "date_ruling": "20.05.2021",
@@ -3674,7 +3686,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 31,
-    "sl_no_on_page": "307",
+    "sl_no_on_page": "308",
     "applicant": "M/s Star Spices",
     "date_application": "23.02.2021",
     "date_ruling": "16.04.2021",
@@ -3686,7 +3698,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 31,
-    "sl_no_on_page": "308",
+    "sl_no_on_page": "309",
     "applicant": "M/s Globe Impex",
     "date_application": "04.02.2021",
     "date_ruling": "23.03.2021",
@@ -3698,7 +3710,7 @@
   {
     "section": "Delhi Rulings",
     "page_no": 31,
-    "sl_no_on_page": "309",
+    "sl_no_on_page": "310",
     "applicant": "M/s Dry Nut Enterprises",
     "date_application": "16.12.2020",
     "date_ruling": "16.03.2021",
