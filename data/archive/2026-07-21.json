@@ -1,8 +1,8 @@
 {
-  "generated": "21 July 2026, 07:30 PM IST",
-  "generatedISO": "2026-07-21T19:30:05.727589+05:30",
+  "generated": "21 July 2026, 10:54 PM IST",
+  "generatedISO": "2026-07-21T22:54:36.345160+05:30",
   "dateStr": "2026-07-21",
-  "totalOrders": 248,
+  "totalOrders": 249,
   "indirectTaxCount": 2,
   "highCount": 1,
   "mediumCount": 1,
@@ -18,7 +18,7 @@
       "it": 0
     },
     "Bombay HC Nagpur": {
-      "total": 20,
+      "total": 21,
       "it": 0
     },
     "Bombay HC Goa": {
@@ -2905,6 +2905,21 @@
       "isJudgment": false,
       "pdfLink": "",
       "bench": "Bombay HC Aurangabad",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "FA/129/2026",
+      "parties": "HDFC ERGO GENERAL INSURANCE CO. LTD., NAGPUR Vs DIPALI WD/O KISHOR SHENDE AND OTHERS",
+      "coram": "HON'BLE SHRI JUSTICE PRAVIN S. PATIL",
+      "orderDate": "20/07/2026",
+      "orderType": "Civil",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC Nagpur",
       "isIT": false,
       "confidence": "none",
       "category": "N/A",
