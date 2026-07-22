@@ -1,8 +1,8 @@
 {
-  "generated": "22 July 2026, 12:01 PM IST",
-  "generatedISO": "2026-07-22T12:01:26.277869+05:30",
+  "generated": "22 July 2026, 03:58 PM IST",
+  "generatedISO": "2026-07-22T15:58:13.744190+05:30",
   "dateStr": "2026-07-22",
-  "totalOrders": 239,
+  "totalOrders": 243,
   "indirectTaxCount": 2,
   "highCount": 1,
   "mediumCount": 1,
@@ -10,7 +10,7 @@
   "pdfScannedCount": 0,
   "benchStats": {
     "Bombay HC": {
-      "total": 159,
+      "total": 163,
       "it": 2
     },
     "Bombay HC Aurangabad": {
@@ -31,6 +31,36 @@
     }
   },
   "orders": [
+    {
+      "matterNo": "IA/145/2026",
+      "parties": "NATIONAL SPOT EXCHANGE LIMITED Vs THE STATE OF MAHARASHTRA AND ORS.",
+      "coram": "HON'BLE SHRI JUSTICE A.S. GADKARI HON'BLE JUSTICE KAMAL KHATA",
+      "orderDate": "21/07/2026",
+      "orderType": "Criminal",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "APEAL/86/2022",
+      "parties": "SEEMA SHARMA Vs THE STATE OF MAHARASHTRA AND ORS.",
+      "coram": "HON'BLE SHRI JUSTICE A.S. GADKARI HON'BLE JUSTICE KAMAL KHATA",
+      "orderDate": "21/07/2026",
+      "orderType": "Criminal",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
     {
       "matterNo": "WP/13405/2023",
       "parties": "MAHARASHTRA STATE ELECTRICITY DISTRIBUTION COMPANY LIMITED Vs STATE OF MAHARASHTRA",
@@ -217,6 +247,21 @@
       "coram": "HON'BLE SHRI JUSTICE SANDEEP V. MARNE",
       "orderDate": "17/07/2026",
       "orderType": "Civil",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "ITXA/230/2024",
+      "parties": "PR COMMISSIONER OF INCOME TAX CENTRAL 4 Vs DBM GEOTECHNICS AND CONSTRUCTION PVT LTD",
+      "coram": "HON'BLE SHRI JUSTICE G. S. KULKARNI HON'BLE MS JUSTICE AARTI A. SATHE",
+      "orderDate": "17/07/2026",
+      "orderType": "Original",
       "isJudgment": true,
       "pdfLink": "",
       "bench": "Bombay HC",
@@ -742,6 +787,21 @@
       "coram": "HON'BLE SHRI JUSTICE ARUN R. PEDNEKER",
       "orderDate": "14/07/2026",
       "orderType": "Original",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "WP/3366/2023",
+      "parties": "ZOOMLION INDIA PRIVATE LIMITED AND ORS Vs THE STATE OF MAHARASHTRA AND ORS",
+      "coram": "HON'BLE SHRI JUSTICE RANJITSINHA RAJA BHONSALE",
+      "orderDate": "13/07/2026",
+      "orderType": "Criminal",
       "isJudgment": true,
       "pdfLink": "",
       "bench": "Bombay HC",
@@ -2822,6 +2882,21 @@
       "pdfScanned": false
     },
     {
+      "matterNo": "WP/7535/2025",
+      "parties": "SAU. SUJATA BHIMRAO KOTHARE AND ORS. Vs NARENDRA S/O HARIBHAU DEHANKAR",
+      "coram": "HON'BLE SHRI JUSTICE ROHIT WASUDEO JOSHI",
+      "orderDate": "20/07/2026",
+      "orderType": "Civil",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC Nagpur",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
       "matterNo": "FA/129/2026",
       "parties": "HDFC ERGO GENERAL INSURANCE CO. LTD., NAGPUR Vs DIPALI WD/O KISHOR SHENDE AND OTHERS",
       "coram": "HON'BLE SHRI JUSTICE PRAVIN S. PATIL",
@@ -2840,21 +2915,6 @@
       "matterNo": "WP/566/2018",
       "parties": "PROFESSOR KHALIL-UR-RAHMAN ANSARI Vs THE STATE OF MAH.,THR. ITS PRINCIPAL SECRETARY, DEPARTMENT OF HIGHER AND TECHNICAL EDUCATION, MUMBA",
       "coram": "HON'BLE SHRI JUSTICE YANSHIVRAJ GOPICHAND KHOBRAGADE HON'BLE SHRI JUSTICE SUSHIL M. GHODESWAR",
-      "orderDate": "20/07/2026",
-      "orderType": "Civil",
-      "isJudgment": true,
-      "pdfLink": "",
-      "bench": "Bombay HC Nagpur",
-      "isIT": false,
-      "confidence": "none",
-      "category": "N/A",
-      "signals": "",
-      "pdfScanned": false
-    },
-    {
-      "matterNo": "WP/7535/2025",
-      "parties": "SAU. SUJATA BHIMRAO KOTHARE AND ORS. Vs NARENDRA S/O HARIBHAU DEHANKAR",
-      "coram": "HON'BLE SHRI JUSTICE ROHIT WASUDEO JOSHI",
       "orderDate": "20/07/2026",
       "orderType": "Civil",
       "isJudgment": true,
