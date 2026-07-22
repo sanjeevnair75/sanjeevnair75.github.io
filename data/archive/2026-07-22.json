@@ -1,8 +1,8 @@
 {
-  "generated": "22 July 2026, 07:32 PM IST",
-  "generatedISO": "2026-07-22T19:32:49.785217+05:30",
+  "generated": "22 July 2026, 10:53 PM IST",
+  "generatedISO": "2026-07-22T22:53:46.166953+05:30",
   "dateStr": "2026-07-22",
-  "totalOrders": 244,
+  "totalOrders": 246,
   "indirectTaxCount": 2,
   "highCount": 1,
   "mediumCount": 1,
@@ -22,7 +22,7 @@
       "it": 0
     },
     "Bombay HC Goa": {
-      "total": 10,
+      "total": 12,
       "it": 0
     },
     "Bombay HC Kolhapur": {
@@ -3175,6 +3175,36 @@
       "isJudgment": true,
       "pdfLink": "",
       "bench": "Bombay HC Nagpur",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "WPST/1616/2025",
+      "parties": "THE VILLAGE PANCHAYAT OF TALEIGAO, THR. THEIR SECRETARY Vs COMMUNIDADE OF TALEIGAO THR. THEIR ATTORNEY XAVIER JOAO DE ALMEIDA AND 4 ORS",
+      "coram": "-",
+      "orderDate": "21/07/2026",
+      "orderType": "Civil",
+      "isJudgment": false,
+      "pdfLink": "",
+      "bench": "Bombay HC Goa",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "WP/211/2025",
+      "parties": "ADITYA LAXMAN GHAISAS Vs ROHAN GOPAL KUNKLEKAR @ GAUDE AND 3 ORS",
+      "coram": "-",
+      "orderDate": "21/07/2026",
+      "orderType": "Civil",
+      "isJudgment": false,
+      "pdfLink": "",
+      "bench": "Bombay HC Goa",
       "isIT": false,
       "confidence": "none",
       "category": "N/A",
