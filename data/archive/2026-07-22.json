@@ -1,8 +1,8 @@
 {
-  "generated": "22 July 2026, 03:58 PM IST",
-  "generatedISO": "2026-07-22T15:58:13.744190+05:30",
+  "generated": "22 July 2026, 07:32 PM IST",
+  "generatedISO": "2026-07-22T19:32:49.785217+05:30",
   "dateStr": "2026-07-22",
-  "totalOrders": 243,
+  "totalOrders": 244,
   "indirectTaxCount": 2,
   "highCount": 1,
   "mediumCount": 1,
@@ -10,7 +10,7 @@
   "pdfScannedCount": 0,
   "benchStats": {
     "Bombay HC": {
-      "total": 163,
+      "total": 164,
       "it": 2
     },
     "Bombay HC Aurangabad": {
@@ -112,6 +112,21 @@
       "coram": "HON'BLE THE ACTING CHIEF JUSTICE HON'BLE SHRI JUSTICE GAUTAM A. ANKHAD",
       "orderDate": "21/07/2026",
       "orderType": "Original",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "WP/4790/2026",
+      "parties": "SAROJ MEHTA Vs DEPUTY REGISTRAR CO-OP SOCIETY LTD AND ORS",
+      "coram": "HON'BLE SHRI JUSTICE SANDEEP V. MARNE",
+      "orderDate": "20/07/2026",
+      "orderType": "Civil",
       "isJudgment": true,
       "pdfLink": "",
       "bench": "Bombay HC",
