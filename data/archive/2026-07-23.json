@@ -1,8 +1,8 @@
 {
-  "generated": "23 July 2026, 07:38 PM IST",
-  "generatedISO": "2026-07-23T19:38:56.532417+05:30",
+  "generated": "23 July 2026, 10:55 PM IST",
+  "generatedISO": "2026-07-23T22:55:20.104806+05:30",
   "dateStr": "2026-07-23",
-  "totalOrders": 258,
+  "totalOrders": 259,
   "indirectTaxCount": 2,
   "highCount": 1,
   "mediumCount": 1,
@@ -10,7 +10,7 @@
   "pdfScannedCount": 0,
   "benchStats": {
     "Bombay HC": {
-      "total": 176,
+      "total": 177,
       "it": 2
     },
     "Bombay HC Aurangabad": {
@@ -728,6 +728,21 @@
       "orderDate": "15/07/2026",
       "orderType": "Civil",
       "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "WP/790/2018",
+      "parties": "KANNAMWAR CO-OP. HSG. SOC. ASSOCIATION LTD. AND 4 ORS. Vs UNION OF INDIA AND 6 ORS.",
+      "coram": "HON'BLE SHRI JUSTICE G. S. KULKARNI HON'BLE MS JUSTICE AARTI A. SATHE",
+      "orderDate": "15/07/2026",
+      "orderType": "Original",
+      "isJudgment": false,
       "pdfLink": "",
       "bench": "Bombay HC",
       "isIT": false,
