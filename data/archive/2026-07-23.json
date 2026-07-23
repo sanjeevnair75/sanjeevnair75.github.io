@@ -1,8 +1,8 @@
 {
-  "generated": "23 July 2026, 03:55 PM IST",
-  "generatedISO": "2026-07-23T15:55:46.074775+05:30",
+  "generated": "23 July 2026, 07:38 PM IST",
+  "generatedISO": "2026-07-23T19:38:56.532417+05:30",
   "dateStr": "2026-07-23",
-  "totalOrders": 257,
+  "totalOrders": 258,
   "indirectTaxCount": 2,
   "highCount": 1,
   "mediumCount": 1,
@@ -10,7 +10,7 @@
   "pdfScannedCount": 0,
   "benchStats": {
     "Bombay HC": {
-      "total": 175,
+      "total": 176,
       "it": 2
     },
     "Bombay HC Aurangabad": {
@@ -92,9 +92,24 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CUAPP/53/2025",
-      "parties": "ORANGE PET NUTRITION PRIVATE LIMITED Vs UNION OF INDIA",
-      "coram": "HON'BLE SHRI JUSTICE B.P. COLABAWALLA HON'BLE SHRI JUSTICE FIRDOSH PHIROZE POONIWALLA",
+      "matterNo": "CARAP/245/2026",
+      "parties": "TECPRO SYSTEMS LIMITED Vs RELIANCE INFRASTRUCTURE LTD",
+      "coram": "HON'BLE SHRI JUSTICE ARUN R. PEDNEKER",
+      "orderDate": "22/07/2026",
+      "orderType": "Original",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "APP/96/2026",
+      "parties": "HARSH RAJNUKANT KILACHAND Vs AMRISH RAJNIKANT KILACHAND",
+      "coram": "HON'BLE SHRI JUSTICE A.S. GADKARI HON'BLE JUSTICE KAMAL KHATA",
       "orderDate": "22/07/2026",
       "orderType": "Original",
       "isJudgment": true,
@@ -122,9 +137,9 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "APP/96/2026",
-      "parties": "HARSH RAJNUKANT KILACHAND Vs AMRISH RAJNIKANT KILACHAND",
-      "coram": "HON'BLE SHRI JUSTICE A.S. GADKARI HON'BLE JUSTICE KAMAL KHATA",
+      "matterNo": "CUAPP/53/2025",
+      "parties": "ORANGE PET NUTRITION PRIVATE LIMITED Vs UNION OF INDIA",
+      "coram": "HON'BLE SHRI JUSTICE B.P. COLABAWALLA HON'BLE SHRI JUSTICE FIRDOSH PHIROZE POONIWALLA",
       "orderDate": "22/07/2026",
       "orderType": "Original",
       "isJudgment": true,
@@ -3032,36 +3047,6 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "WP/7586/2021",
-      "parties": "BHIKAN NAMDEO SURYAWANSHI Vs THE CHIEF GENERAL MANAGER MSEDCL AND OTHERS",
-      "coram": "HON'BLE SHRI JUSTICE KISHORE C. SANT HON'BLE SHRI JUSTICE AJIT B. KADETHANKAR",
-      "orderDate": "09/07/2026",
-      "orderType": "Civil",
-      "isJudgment": true,
-      "pdfLink": "",
-      "bench": "Bombay HC Aurangabad",
-      "isIT": false,
-      "confidence": "none",
-      "category": "N/A",
-      "signals": "",
-      "pdfScanned": false
-    },
-    {
-      "matterNo": "WP/249/2022",
-      "parties": "ANIL SOMA THAKUR Vs THE CHIEF GENERAL MANAGER HR AND OTHERS",
-      "coram": "HON'BLE SHRI JUSTICE KISHORE C. SANT HON'BLE SHRI JUSTICE AJIT B. KADETHANKAR",
-      "orderDate": "09/07/2026",
-      "orderType": "Civil",
-      "isJudgment": true,
-      "pdfLink": "",
-      "bench": "Bombay HC Aurangabad",
-      "isIT": false,
-      "confidence": "none",
-      "category": "N/A",
-      "signals": "",
-      "pdfScanned": false
-    },
-    {
       "matterNo": "FA/1796/2024",
       "parties": "UNION OF INDIA THROUGH GENERAL MANAGER SOUTH CENTRAL RAILWAY SECUNDARABVAD AND ANR Vs ANITADEVI ANIL JINDAL AND ORS",
       "coram": "HON'BLE SHRI JUSTICE KISHORE C. SANT HON'BLE SHRI JUSTICE AJIT B. KADETHANKAR",
@@ -3079,6 +3064,36 @@
     {
       "matterNo": "FA/101/2024",
       "parties": "ANITADEVI ANIL JINDAL AND ORS Vs UNION OF INDIA THROUGH GENERAL MANAGER RAILWAY (SOUTH CENTRAL RAILWAY) AND ORS",
+      "coram": "HON'BLE SHRI JUSTICE KISHORE C. SANT HON'BLE SHRI JUSTICE AJIT B. KADETHANKAR",
+      "orderDate": "09/07/2026",
+      "orderType": "Civil",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC Aurangabad",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "WP/7586/2021",
+      "parties": "BHIKAN NAMDEO SURYAWANSHI Vs THE CHIEF GENERAL MANAGER MSEDCL AND OTHERS",
+      "coram": "HON'BLE SHRI JUSTICE KISHORE C. SANT HON'BLE SHRI JUSTICE AJIT B. KADETHANKAR",
+      "orderDate": "09/07/2026",
+      "orderType": "Civil",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC Aurangabad",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "WP/249/2022",
+      "parties": "ANIL SOMA THAKUR Vs THE CHIEF GENERAL MANAGER HR AND OTHERS",
       "coram": "HON'BLE SHRI JUSTICE KISHORE C. SANT HON'BLE SHRI JUSTICE AJIT B. KADETHANKAR",
       "orderDate": "09/07/2026",
       "orderType": "Civil",
