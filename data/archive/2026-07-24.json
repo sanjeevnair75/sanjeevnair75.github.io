@@ -1,8 +1,8 @@
 {
-  "generated": "24 July 2026, 11:58 AM IST",
-  "generatedISO": "2026-07-24T11:58:24.715902+05:30",
+  "generated": "24 July 2026, 03:51 PM IST",
+  "generatedISO": "2026-07-24T15:51:53.639327+05:30",
   "dateStr": "2026-07-24",
-  "totalOrders": 233,
+  "totalOrders": 239,
   "indirectTaxCount": 2,
   "highCount": 1,
   "mediumCount": 1,
@@ -10,7 +10,7 @@
   "pdfScannedCount": 0,
   "benchStats": {
     "Bombay HC": {
-      "total": 164,
+      "total": 167,
       "it": 2
     },
     "Bombay HC Aurangabad": {
@@ -22,7 +22,7 @@
       "it": 0
     },
     "Bombay HC Goa": {
-      "total": 10,
+      "total": 13,
       "it": 0
     },
     "Bombay HC Kolhapur": {
@@ -572,6 +572,21 @@
       "pdfScanned": false
     },
     {
+      "matterNo": "REVN/539/2025",
+      "parties": "MANGESH ANANT KUDALKAR Vs The State of Maharashtra",
+      "coram": "HON'BLE SHRI JUSTICE SHIVKUMAR DIGE",
+      "orderDate": "15/07/2026",
+      "orderType": "Criminal",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
       "matterNo": "WP/1495/2026",
       "parties": "RAJU DHONDIRA AKRUPE Vs THE STATE OF MAHARASHTRA THRO THE PRINCIPAL SECRETARY URBAN DEVELOPMENT DEPT.",
       "coram": "HON'BLE SHRI JUSTICE G. S. KULKARNI HON'BLE MS JUSTICE AARTI A. SATHE",
@@ -772,6 +787,36 @@
       "coram": "HON'BLE SHRI JUSTICE SOMASEKHAR SUNDARESAN",
       "orderDate": "15/07/2026",
       "orderType": "Original",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "WP/8030/2026",
+      "parties": "BHARAT JAYWANT PATIL Vs THE STATE OF MAHARASHTRA",
+      "coram": "HON'BLE SHRI JUSTICE G. S. KULKARNI HON'BLE MS JUSTICE AARTI A. SATHE",
+      "orderDate": "14/07/2026",
+      "orderType": "Civil",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "WP/12576/2025",
+      "parties": "NARENDRA SUBHASH PELMAHALE Vs THE STATE OF MAHARASHTRA THROU. GOVT PLEADER AND ORS",
+      "coram": "HON'BLE SHRI JUSTICE G. S. KULKARNI HON'BLE MS JUSTICE AARTI A. SATHE",
+      "orderDate": "14/07/2026",
+      "orderType": "Civil",
       "isJudgment": true,
       "pdfLink": "",
       "bench": "Bombay HC",
@@ -3122,10 +3167,55 @@
       "pdfScanned": false
     },
     {
+      "matterNo": "MCA/1003/2017",
+      "parties": "SANYOG GANESH NARVEKAR., Vs ANJALI SANYOG NARVEKAR.,",
+      "coram": "-",
+      "orderDate": "23/07/2026",
+      "orderType": "Civil",
+      "isJudgment": false,
+      "pdfLink": "",
+      "bench": "Bombay HC Goa",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
       "matterNo": "CAREV/10/2026",
       "parties": "GAJANAN ALIAS GANOPOTI SHANKAR SAWANT AND ANR Vs SUHASINI RAWALNATH SAWANT AND 13 ORS",
       "coram": "-",
       "orderDate": "23/07/2026",
+      "orderType": "Civil",
+      "isJudgment": false,
+      "pdfLink": "",
+      "bench": "Bombay HC Goa",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "WP/985/2019",
+      "parties": "BANK OF MAHARASHTRA, REP. BY AUT. OFFICER, ANAND SUMAN., Vs ANANT RAJARAM SAWANT AND 2 ORS.,",
+      "coram": "-",
+      "orderDate": "22/07/2026",
+      "orderType": "Civil",
+      "isJudgment": false,
+      "pdfLink": "",
+      "bench": "Bombay HC Goa",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "WP/986/2019",
+      "parties": "BANK OF MAHARASHTRA, REP. BY AUT. OFFICER, ANAND SUMAN., Vs ARUN NARAYAN AMBRE AND 2 ORS.,",
+      "coram": "-",
+      "orderDate": "22/07/2026",
       "orderType": "Civil",
       "isJudgment": false,
       "pdfLink": "",
