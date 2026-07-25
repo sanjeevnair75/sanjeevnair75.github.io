@@ -1,8 +1,8 @@
 {
-  "generated": "25 July 2026, 03:21 PM IST",
-  "generatedISO": "2026-07-25T15:21:37.546798+05:30",
+  "generated": "25 July 2026, 07:11 PM IST",
+  "generatedISO": "2026-07-25T19:11:43.240581+05:30",
   "dateStr": "2026-07-25",
-  "totalOrders": 174,
+  "totalOrders": 175,
   "indirectTaxCount": 2,
   "highCount": 1,
   "mediumCount": 1,
@@ -10,7 +10,7 @@
   "pdfScannedCount": 0,
   "benchStats": {
     "Bombay HC": {
-      "total": 99,
+      "total": 100,
       "it": 2
     },
     "Bombay HC Aurangabad": {
@@ -81,6 +81,21 @@
       "parties": "SHAILENDRA MANIKRAO BAKARE Vs THE STATE OF MAHARASHTRA",
       "coram": "HON'BLE SHRI JUSTICE N. J. JAMADAR",
       "orderDate": "23/07/2026",
+      "orderType": "Criminal",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "WP/5692/2025",
+      "parties": "RAJESH SOMANDAS SACHDEV Vs INCOME TAX OFFICER(SHRI. VILAS V SONAWALE) AND ORS",
+      "coram": "HON'BLE SHRI JUSTICE MADHAV J. JAMDAR",
+      "orderDate": "22/07/2026",
       "orderType": "Criminal",
       "isJudgment": true,
       "pdfLink": "",
