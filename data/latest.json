@@ -1,8 +1,8 @@
 {
-  "generated": "27 July 2026, 08:12 PM IST",
-  "generatedISO": "2026-07-27T20:12:53.411354+05:30",
+  "generated": "27 July 2026, 11:14 PM IST",
+  "generatedISO": "2026-07-27T23:14:42.294533+05:30",
   "dateStr": "2026-07-27",
-  "totalOrders": 176,
+  "totalOrders": 177,
   "indirectTaxCount": 2,
   "highCount": 1,
   "mediumCount": 1,
@@ -10,7 +10,7 @@
   "pdfScannedCount": 0,
   "benchStats": {
     "Bombay HC": {
-      "total": 101,
+      "total": 102,
       "it": 2
     },
     "Bombay HC Aurangabad": {
@@ -292,6 +292,21 @@
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "22/07/2026",
       "orderType": "Original",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "WP/4995/2025",
+      "parties": "CHIRAYU CHANDRADATT NAVALKAR Vs STATE OF MAHARASHTRA AND ANR",
+      "coram": "HON'BLE SHRI JUSTICE MADHAV J. JAMDAR",
+      "orderDate": "21/07/2026",
+      "orderType": "Criminal",
       "isJudgment": true,
       "pdfLink": "",
       "bench": "Bombay HC",
