@@ -1,8 +1,8 @@
 {
-  "generated": "01 August 2026, 12:02 PM IST",
-  "generatedISO": "2026-08-01T12:02:05.146044+05:30",
+  "generated": "01 August 2026, 03:31 PM IST",
+  "generatedISO": "2026-08-01T15:31:58.089290+05:30",
   "dateStr": "2026-08-01",
-  "totalOrders": 142,
+  "totalOrders": 143,
   "indirectTaxCount": 1,
   "highCount": 1,
   "mediumCount": 0,
@@ -10,7 +10,7 @@
   "pdfScannedCount": 0,
   "benchStats": {
     "Bombay HC": {
-      "total": 81,
+      "total": 82,
       "it": 1
     },
     "Bombay HC Aurangabad": {
@@ -317,7 +317,7 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "IAL/23721/2026",
+      "matterNo": "IA/4420/2026",
       "parties": "WU JYUN LIN Vs FOREIGNERS REGIONAL REGISTRATION OFFICE THROUGH LEARNED DEPUTY COMMISSIONER OF POLICE AND 3 ORS",
       "coram": "HON'BLE THE ACTING CHIEF JUSTICE HON'BLE SHRI JUSTICE GAUTAM A. ANKHAD",
       "orderDate": "28/07/2026",
@@ -332,7 +332,7 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "WPL/8223/2026",
+      "matterNo": "WP/3629/2026",
       "parties": "WU JYUN LIN Vs FOREIGNERS REGIONAL REGISTRATION OFFICE THROUGH LEARNED DEPUTY COMMISSIONER OF POLICE",
       "coram": "HON'BLE THE ACTING CHIEF JUSTICE HON'BLE SHRI JUSTICE GAUTAM A. ANKHAD",
       "orderDate": "28/07/2026",
@@ -1192,6 +1192,21 @@
       "coram": "HON'BLE THE ACTING CHIEF JUSTICE HON'BLE SHRI JUSTICE GAUTAM A. ANKHAD",
       "orderDate": "21/07/2026",
       "orderType": "Original",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "APEAL/277/2022",
+      "parties": "RAMNATH P. IYER Vs THE STATE OF MAHARASHTRA AND ANR.",
+      "coram": "HON'BLE SHRI JUSTICE N. R. BORKAR",
+      "orderDate": "20/07/2026",
+      "orderType": "Criminal",
       "isJudgment": true,
       "pdfLink": "",
       "bench": "Bombay HC",
