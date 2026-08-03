@@ -1,8 +1,8 @@
 {
-  "generated": "03 August 2026, 04:58 PM IST",
-  "generatedISO": "2026-08-03T16:58:20.347041+05:30",
+  "generated": "03 August 2026, 08:16 PM IST",
+  "generatedISO": "2026-08-03T20:16:18.863345+05:30",
   "dateStr": "2026-08-03",
-  "totalOrders": 139,
+  "totalOrders": 140,
   "indirectTaxCount": 1,
   "highCount": 1,
   "mediumCount": 0,
@@ -18,7 +18,7 @@
       "it": 0
     },
     "Bombay HC Nagpur": {
-      "total": 9,
+      "total": 10,
       "it": 0
     },
     "Bombay HC Goa": {
@@ -1585,6 +1585,21 @@
       "isJudgment": true,
       "pdfLink": "",
       "bench": "Bombay HC Aurangabad",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "WP/530/2026",
+      "parties": "NILIMA DILIP KANNURWAR, Vs CHILD WALFARE COMMITTEE THR CHAIRPERSON",
+      "coram": "HON'BLE JUSTICE URMILA JOSHI PHALKE HON'BLE JUSTICE NIVEDITA PRAKASH MEHTA",
+      "orderDate": "31/07/2026",
+      "orderType": "Criminal",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC Nagpur",
       "isIT": false,
       "confidence": "none",
       "category": "N/A",
