@@ -1,8 +1,8 @@
 {
-  "generated": "03 August 2026, 01:01 PM IST",
-  "generatedISO": "2026-08-03T13:01:01.971437+05:30",
+  "generated": "03 August 2026, 04:58 PM IST",
+  "generatedISO": "2026-08-03T16:58:20.347041+05:30",
   "dateStr": "2026-08-03",
-  "totalOrders": 138,
+  "totalOrders": 139,
   "indirectTaxCount": 1,
   "highCount": 1,
   "mediumCount": 0,
@@ -18,7 +18,7 @@
       "it": 0
     },
     "Bombay HC Nagpur": {
-      "total": 8,
+      "total": 9,
       "it": 0
     },
     "Bombay HC Goa": {
@@ -1595,6 +1595,21 @@
       "matterNo": "APEAL/258/2026",
       "parties": "PRASHANT R/O RAMESHWAR TUNGAR IN JAIL Vs THE STATE OF MAHARASHTRA THR PSO. PS. DARWHA, DISTICT YAYATMAL.",
       "coram": "HON'BLE SHRI JUSTICE YANSHIVRAJ GOPICHAND KHOBRAGADE",
+      "orderDate": "29/07/2026",
+      "orderType": "Criminal",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC Nagpur",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "WP/505/2026",
+      "parties": "MRS. JYOTI W/O DURGAPRASAD CHOURASIA, Vs DURGAPRASAD S/O SATYANARAYAN CHOURASIA",
+      "coram": "HON'BLE SHRI JUSTICE M. M. NERLIKAR",
       "orderDate": "29/07/2026",
       "orderType": "Criminal",
       "isJudgment": true,
