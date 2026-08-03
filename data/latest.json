@@ -1,8 +1,8 @@
 {
-  "generated": "03 August 2026, 08:16 PM IST",
-  "generatedISO": "2026-08-03T20:16:18.863345+05:30",
+  "generated": "03 August 2026, 11:23 PM IST",
+  "generatedISO": "2026-08-03T23:23:47.729485+05:30",
   "dateStr": "2026-08-03",
-  "totalOrders": 140,
+  "totalOrders": 142,
   "indirectTaxCount": 1,
   "highCount": 1,
   "mediumCount": 0,
@@ -10,7 +10,7 @@
   "pdfScannedCount": 0,
   "benchStats": {
     "Bombay HC": {
-      "total": 84,
+      "total": 85,
       "it": 1
     },
     "Bombay HC Aurangabad": {
@@ -18,7 +18,7 @@
       "it": 0
     },
     "Bombay HC Nagpur": {
-      "total": 10,
+      "total": 11,
       "it": 0
     },
     "Bombay HC Goa": {
@@ -127,6 +127,21 @@
       "coram": "HON'BLE SHRI JUSTICE A.S. GADKARI HON'BLE JUSTICE KAMAL KHATA",
       "orderDate": "30/07/2026",
       "orderType": "Original",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "APL/1365/2026",
+      "parties": "Vipin Arun Nikam Vs The State of Maharashtra",
+      "coram": "HON'BLE SHRI JUSTICE ASHWIN D. BHOBE",
+      "orderDate": "29/07/2026",
+      "orderType": "Criminal",
       "isJudgment": true,
       "pdfLink": "",
       "bench": "Bombay HC",
@@ -1641,6 +1656,21 @@
       "parties": "MOIL JANSHAKTI MAZDOOR SANGH BALAGHAT, THR. PRESIDENT, RAMKRIPAL KHURSHEL Vs UNION OF INDIA, THR. SECRETARY, MINISTRY OF STEEL (MOIL) DIVISION, NEW DELHI AND ORS.",
       "coram": "HON'BLE SHRI JUSTICE ANIL S. KILOR HON'BLE SHRI JUSTICE RAJ D. WAKODE",
       "orderDate": "29/07/2026",
+      "orderType": "Civil",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC Nagpur",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "WP/6555/2025",
+      "parties": "SHRI PREM S/O RAVINDRA KUMBHRE Vs STAFF SELECTION COMMISSION THR. SEC./CHAIRMAN AND OTHERS.",
+      "coram": "HON'BLE SHRI JUSTICE YANSHIVRAJ GOPICHAND KHOBRAGADE HON'BLE SHRI JUSTICE SUSHIL M. GHODESWAR",
+      "orderDate": "28/07/2026",
       "orderType": "Civil",
       "isJudgment": true,
       "pdfLink": "",
