@@ -1,8 +1,8 @@
 {
-  "generated": "06 August 2026, 04:12 PM IST",
-  "generatedISO": "2026-08-06T16:12:33.262684+05:30",
+  "generated": "06 August 2026, 07:50 PM IST",
+  "generatedISO": "2026-08-06T19:50:03.270719+05:30",
   "dateStr": "2026-08-06",
-  "totalOrders": 152,
+  "totalOrders": 153,
   "indirectTaxCount": 2,
   "highCount": 2,
   "mediumCount": 0,
@@ -14,7 +14,7 @@
       "it": 2
     },
     "Bombay HC Aurangabad": {
-      "total": 29,
+      "total": 30,
       "it": 0
     },
     "Bombay HC Nagpur": {
@@ -1461,6 +1461,21 @@
       "parties": "CHANDRAKANT TUKARAM GUNALE AND ORS Vs THE STATE OF MAH AND ORS",
       "coram": "HON'BLE SHRI JUSTICE KISHORE C. SANT HON'BLE SHRI JUSTICE AJIT B. KADETHANKAR",
       "orderDate": "03/08/2026",
+      "orderType": "Civil",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC Aurangabad",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "FA/688/2017",
+      "parties": "THE STATE OF MAHARASHTRA AND ORS Vs RAOSAHEB VITTHALRAO CHAVAN AND ANR",
+      "coram": "HON'BLE SHRI JUSTICE SIDDHESHWAR SUNDARRAO THOMBRE",
+      "orderDate": "31/07/2026",
       "orderType": "Civil",
       "isJudgment": true,
       "pdfLink": "",
