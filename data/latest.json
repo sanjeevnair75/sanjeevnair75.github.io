@@ -1,8 +1,8 @@
 {
-  "generated": "07 August 2026, 02:32 PM IST",
-  "generatedISO": "2026-08-07T14:32:34.037042+05:30",
+  "generated": "07 August 2026, 06:40 PM IST",
+  "generatedISO": "2026-08-07T18:40:47.182314+05:30",
   "dateStr": "2026-08-07",
-  "totalOrders": 164,
+  "totalOrders": 171,
   "indirectTaxCount": 1,
   "highCount": 1,
   "mediumCount": 0,
@@ -10,7 +10,7 @@
   "pdfScannedCount": 0,
   "benchStats": {
     "Bombay HC": {
-      "total": 100,
+      "total": 106,
       "it": 1
     },
     "Bombay HC Aurangabad": {
@@ -18,7 +18,7 @@
       "it": 0
     },
     "Bombay HC Nagpur": {
-      "total": 14,
+      "total": 15,
       "it": 0
     },
     "Bombay HC Goa": {
@@ -188,6 +188,36 @@
       "orderDate": "06/08/2026",
       "orderType": "Original",
       "isJudgment": false,
+      "pdfLink": "",
+      "bench": "Bombay HC",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "WP/544/2011",
+      "parties": "M/S KAMLA DEVELOPERS Vs DISTRICT COLLECTOR OF STAMPS BORIVALI TALUKA AND ORS",
+      "coram": "HON'BLE SHRI JUSTICE M. M. SATHAYE",
+      "orderDate": "05/08/2026",
+      "orderType": "Civil",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "WP/542/2011",
+      "parties": "M/S KAMLA DEVELOPERS Vs DISTRICT COLLECTOR OF STAMPS BORIVALI TALUKA AND ORS",
+      "coram": "HON'BLE SHRI JUSTICE M. M. SATHAYE",
+      "orderDate": "05/08/2026",
+      "orderType": "Civil",
+      "isJudgment": true,
       "pdfLink": "",
       "bench": "Bombay HC",
       "isIT": false,
@@ -382,6 +412,66 @@
       "coram": "HON'BLE THE ACTING CHIEF JUSTICE HON'BLE SHRI JUSTICE GAUTAM A. ANKHAD",
       "orderDate": "04/08/2026",
       "orderType": "Civil",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "IA/2015/2026",
+      "parties": "S E INVESTMENTS LIMITED (Now known as PAISALO DIGITAL LIMITED) Vs SEZAL GLASS LIMITED (Formerly known as Sejal Architectural Glass Limited) (Through its Directors)",
+      "coram": "HON'BLE SHRI JUSTICE JITENDRA SHANTILAL JAIN",
+      "orderDate": "04/08/2026",
+      "orderType": "Original",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "IA/2009/2026",
+      "parties": "S E INVESTMENTS LTD (NOW KNOWN AS PAISALO DIGITAL LIMITED) Vs MAPLE COMPOSITE CONTAIERS LIMITED (Through its directors)",
+      "coram": "HON'BLE SHRI JUSTICE JITENDRA SHANTILAL JAIN",
+      "orderDate": "04/08/2026",
+      "orderType": "Original",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "IA/2011/2026",
+      "parties": "S E INVESTMENTS LTD (NOW KNOWN AS PAISALO DIGITAL LIMITED) Vs HARERAM COTTON INDUSTRIES (Through its Proprietor Ramdas Mahadev Hirode)",
+      "coram": "HON'BLE SHRI JUSTICE JITENDRA SHANTILAL JAIN",
+      "orderDate": "04/08/2026",
+      "orderType": "Original",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "IA/2007/2026",
+      "parties": "S E INVESTMENTS LTD (NOW KNOWN AS PAISALO DIGITAL LIMITED) Vs STAR BAZAAR PRIVATE LIMITED, (Through its Director/Manager/Secretary)",
+      "coram": "HON'BLE SHRI JUSTICE JITENDRA SHANTILAL JAIN",
+      "orderDate": "04/08/2026",
+      "orderType": "Original",
       "isJudgment": true,
       "pdfLink": "",
       "bench": "Bombay HC",
@@ -992,7 +1082,7 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CARBPL/10205/2026",
+      "matterNo": "CARBP/940/2026",
       "parties": "Tata Capital Limited Through its Authorized Signatory Mr Omkar Kadam Vs Jagdish Gagal",
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "28/07/2026",
@@ -1007,7 +1097,7 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CARBPL/9121/2026",
+      "matterNo": "CARBP/939/2026",
       "parties": "Tata Capital Limited Through its Authorized Signatory Ms Deepti Soneta Vs Mohmad Sabir Hajibhai Theba",
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "28/07/2026",
@@ -1022,7 +1112,7 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CARBPL/8991/2026",
+      "matterNo": "CARBP/938/2026",
       "parties": "Tata Capital Limited Through its Authorized Signatory Ms Deepti Soneta Vs SB Sparktex Infra Pvt Ltd",
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "28/07/2026",
@@ -1037,8 +1127,8 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CARBPL/8953/2026",
-      "parties": "Tata Capital Limited Through its Authorized Signatory Ms Deepti Soneta Vs S S SAWALIKAR",
+      "matterNo": "CARBP/937/2026",
+      "parties": "Tata Capital Limited Vs S S SAWALIKAR",
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "28/07/2026",
       "orderType": "Original",
@@ -1052,8 +1142,8 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CARBPL/8950/2026",
-      "parties": "Tata Capital Limited Through its Authorized Signatory Ms Deepti Soneta Vs Kaushalpati Infra Equipments Private Limited",
+      "matterNo": "CARBP/936/2026",
+      "parties": "Tata Capital Limited Vs Kaushalpati Infra Equipments Private Limited",
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "28/07/2026",
       "orderType": "Original",
@@ -1067,8 +1157,8 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CARBPL/8922/2026",
-      "parties": "Tata Capital Limited Through its Authorized Signatory Ms Deepti Soneta Vs Kumar Enterprises",
+      "matterNo": "CARBP/935/2026",
+      "parties": "Tata Capital Limited Vs Kumar Enterprises",
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "28/07/2026",
       "orderType": "Original",
@@ -1082,8 +1172,8 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CARBPL/8919/2026",
-      "parties": "Tata Capital Limited Through its Authorized Signatory Ms Deepti Soneta Vs Santosh Narbat",
+      "matterNo": "CARBP/934/2026",
+      "parties": "Tata Capital Limited Vs Santosh Narbat",
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "28/07/2026",
       "orderType": "Original",
@@ -1097,8 +1187,8 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CARBPL/8913/2026",
-      "parties": "Tata Capital Limited Through its Authorized Signatory Ms Deepti Soneta Vs Mrs Navjot Kaur",
+      "matterNo": "CARBP/933/2026",
+      "parties": "Tata Capital Limited Vs Navjot Kaur",
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "28/07/2026",
       "orderType": "Original",
@@ -1112,8 +1202,8 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CARBPL/8903/2026",
-      "parties": "Tata Capital Limited Through its Authorized Signatory Ms Deepti Soneta Vs Mr Sandip Vasant Satpute",
+      "matterNo": "CARBP/932/2026",
+      "parties": "TATA CAPITAL LIMITED Vs Sandip Vasant Satpute",
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "28/07/2026",
       "orderType": "Original",
@@ -1127,8 +1217,8 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CARBPL/8898/2026",
-      "parties": "Tata Capital Limited Through its Authorized Signatory Ms Deepti Soneta Vs Kiran Jagdale",
+      "matterNo": "CARBP/930/2026",
+      "parties": "Tata Capital Limited Vs Kiran Jagdale",
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "28/07/2026",
       "orderType": "Original",
@@ -1142,8 +1232,8 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CARBPL/8897/2026",
-      "parties": "Tata Capital Limited Through its Authorized Signatory Ms Deepti Soneta Vs M/s Devgarh",
+      "matterNo": "CARBP/929/2026",
+      "parties": "Tata Capital Limited Vs Devgarh",
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "28/07/2026",
       "orderType": "Original",
@@ -1157,8 +1247,8 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CARBPL/8891/2026",
-      "parties": "Tata Capital Limited Through its Authorized Signatory Ms Deepti Soneta Vs Nitish Ganpat Tandel",
+      "matterNo": "CARBP/928/2026",
+      "parties": "Tata Capital Limited Vs Nitish Ganpat Tandel",
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "28/07/2026",
       "orderType": "Original",
@@ -1172,8 +1262,8 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CARBPL/8886/2026",
-      "parties": "Tata Capital Limited. Vs NAIM SHAH",
+      "matterNo": "CARBP/927/2026",
+      "parties": "Tata Capital Limited Vs NAIM SHAH",
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "28/07/2026",
       "orderType": "Original",
@@ -1187,8 +1277,8 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CARBPL/8876/2026",
-      "parties": "Tata Capital Limited Through its Authorized Signatory Ms Deepti Soneta Vs Vishwas Patnaik",
+      "matterNo": "CARBP/926/2026",
+      "parties": "Tata Capital Limited Vs Vishwas Patnaik",
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "28/07/2026",
       "orderType": "Original",
@@ -1202,7 +1292,7 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CARBPL/8817/2026",
+      "matterNo": "CARBP/925/2026",
       "parties": "Tata Capital Limited Through its Authorized Signatory Ms Deepti Soneta Vs Shakir Khan",
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "28/07/2026",
@@ -1217,7 +1307,7 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CARBPL/8809/2026",
+      "matterNo": "CARBP/923/2026",
       "parties": "Tata Capital Limited Through its Authorized Signatory Ms Deepti Soneta Vs Vanshi Traders",
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "28/07/2026",
@@ -1232,7 +1322,7 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CARBPL/8805/2026",
+      "matterNo": "CARBP/922/2026",
       "parties": "Tata Capital Limited Through its Authorized Signatory Ms Deepti Soneta Vs VAIBHAV BHAGAVAT TARLE",
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "28/07/2026",
@@ -1247,7 +1337,7 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CARBPL/8789/2026",
+      "matterNo": "CARBP/921/2026",
       "parties": "Tata Capital Limited Vs Kalyan RMC Plant",
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "28/07/2026",
@@ -1262,7 +1352,7 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CARBPL/8779/2026",
+      "matterNo": "CARBP/920/2026",
       "parties": "Tata Capital Limited Through its Authorized Signatory Ms Deepti Soneta Vs Amrut Mahadev Mohite",
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "28/07/2026",
@@ -1277,7 +1367,7 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CARBPL/8760/2026",
+      "matterNo": "CARBP/918/2026",
       "parties": "Tata Capital Limited Through its Authorized Signatory Ms Deepti Soneta Vs CHAHAT ROADLINES",
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "28/07/2026",
@@ -1292,7 +1382,7 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CARBPL/8750/2026",
+      "matterNo": "CARBP/917/2026",
       "parties": "Tata Capital Limited Vs Bharat Pandurang Davane",
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "28/07/2026",
@@ -1307,7 +1397,7 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "CARBPL/8746/2026",
+      "matterNo": "CARBP/914/2026",
       "parties": "Tata Capital Limited Through its Authorized Signatory Ms Deepti Soneta Vs Himanshu Dewda",
       "coram": "HON'BLE SHRI JUSTICE AMIT BORKAR",
       "orderDate": "28/07/2026",
@@ -2027,11 +2117,11 @@
       "pdfScanned": false
     },
     {
-      "matterNo": "APEAL/310/2019",
-      "parties": "ABDUL JAHID @ RAJU ABDUL RASHID Vs THE STATE OF MAH, THR P.SO. P.S. WADGAON ROAD, YAVATMAL",
-      "coram": "HON'BLE JUSTICE URMILA JOSHI PHALKE HON'BLE JUSTICE NIVEDITA PRAKASH MEHTA",
+      "matterNo": "WP/5030/2024",
+      "parties": "SMT. SHUBHADA W/O PRANAV FIRKE (KU. SHUBHADA VINAYAK PATIL) Vs THE HIGH COURT OF BOMBAY, THROUGH THE REGISTRAR GENERAL, MUMBAI",
+      "coram": "HON'BLE SHRI JUSTICE YANSHIVRAJ GOPICHAND KHOBRAGADE HON'BLE SHRI JUSTICE SUSHIL M. GHODESWAR",
       "orderDate": "03/08/2026",
-      "orderType": "Criminal",
+      "orderType": "Civil",
       "isJudgment": true,
       "pdfLink": "",
       "bench": "Bombay HC Nagpur",
@@ -2047,6 +2137,21 @@
       "coram": "HON'BLE SHRI JUSTICE ROHIT WASUDEO JOSHI",
       "orderDate": "03/08/2026",
       "orderType": "Civil",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC Nagpur",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "APEAL/310/2019",
+      "parties": "ABDUL JAHID @ RAJU ABDUL RASHID Vs THE STATE OF MAH, THR P.SO. P.S. WADGAON ROAD, YAVATMAL",
+      "coram": "HON'BLE JUSTICE URMILA JOSHI PHALKE HON'BLE JUSTICE NIVEDITA PRAKASH MEHTA",
+      "orderDate": "03/08/2026",
+      "orderType": "Criminal",
       "isJudgment": true,
       "pdfLink": "",
       "bench": "Bombay HC Nagpur",
