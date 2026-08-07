@@ -1,8 +1,8 @@
 {
-  "generated": "07 August 2026, 06:40 PM IST",
-  "generatedISO": "2026-08-07T18:40:47.182314+05:30",
+  "generated": "07 August 2026, 10:26 PM IST",
+  "generatedISO": "2026-08-07T22:26:20.083216+05:30",
   "dateStr": "2026-08-07",
-  "totalOrders": 171,
+  "totalOrders": 172,
   "indirectTaxCount": 1,
   "highCount": 1,
   "mediumCount": 0,
@@ -26,7 +26,7 @@
       "it": 0
     },
     "Bombay HC Kolhapur": {
-      "total": 10,
+      "total": 11,
       "it": 0
     }
   },
@@ -2440,6 +2440,21 @@
       "isJudgment": false,
       "pdfLink": "",
       "bench": "Bombay HC Goa",
+      "isIT": false,
+      "confidence": "none",
+      "category": "N/A",
+      "signals": "",
+      "pdfScanned": false
+    },
+    {
+      "matterNo": "WP/9463/2014",
+      "parties": "MRS. SMITA SHASHANK JADE Vs AVISHKAR INSTITUTION FOR MENTALLY RETARDED CHILDREN AND ORS.",
+      "coram": "HON'BLE MRS. JUSTICE VRUSHALI V. JOSHI HON'BLE SHRI JUSTICE SANDESH D. PATIL",
+      "orderDate": "04/08/2026",
+      "orderType": "Civil",
+      "isJudgment": true,
+      "pdfLink": "",
+      "bench": "Bombay HC Kolhapur",
       "isIT": false,
       "confidence": "none",
       "category": "N/A",
